@@ -93,6 +93,21 @@
       color: white;
       padding: 20px;
     }
+    html {
+  scroll-behavior: smooth;
+    }
+
+        section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+    }
+
+    section.show {
+    opacity: 1;
+    transform: translateY(0);
+    }
+    
   </style>
 </head>
 
@@ -229,6 +244,33 @@
 <footer>
   <p>© 2026 Maatri Sparsh Wellness</p>
 </footer>
+<a href="https://wa.me/919340194664" target="_blank" 
+style="
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #25D366;
+color: white;
+padding: 15px 18px;
+border-radius: 50%;
+font-size: 20px;
+text-decoration: none;
+box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+z-index: 999;
+">
+💬
+</a>
+<script>
+const sections = document.querySelectorAll("section");
 
+window.addEventListener("scroll", () => {
+  sections.forEach(sec => {
+    const top = sec.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      sec.classList.add("show");
+    }
+  });
+});
+</script>
 </body>
 </html>
