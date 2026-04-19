@@ -316,22 +316,40 @@
   .subscribe-btn:hover { background: #b3635a; transform: translateY(-1px); }
 
   @media (max-width: 900px) {
-    .blog-section { padding: 60px 32px; }
-    .blog-featured { grid-template-columns: 1fr; }
-    .featured-visual { min-height: 240px; }
-    .blog-grid { grid-template-columns: 1fr 1fr; }
-    .subscribe-section { padding: 60px 32px; }
-    .subscribe-form { flex-direction: column; }
+    .blog-section { padding: 56px 24px; }
+    .blog-featured { grid-template-columns: 1fr; margin-bottom: 40px; }
+    .featured-visual { min-height: 200px; }
+    .featured-body { padding: 32px 28px 28px; }
+    .post-title { font-size: 28px; }
+    .blog-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .subscribe-section { padding: 56px 24px; }
+    .subscribe-form { flex-direction: column; gap: 10px; }
+    .subscribe-input { border-radius: 12px; }
+    .subscribe-btn { border-radius: 12px; }
   }
 
   @media (max-width: 600px) {
-    .blog-section { padding: 56px 20px; }
-    .blog-grid { grid-template-columns: 1fr; }
-    .featured-body { padding: 32px 24px; }
-    .post-title { font-size: 26px; }
-    .subscribe-section { padding: 56px 20px; }
-    .subscribe-heading { font-size: 32px; }
-    .filter-bar { gap: 8px; }
+    .blog-section { padding: 48px 16px; }
+    .blog-featured { border-radius: 20px; margin-bottom: 32px; }
+    .featured-visual { min-height: 160px; font-size: 80px; }
+    .featured-badge { font-size: 10px; padding: 5px 12px; }
+    .featured-body { padding: 24px 20px; }
+    .post-category { font-size: 10px; }
+    .post-title { font-size: 22px; }
+    .post-excerpt { font-size: 13px; margin-bottom: 20px; }
+    .post-meta { gap: 12px; font-size: 11px; flex-wrap: wrap; }
+    .read-link { font-size: 13px; margin-top: 14px; }
+    .filter-bar { gap: 6px; }
+    .filter-label { display: none; }
+    .filter-btn { font-size: 12px; padding: 7px 14px; }
+    .blog-grid { grid-template-columns: 1fr; gap: 14px; }
+    .card-visual { height: 140px; font-size: 44px; }
+    .card-body { padding: 20px 18px 18px; }
+    .card-title { font-size: 18px; }
+    .card-excerpt { font-size: 13px; margin-bottom: 14px; }
+    .subscribe-section { padding: 48px 16px; }
+    .subscribe-heading { font-size: 28px; }
+    .subscribe-text { font-size: 14px; margin-bottom: 24px; }
   }
 </style>
 </head>
@@ -467,7 +485,7 @@ function handleSubscribe() {
     return;
   }
   document.getElementById('subEmail').style.borderColor = '';
-  window.location.href = `mailto:partnerships@maatrisparsh.com?subject=Newsletter%20Subscription&body=Please%20add%20${encodeURIComponent(email)}%20to%20the%20MaatriSparsh%20newsletter.`;
+  window.location.href = `mailto:maatrisparsh@gmail.com?subject=Newsletter%20Subscription&body=Please%20add%20${encodeURIComponent(email)}%20to%20the%20MaatriSparsh%20newsletter.`;
 }
 </script>
 </body>
