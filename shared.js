@@ -39,7 +39,7 @@ const NAV_HTML = `
     </nav>
     <div class="mobile-drawer-ctas">
       <a href="contact.html" class="mob-cta-email">✉ Request a Demo</a>
-      <a href="https://wa.me/919340194664?text=Hello%20MaatriSparsh%20Team" target="_blank" class="mob-cta-wa">💬 Chat on WhatsApp</a>
+      <a href="https://wa.me/919183216100?text=Hello%20MaatriSparsh%20Team" target="_blank" class="mob-cta-wa">💬 Chat on WhatsApp</a>
     </div>
   </div>
 </div>
@@ -81,8 +81,8 @@ const FOOTER_HTML = `
     <div class="footer-col">
       <div class="footer-col-title">Contact</div>
       <ul>
-        <li><a href="mailto:partnerships@maatrisparsh.com">partnerships@maatrisparsh.com</a></li>
-        <li><a href="https://wa.me/919340194664">+91 93401 94664</a></li>
+        <li><a href="mailto:maatrisparsh@gmail.com">maatrisparsh@gmail.com</a></li>
+        <li><a href="https://wa.me/919183216100">+91 9183216100</a></li>
         <li><a href="contact.html">Request a Demo</a></li>
       </ul>
     </div>
@@ -101,7 +101,7 @@ const FOOTER_HTML = `
 const WA_HTML = `
 <div class="wa-float">
   <div class="wa-tooltip"><strong style="display:block;font-size:11px;color:var(--ink-muted);margin-bottom:2px;">Quick Connect</strong>Chat with us on WhatsApp</div>
-  <a class="wa-btn" href="https://wa.me/919340194664?text=Hello%20MaatriSparsh%20Team" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a class="wa-btn" href="https://wa.me/919183216100?text=Hello%20MaatriSparsh%20Team" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <div class="wa-pulse"></div>
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.47.668 4.784 1.832 6.77L2 30l7.43-1.79A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.6a11.56 11.56 0 01-5.9-1.614l-.424-.252-4.408 1.062 1.1-4.29-.278-.44A11.56 11.56 0 014.4 16C4.4 9.593 9.593 4.4 16 4.4S27.6 9.593 27.6 16 22.407 27.6 16 27.6zm6.34-8.64c-.348-.174-2.06-1.016-2.38-1.132-.32-.116-.552-.174-.784.174-.232.348-.9 1.132-1.104 1.364-.204.232-.406.26-.754.086-.348-.174-1.47-.542-2.8-1.726-1.034-.922-1.732-2.06-1.936-2.408-.204-.348-.022-.536.154-.71.158-.156.348-.406.522-.61.174-.202.232-.348.348-.58.116-.232.058-.436-.028-.61-.088-.174-.784-1.89-1.074-2.59-.282-.68-.57-.588-.784-.598l-.668-.012c-.232 0-.61.086-.928.434-.32.348-1.218 1.19-1.218 2.902s1.248 3.366 1.422 3.598c.174.232 2.456 3.748 5.952 5.258.832.36 1.482.574 1.988.734.836.266 1.596.228 2.198.138.67-.1 2.06-.842 2.35-1.656.29-.814.29-1.512.204-1.656-.086-.144-.318-.232-.666-.406z"/></svg>
   </a>
