@@ -246,7 +246,311 @@
 
       <div class="legal-body">
         <div class="legal-highlight">We understand that hospital environments are dynamic and that schedules can change. Our cancellation policy is designed to be fair to both parties.</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MaatriSparsh legal documents — Terms & Conditions, Privacy Policy, and Cancellation Policy.">
+<title>Legal — MaatriSparsh</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .legal-layout {
+    padding: 80px;
+    background: var(--warm-white);
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
 
+  .legal-sidebar {
+    position: sticky;
+    top: 100px;
+  }
+
+  .legal-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 20px;
+  }
+
+  .legal-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 14px;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .legal-nav-link:hover, .legal-nav-link.active { background: var(--rose-light); color: var(--rose); }
+
+  .legal-updated {
+    margin-top: 28px;
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 12px;
+    color: var(--ink-muted);
+    line-height: 1.6;
+  }
+
+  .legal-updated strong { display: block; color: var(--ink-soft); margin-bottom: 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* ─── CONTENT ─── */
+  .legal-section {
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .legal-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .legal-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 8px;
+    line-height: 1.1;
+  }
+  .legal-heading em { font-style: italic; color: var(--rose); }
+
+  .legal-subtitle {
+    font-size: 13px;
+    color: var(--ink-muted);
+    margin-bottom: 40px;
+  }
+
+  .legal-body {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+  }
+
+  .legal-body h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 36px 0 12px;
+  }
+
+  .legal-body p { margin-bottom: 16px; }
+  .legal-body p:last-child { margin-bottom: 0; }
+
+  .legal-body ul {
+    margin: 12px 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .legal-body li { line-height: 1.7; }
+
+  .legal-body a { color: var(--rose); text-decoration: underline; text-underline-offset: 2px; }
+
+  .legal-highlight {
+    background: var(--rose-light);
+    border-left: 3px solid var(--rose);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    margin: 24px 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 900px) {
+    .legal-layout { grid-template-columns: 1fr; padding: 56px 24px; gap: 36px; }
+    .legal-sidebar { position: static; }
+    .legal-nav { flex-direction: row; flex-wrap: wrap; gap: 6px; }
+    .legal-nav-link { flex: none; font-size: 13px; padding: 10px 14px; }
+    .legal-section { margin-bottom: 56px; padding-bottom: 56px; }
+  }
+
+  @media (max-width: 600px) {
+    .legal-layout { padding: 48px 16px; gap: 28px; }
+    .legal-nav { gap: 6px; }
+    .legal-nav-link { font-size: 12px; padding: 9px 12px; border-radius: 10px; }
+    .legal-updated { font-size: 11px; padding: 12px; }
+    .legal-heading { font-size: 28px; }
+    .legal-subtitle { font-size: 12px; margin-bottom: 28px; }
+    .legal-body { font-size: 14px; }
+    .legal-body h3 { font-size: 20px; margin: 28px 0 10px; }
+    .legal-highlight { padding: 16px 18px; font-size: 13px; }
+    .legal-section { margin-bottom: 44px; padding-bottom: 44px; }
+  }
+</style>
+</head>
+<body data-page="">
+
+<div class="page-hero">
+  <div class="page-hero-label">Legal</div>
+  <h1>Our Policies &amp; <em>Terms</em></h1>
+  <p class="page-hero-lead">Transparency is core to how we operate. Please read our policies carefully — they govern your relationship with MaatriSparsh.</p>
+</div>
+
+<section class="legal-layout">
+  <!-- Sidebar -->
+  <div class="legal-sidebar">
+    <div class="section-label">Documents</div>
+    <div class="legal-nav">
+      <a href="#terms" class="legal-nav-link">📋 Terms &amp; Conditions</a>
+      <a href="#privacy" class="legal-nav-link">🔒 Privacy Policy</a>
+      <a href="#cancellation" class="legal-nav-link">↩ Cancellation Policy</a>
+    </div>
+    <div class="legal-updated">
+      <strong>Last Updated</strong>
+      December 2024<br>
+      All policies are reviewed annually and updated as required by applicable Indian law.
+    </div>
+    <div style="margin-top:20px;padding:16px;background:var(--plum-light);border-radius:12px;font-size:13px;color:var(--plum);line-height:1.6;">
+      Questions about our policies? <a href="contact.html" style="color:var(--plum);font-weight:500;">Contact us</a> — we're happy to explain anything clearly.
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div>
+
+    <!-- TERMS -->
+    <div class="legal-section" id="terms">
+      <h2 class="legal-heading">Terms &amp; <em>Conditions</em></h2>
+      <p class="legal-subtitle">Effective Date: December 2024 — Governing Law: India</p>
+
+      <div class="legal-body">
+        <div class="legal-highlight">By engaging MaatriSparsh Wellness ("MaatriSparsh", "we", "us") — whether as a hospital partner or service recipient — you agree to these Terms and Conditions.</div>
+
+        <h3>1. About MaatriSparsh</h3>
+        <p>MaatriSparsh Wellness is a postpartum wellness service provider operating in India. We deliver certified postpartum massage therapy and holistic wellness services within hospital and maternity unit settings through partnership agreements.</p>
+
+        <h3>2. Service Delivery</h3>
+        <p>MaatriSparsh services are delivered by trained and certified therapists within hospital premises in accordance with agreed partnership protocols. All services are subject to:</p>
+        <ul>
+          <li>Clinical assessment and physician clearance as required by the partner hospital</li>
+          <li>Absence of contraindications as assessed by our therapists</li>
+          <li>The mother's informed consent prior to each session</li>
+          <li>Compliance with hospital hygiene and clinical protocols</li>
+        </ul>
+
+        <h3>3. Clinical Boundaries</h3>
+        <p>MaatriSparsh therapists provide therapeutic wellness services. They are not medical practitioners and do not diagnose, treat, or prescribe for any medical condition. In the event of any clinical concern arising during a session, the therapist will immediately notify the relevant nursing or medical staff.</p>
+
+        <h3>4. Hospital Partner Obligations</h3>
+        <p>Partner hospitals agree to: provide appropriate access to the maternity ward during agreed service hours; notify MaatriSparsh staff of any changes to a patient's clinical status that may affect service delivery; ensure that our therapists are able to operate in a safe and respectful environment; and integrate MaatriSparsh's services into the patient care plan in accordance with the partnership agreement.</p>
+
+        <h3>5. Intellectual Property</h3>
+        <p>All materials, protocols, training documents, and branding created by MaatriSparsh remain the exclusive intellectual property of MaatriSparsh Wellness. Partner hospitals may not reproduce, adapt, or distribute these materials without written consent.</p>
+
+        <h3>6. Limitation of Liability</h3>
+        <p>To the fullest extent permitted by law, MaatriSparsh's liability for any claim arising from service delivery shall not exceed the value of the specific service session in question. MaatriSparsh shall not be liable for any indirect, consequential, or incidental damages.</p>
+
+        <h3>7. Dispute Resolution</h3>
+        <p>Any disputes arising under these Terms shall first be addressed through good-faith negotiation. Unresolved disputes shall be subject to arbitration under the Arbitration and Conciliation Act, 1996, with proceedings conducted in English in India.</p>
+
+        <h3>8. Changes to Terms</h3>
+        <p>We may update these Terms from time to time. Partner hospitals and service recipients will be notified of material changes with at least 30 days' notice.</p>
+
+        <h3>9. Contact</h3>
+        <p>For questions regarding these Terms, please contact us at <a href="mailto:partnerships@maatrisparsh.com">partnerships@maatrisparsh.com</a>.</p>
+      </div>
+    </div>
+
+    <!-- PRIVACY -->
+    <div class="legal-section" id="privacy">
+      <h2 class="legal-heading">Privacy <em>Policy</em></h2>
+      <p class="legal-subtitle">Effective Date: December 2024 — Compliant with the Digital Personal Data Protection Act, 2023 (India)</p>
+
+      <div class="legal-body">
+        <div class="legal-highlight">We take your privacy seriously. This policy explains what data we collect, how we use it, and your rights under Indian data protection law.</div>
+
+        <h3>1. Data We Collect</h3>
+        <p>We collect the following categories of personal data:</p>
+        <ul>
+          <li><strong>Hospital partners:</strong> Name, designation, hospital name, email address, phone number, city/location, and correspondence records.</li>
+          <li><strong>Service recipients (mothers):</strong> First name, delivery type (communicated by the hospital), session attendance records, and anonymised clinical notes prepared by our therapists.</li>
+          <li><strong>Website visitors:</strong> Standard analytics data including pages visited, time on site, device type, and geographic region (city level). We do not use cookies for advertising purposes.</li>
+        </ul>
+
+        <h3>2. How We Use Your Data</h3>
+        <p>We use collected data to: deliver and improve our services; communicate with hospital partners about programme delivery; maintain session records for clinical and quality purposes; respond to enquiries and partnership requests; and comply with legal and regulatory requirements.</p>
+
+        <h3>3. Data Sharing</h3>
+        <p>We do not sell, rent, or trade your personal data. We share data only with: (a) hospital partners as required to deliver services; (b) trusted service providers (e.g. email platforms) bound by data processing agreements; and (c) regulatory authorities when required by law.</p>
+
+        <h3>4. Data Retention</h3>
+        <p>We retain personal data for as long as necessary to fulfil the purposes described in this policy, or as required by law. Partner contact data is retained for the duration of the partnership plus 3 years. Service session records are retained for 7 years in accordance with standard clinical record-keeping practice.</p>
+
+        <h3>5. Your Rights</h3>
+        <p>Under applicable Indian law, you have the right to: access the personal data we hold about you; request correction of inaccurate data; request deletion of your data (subject to legal retention requirements); and withdraw consent where processing is based on consent.</p>
+        <p>To exercise any of these rights, contact us at <a href="mailto:partnerships@maatrisparsh.com">partnerships@maatrisparsh.com</a>.</p>
+
+        <h3>6. Security</h3>
+        <p>We implement appropriate technical and organisational measures to protect your personal data against unauthorised access, loss, or disclosure. All data is stored on secure servers with access controls and regular security reviews.</p>
+
+        <h3>7. Changes to This Policy</h3>
+        <p>We may update this Privacy Policy periodically. We will notify you of significant changes by email or through a prominent notice on our website.</p>
+      </div>
+    </div>
+
+    <!-- CANCELLATION -->
+    <div class="legal-section" id="cancellation">
+      <h2 class="legal-heading">Cancellation <em>Policy</em></h2>
+      <p class="legal-subtitle">Effective Date: December 2024</p>
+
+      <div class="legal-body">
+        <div class="legal-highlight">We understand that hospital environments are dynamic and that schedules can change. Our cancellation policy is designed to be fair to both parties.</div>
+
+        <h3>1. Session Cancellations by Hospital Partners</h3>
+        <p>Sessions may be cancelled or rescheduled by the hospital with the following notice requirements:</p>
+        <ul>
+          <li><strong>24 hours or more notice:</strong> No charge — session rescheduled at no additional cost.</li>
+          <li><strong>Less than 24 hours notice:</strong> 50% of the session fee is payable as a late cancellation charge, except in the case of clinical emergencies affecting the patient.</li>
+          <li><strong>Clinical emergency exceptions:</strong> Where a session is cancelled due to a clinical emergency involving the patient (as communicated by medical staff), no cancellation charge applies. We request written confirmation of the clinical reason within 48 hours.</li>
+        </ul>
+
+        <h3>2. Clinical Assessment Cancellations</h3>
+        <p>Where our therapist, upon clinical assessment, determines that a session cannot proceed safely (e.g. due to contraindications), no session fee is charged for that session. The therapist will document the reason and communicate it to the partner hospital's clinical team.</p>
+
+        <h3>3. Programme Termination</h3>
+        <p>Either party may terminate a partnership programme with 30 days' written notice. Sessions already delivered and in progress will be completed. Prepaid but undelivered sessions will be refunded on a pro-rata basis within 14 working days.</p>
+
+        <h3>4. Force Majeure</h3>
+        <p>Neither party shall be liable for failure to deliver services due to circumstances beyond their reasonable control, including natural disasters, government-imposed restrictions, or public health emergencies. Both parties agree to act in good faith to reschedule affected sessions as soon as reasonably practicable.</p>
+
+        <h3>5. Refunds</h3>
+        <p>All eligible refunds will be processed within 14 working days of the cancellation being confirmed in writing. Refunds are issued to the original payment method or via NEFT/RTGS transfer as agreed.</p>
+
+        <h3>6. Contact for Cancellations</h3>
+        <p>All cancellations must be communicated in writing to <a href="mailto:partnerships@maatrisparsh.com">partnerships@maatrisparsh.com</a> or via WhatsApp to <a href="https://wa.me/919340194664">+91 93401 94664</a>. Verbal cancellations will only be accepted in clinical emergency situations and must be followed up in writing within 24 hours.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="shared.js"></script>
+<script>
+// Highlight active legal nav on scroll
+const sections = document.querySelectorAll('.legal-section');
+const navLinks = document.querySelectorAll('.legal-nav-link');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 140) current = s.id;
+  });
+  navLinks.forEach(l => {
+    l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body>
+</html>
         <h3>1. Session Cancellations by Hospital Partners</h3>
         <p>Sessions may be cancelled or rescheduled by the hospital with the following notice requirements:</p>
         <ul>

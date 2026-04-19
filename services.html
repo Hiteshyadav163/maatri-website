@@ -286,21 +286,37 @@
   .btn-primary:hover { background: #b3635a; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(201,117,106,0.35); }
 
   @media (max-width: 900px) {
-    .clinical-section { grid-template-columns: 1fr; gap: 40px; padding: 60px 32px; }
-    .services-grid { grid-template-columns: 1fr; }
-    .outcomes-grid { grid-template-columns: 1fr; }
-    .addons-grid { grid-template-columns: 1fr; }
-    .cta-strip { padding: 60px 32px; }
+    .clinical-section { grid-template-columns: 1fr; gap: 36px; padding: 56px 24px; }
+    .services-section { padding: 56px 24px; }
+    .services-grid { grid-template-columns: 1fr; gap: 20px; margin-top: 36px; }
+    .outcomes-section { padding: 56px 24px; }
+    .outcomes-grid { grid-template-columns: 1fr; margin-top: 36px; }
+    .addons-section { padding: 56px 24px; }
+    .addons-grid { grid-template-columns: 1fr; margin-top: 36px; }
+    .cta-strip { padding: 56px 24px; }
   }
 
   @media (max-width: 600px) {
-    .services-section { padding: 56px 20px; }
-    .outcomes-section { padding: 56px 20px; }
-    .addons-section { padding: 56px 20px; }
-    .service-header { padding: 28px 24px 20px; }
-    .service-body { padding: 24px; }
-    .addon-card { grid-template-columns: 1fr; gap: 12px; }
-    .cta-heading { font-size: 32px; }
+    .clinical-section { padding: 48px 16px; }
+    .quote-text { font-size: 17px; }
+    .benefit-card { padding: 20px; }
+    .benefit-title { font-size: 17px; }
+    .services-section { padding: 48px 16px; }
+    .service-header { padding: 24px 20px 16px; }
+    .service-title { font-size: 26px; }
+    .service-body { padding: 20px; }
+    .day-item { padding: 12px 0; }
+    .outcomes-section { padding: 48px 16px; }
+    .outcome-card { padding: 28px 20px; }
+    .outcome-num { font-size: 42px; }
+    .addons-section { padding: 48px 16px; }
+    .addon-card { grid-template-columns: 1fr; gap: 10px; padding: 24px 20px; }
+    .addon-num-box { font-size: 40px; width: auto; }
+    .addon-title { font-size: 19px; }
+    .cta-strip { padding: 48px 16px; }
+    .cta-heading { font-size: 28px; }
+    .cta-text { font-size: 14px; }
+    .btn-primary { width: 100%; justify-content: center; }
   }
 </style>
 </head>
@@ -350,7 +366,7 @@
   <div class="section-label reveal">Recovery Pathways</div>
   <h2 class="section-heading reveal">Our <em>Core Programmes</em></h2>
   <p class="section-lead reveal">Carefully designed for every birth type — from Day 1 through discharge. Each programme is personalised by our certified therapists following an initial assessment.</p>
-<!-- commented
+
   <div class="services-grid">
     <div class="service-card lscs reveal">
       <div class="service-header">
@@ -385,7 +401,7 @@
         </ul>
       </div>
     </div>
-  </div> -->
+  </div>
 </section>
 
 <!-- OUTCOMES -->

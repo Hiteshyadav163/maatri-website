@@ -55,6 +55,8 @@
     color: var(--ink);
     font-weight: 500;
     margin-bottom: 4px;
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 
   .ci-sub {
@@ -280,17 +282,28 @@
   .alt-link:hover { background: rgba(255,255,255,0.25); }
 
   @media (max-width: 900px) {
-    .contact-layout { grid-template-columns: 1fr; gap: 40px; padding: 60px 32px; }
+    .contact-layout { grid-template-columns: 1fr; gap: 36px; padding: 56px 24px; }
     .contact-info { position: static; }
-    .alt-contact { grid-template-columns: 1fr; padding: 60px 32px; gap: 20px; }
+    .alt-contact { grid-template-columns: 1fr; padding: 56px 24px; gap: 16px; }
   }
 
   @media (max-width: 600px) {
-    .contact-layout { padding: 56px 20px; }
-    .contact-form-wrapper { padding: 32px 24px; }
+    .contact-layout { padding: 48px 16px; gap: 28px; }
+    .contact-info-item { padding: 20px 0; gap: 14px; }
+    .ci-icon { width: 40px; height: 40px; font-size: 16px; border-radius: 10px; }
+    .ci-value { font-size: 16px; }
+    .contact-form-wrapper { padding: 28px 16px; border-radius: 20px; }
+    .form-heading { font-size: 26px; }
+    .form-subheading { font-size: 13px; margin-bottom: 24px; }
     .form-row { grid-template-columns: 1fr; gap: 0; }
-    .submit-row { flex-direction: column; align-items: stretch; }
-    .alt-contact { padding: 56px 20px; }
+    .form-row .form-group { margin-bottom: 16px; }
+    input, select, textarea { padding: 13px 14px; font-size: 15px; }
+    .submit-row { flex-direction: column; align-items: stretch; gap: 14px; }
+    .btn-submit { padding: 15px; font-size: 15px; }
+    .form-privacy { font-size: 12px; }
+    .alt-contact { padding: 48px 16px; }
+    .alt-item { padding: 24px 16px; }
+    .alt-title { font-size: 19px; }
   }
 </style>
 </head>
@@ -321,7 +334,7 @@
       <div class="ci-icon">📱</div>
       <div>
         <div class="ci-label">WhatsApp / Phone</div>
-        <div class="ci-value"><a href="https://wa.me/919183216100" class="ci-link">+91 91832 16100</a></div>
+        <div class="ci-value"><a href="https://wa.me/919340194664" class="ci-link">+91 93401 94664</a></div>
         <div class="ci-sub">Quick connect — typically responds within a few hours</div>
       </div>
     </div>
@@ -438,7 +451,7 @@
     <div class="alt-icon">✉️</div>
     <div class="alt-title">Email</div>
     <p class="alt-text">For formal partnership proposals and clinical demonstration requests.</p>
-    <a href="mailto:maatrisparsh@gmail.com" class="alt-link">Send Email</a>
+    <a href="mailto:partnerships@maatrisparsh.com" class="alt-link">Send Email</a>
   </div>
   <div class="alt-item reveal">
     <div class="alt-icon">📋</div>
