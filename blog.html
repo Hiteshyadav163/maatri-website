@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MaatriSparsh blog — insights on postpartum recovery, maternal wellness, and clinical care.">
+<title>Blog — MaatriSparsh</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .blog-section {
+    padding: 80px;
+    background: var(--warm-white);
+  }
+
+  /* ─── FEATURED ─── */
+  .blog-featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-radius: 28px;
+    overflow: hidden;
+    margin-bottom: 64px;
+    background: var(--cream);
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: box-shadow 0.4s;
+    text-decoration: none;
+    color: inherit;
+  }
+  .blog-featured:hover { box-shadow: 0 24px 60px rgba(107,78,110,0.14); }
+
+  .featured-visual {
+    background: linear-gradient(160deg, #E8C8E0 0%, #C8A8C0 100%);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .featured-visual::before {
+    content: '🌸';
+    font-size: 120px;
+    opacity: 0.3;
+  }
+
+  .featured-badge {
+    position: absolute;
+    top: 24px; left: 24px;
+    background: var(--rose);
+    color: white;
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .featured-body {
+    padding: 52px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .post-category {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 12px;
+  }
+
+  .post-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .post-title em { font-style: italic; color: var(--rose); }
+
+  .post-excerpt {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--ink-muted);
+    margin-bottom: 28px;
+    flex: 1;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+    color: var(--ink-muted);
+    flex-wrap: wrap;
+  }
+
+  .post-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .author-avatar {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--plum-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--plum);
+  }
+
+  .post-date { color: var(--ink-muted); }
+  .post-read-time { color: var(--rose); font-weight: 500; }
+
+  .read-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--rose);
+    text-decoration: none;
+    margin-top: 20px;
+    transition: gap 0.2s;
+  }
+  .read-link:hover { gap: 12px; }
+
+  /* ─── FILTER BAR ─── */
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .filter-label {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-right: 4px;
+  }
+
+  .filter-btn {
+    background: none;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 100px;
+    padding: 8px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .filter-btn:hover { background: var(--rose-light); border-color: var(--rose-mid); color: var(--rose); }
+  .filter-btn.active { background: var(--rose); border-color: var(--rose); color: white; }
+
+  /* ─── GRID ─── */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .blog-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--cream);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(107,78,110,0.12); }
+
+  .card-visual {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .v1 { background: linear-gradient(135deg,#E8D5D0,#D4B5C8); }
+  .v2 { background: linear-gradient(135deg,#C8D8C0,#B5C8D4); }
+  .v3 { background: linear-gradient(135deg,#DDD4E8,#C8B8D8); }
+  .v4 { background: linear-gradient(135deg,#F5EDD9,#E8D4B8); }
+  .v5 { background: linear-gradient(135deg,#D4E8E0,#B8D4CC); }
+  .v6 { background: linear-gradient(135deg,#F0D8E0,#D8B8C8); }
+
+  .card-cat-badge {
+    position: absolute;
+    bottom: 12px; left: 12px;
+    background: rgba(255,255,255,0.88);
+    border-radius: 100px;
+    padding: 4px 12px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--plum);
+  }
+
+  .card-body {
+    padding: 28px 24px 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 10px;
+  }
+
+  .card-excerpt {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--ink-muted);
+    margin-bottom: 20px;
+    flex: 1;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--ink-muted);
+  }
+
+  .card-read {
+    color: var(--rose);
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  /* ─── SUBSCRIBE ─── */
+  .subscribe-section {
+    background: #F8EEF5;
+    padding: 80px;
+    text-align: center;
+  }
+
+  .subscribe-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 44px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  .subscribe-heading em { font-style: italic; color: var(--rose); }
+
+  .subscribe-text {
+    font-size: 15px;
+    color: var(--ink-muted);
+    max-width: 440px;
+    margin: 0 auto 36px;
+    line-height: 1.8;
+  }
+
+  .subscribe-form {
+    display: flex;
+    gap: 12px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .subscribe-input {
+    flex: 1;
+    padding: 14px 20px;
+    border-radius: 100px;
+    border: 1.5px solid rgba(0,0,0,0.1);
+    background: var(--warm-white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .subscribe-input:focus { border-color: var(--rose); }
+
+  .subscribe-btn {
+    background: var(--rose);
+    color: white;
+    border: none;
+    border-radius: 100px;
+    padding: 14px 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .subscribe-btn:hover { background: #b3635a; transform: translateY(-1px); }
+
+  @media (max-width: 900px) {
+    .blog-section { padding: 60px 32px; }
+    .blog-featured { grid-template-columns: 1fr; }
+    .featured-visual { min-height: 240px; }
+    .blog-grid { grid-template-columns: 1fr 1fr; }
+    .subscribe-section { padding: 60px 32px; }
+    .subscribe-form { flex-direction: column; }
+  }
+
+  @media (max-width: 600px) {
+    .blog-section { padding: 56px 20px; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .featured-body { padding: 32px 24px; }
+    .post-title { font-size: 26px; }
+    .subscribe-section { padding: 56px 20px; }
+    .subscribe-heading { font-size: 32px; }
+    .filter-bar { gap: 8px; }
+  }
+</style>
+</head>
+<body data-page="blog">
+
+<div class="page-hero">
+  <div class="page-hero-label">Insights & Articles</div>
+  <h1>The MaatriSparsh <em>Journal</em></h1>
+  <p class="page-hero-lead">Evidence-based insights on postpartum recovery, maternal wellness, and the science of healing after birth.</p>
+</div>
+
+<section class="blog-section">
+
+  <!-- FEATURED POST -->
+  <a href="#" class="blog-featured reveal">
+    <div class="featured-visual">
+      <span class="featured-badge">Featured</span>
+    </div>
+    <div class="featured-body">
+      <div class="post-category">Clinical Research</div>
+      <h2 class="post-title">Why postpartum massage is no longer <em>optional</em> — a clinical review</h2>
+      <p class="post-excerpt">A growing body of peer-reviewed evidence now firmly supports therapeutic massage as a clinical intervention — not merely a comfort measure — in postpartum care. We examine what the science says and what it means for Indian hospitals.</p>
+      <div class="post-meta">
+        <div class="post-author">
+          <div class="author-avatar">A</div>
+          <span>Dr. Anita Patel</span>
+        </div>
+        <span class="post-date">December 2024</span>
+        <span class="post-read-time">8 min read</span>
+      </div>
+      <span class="read-link">Read Article →</span>
+    </div>
+  </a>
+
+  <!-- FILTER -->
+  <div class="filter-bar reveal">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="filterPosts('all', this)">All</button>
+    <button class="filter-btn" onclick="filterPosts('clinical', this)">Clinical</button>
+    <button class="filter-btn" onclick="filterPosts('wellness', this)">Wellness</button>
+    <button class="filter-btn" onclick="filterPosts('hospital', this)">For Hospitals</button>
+    <button class="filter-btn" onclick="filterPosts('ayurveda', this)">Ayurveda</button>
+  </div>
+
+  <!-- GRID -->
+  <div class="blog-grid" id="blogGrid">
+    <a href="#" class="blog-card reveal" data-category="clinical">
+      <div class="card-visual v1">🧬<span class="card-cat-badge">Clinical</span></div>
+      <div class="card-body">
+        <div class="card-title">The cortisol connection: how touch reduces postpartum anxiety</div>
+        <p class="card-excerpt">New research reveals the precise neurochemical pathway through which therapeutic massage reduces maternal cortisol — and what this means for recovery timelines.</p>
+        <div class="card-meta"><span>Nov 2024 · 6 min</span><span class="card-read">Read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card reveal" data-category="wellness">
+      <div class="card-visual v2">🤱<span class="card-cat-badge">Wellness</span></div>
+      <div class="card-body">
+        <div class="card-title">Breast engorgement: what works and what doesn't</div>
+        <p class="card-excerpt">Engorgement affects up to 80% of new mothers in the first week. A practical clinical guide to what's effective — and why breast massage leads the evidence.</p>
+        <div class="card-meta"><span>Oct 2024 · 5 min</span><span class="card-read">Read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card reveal" data-category="hospital">
+      <div class="card-visual v3">🏥<span class="card-cat-badge">For Hospitals</span></div>
+      <div class="card-body">
+        <div class="card-title">How postpartum wellness services improve patient satisfaction scores</div>
+        <p class="card-excerpt">Hospitals that offer structured postpartum recovery programmes see measurable improvements in HCAHPS scores and repeat patient preference. Here's what the data shows.</p>
+        <div class="card-meta"><span>Sep 2024 · 7 min</span><span class="card-read">Read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card reveal" data-category="ayurveda">
+      <div class="card-visual v4">🪷<span class="card-cat-badge">Ayurveda</span></div>
+      <div class="card-body">
+        <div class="card-title">Marma therapy and postpartum recovery: ancient wisdom, modern evidence</div>
+        <p class="card-excerpt">India's classical healing tradition has long recognised the importance of marma point therapy after childbirth. We explore how it aligns with contemporary neuroscience.</p>
+        <div class="card-meta"><span>Aug 2024 · 9 min</span><span class="card-read">Read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card reveal" data-category="clinical">
+      <div class="card-visual v5">💊<span class="card-cat-badge">Clinical</span></div>
+      <div class="card-body">
+        <div class="card-title">Non-pharmacological pain management after LSCS: a clinical overview</div>
+        <p class="card-excerpt">As opioid-sparing protocols become standard of care, non-pharmacological pain management — including therapeutic massage — is gaining clinical traction. A review of current evidence.</p>
+        <div class="card-meta"><span>Jul 2024 · 7 min</span><span class="card-read">Read →</span></div>
+      </div>
+    </a>
+
+    <a href="#" class="blog-card reveal" data-category="wellness">
+      <div class="card-visual v6">😴<span class="card-cat-badge">Wellness</span></div>
+      <div class="card-body">
+        <div class="card-title">Sleep quality after childbirth: why it matters more than you think</div>
+        <p class="card-excerpt">Poor postpartum sleep is a predictor of depression, impaired bonding, and delayed physical recovery. We examine the evidence for therapeutic interventions — and the role of massage.</p>
+        <div class="card-meta"><span>Jun 2024 · 5 min</span><span class="card-read">Read →</span></div>
+      </div>
+    </a>
+  </div>
+
+</section>
+
+<!-- SUBSCRIBE -->
+<section class="subscribe-section">
+  <h2 class="subscribe-heading reveal">Stay <em>informed</em></h2>
+  <p class="subscribe-text reveal">Get our latest clinical insights, research summaries, and wellness articles — delivered to your inbox monthly.</p>
+  <div class="subscribe-form reveal">
+    <input type="email" class="subscribe-input" placeholder="your@email.com" id="subEmail">
+    <button class="subscribe-btn" onclick="handleSubscribe()">Subscribe</button>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+<script>
+function filterPosts(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+
+  document.querySelectorAll('.blog-card').forEach(card => {
+    if (cat === 'all' || card.dataset.category === cat) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+function handleSubscribe() {
+  const email = document.getElementById('subEmail').value.trim();
+  if (!email || !email.includes('@')) {
+    document.getElementById('subEmail').style.borderColor = '#C9756A';
+    return;
+  }
+  document.getElementById('subEmail').style.borderColor = '';
+  window.location.href = `mailto:partnerships@maatrisparsh.com?subject=Newsletter%20Subscription&body=Please%20add%20${encodeURIComponent(email)}%20to%20the%20MaatriSparsh%20newsletter.`;
+}
+</script>
+</body>
+</html>

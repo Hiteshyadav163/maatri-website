@@ -4,44 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="MaatriSparsh brings certified postpartum massage therapy to your maternity ward. Evidence-based, physician-approved, hospital-ready.">
-<meta property="og:title" content="MaatriSparsh — The Healing Touch for a Mother">
-<meta property="og:description" content="A clinically informed postpartum wellness programme for new mothers. Delivered directly to your maternity unit.">
-<meta property="og:image" content="images/logo.jpg">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="images/logo.jpg">
 <title>MaatriSparsh — The Healing Touch for a Mother</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --rose: #C9756A;
-    --rose-light: #F5EAE7;
-    --rose-mid: #E8B5AC;
-    --plum: #6B4E6E;
-    --plum-light: #EDE4EF;
-    --plum-mid: #C2A8C5;
-    --cream: #FDF5F8;
-    --warm-white: #FFFAFC;
-    --ink: #1E1A1A;
-    --ink-soft: #4A3F3F;
-    --ink-muted: #8A7878;
-    --gold: #B8956A;
-    --gold-light: #F5EDD9;
-    --green-soft: #4E7A5F;
-    --green-light: #E6F0EA;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--ink);
-    overflow-x: hidden;
-  }
-
   /* ─── HERO ─── */
   .hero {
     min-height: 100vh;
@@ -56,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 80px 60px;
+    padding: 100px 60px 80px;
     position: relative;
     z-index: 2;
   }
@@ -64,10 +30,8 @@
   .hero-left::after {
     content: '';
     position: absolute;
-    right: -60px;
-    top: 0;
-    width: 120px;
-    height: 100%;
+    right: -60px; top: 0;
+    width: 120px; height: 100%;
     background: var(--warm-white);
     clip-path: polygon(0 0, 50% 0, 100% 50%, 50% 100%, 0 100%);
     z-index: 3;
@@ -83,22 +47,12 @@
   }
 
   .hero-right-photo {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
     object-fit: cover;
     object-position: center top;
     opacity: 0.22;
     mix-blend-mode: multiply;
-    z-index: 0;
-  }
-
-  .hero-right-overlay {
-    position: absolute;
-    inset: 0;
-    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    pointer-events: none;
   }
 
   .hero-right-content {
@@ -118,17 +72,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 280px;
-    height: 280px;
+    width: 280px; height: 280px;
   }
 
   .hero-logo-large {
-    width: 180px;
-    height: 180px;
+    width: 180px; height: 180px;
     border-radius: 40px;
     object-fit: cover;
-    position: relative;
-    z-index: 3;
+    position: relative; z-index: 3;
     box-shadow: 0 20px 60px rgba(139,58,126,0.3), 0 0 0 8px rgba(255,255,255,0.4);
     animation: breathe 4s ease-in-out infinite;
   }
@@ -139,26 +90,21 @@
     border: 1px solid rgba(255,255,255,0.35);
     animation: breathe 4s ease-in-out infinite;
   }
-  .hero-logo-ring-1 {
-    width: 220px;
-    height: 220px;
-    animation-delay: 0.5s;
-  }
-  .hero-logo-ring-2 {
-    width: 270px;
-    height: 270px;
-    border-color: rgba(255,255,255,0.18);
-    animation-delay: 1s;
-  }
+  .ring-1 { width: 220px; height: 220px; animation-delay: 0.5s; }
+  .ring-2 { width: 270px; height: 270px; border-color: rgba(255,255,255,0.18); animation-delay: 1s; }
 
   .hero-logo-glow {
     position: absolute;
-    width: 200px;
-    height: 200px;
+    width: 200px; height: 200px;
     border-radius: 50%;
     background: rgba(255,255,255,0.2);
     filter: blur(20px);
     z-index: 1;
+  }
+
+  @keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
   }
 
   .hero-right-quote {
@@ -180,10 +126,8 @@
 
   .hero-floral-deco {
     position: absolute;
-    width: 340px;
-    height: 340px;
-    top: 50%;
-    left: 50%;
+    width: 340px; height: 340px;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
     animation: spin-slow 40s linear infinite;
@@ -192,12 +136,7 @@
 
   @keyframes spin-slow {
     from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
-  }
-
-  @keyframes breathe {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.04); }
+    to   { transform: translate(-50%, -50%) rotate(360deg); }
   }
 
   .hero-badge {
@@ -218,9 +157,8 @@
     animation: fadeUp 0.8s 0.2s forwards;
   }
 
-  .hero-badge-dot {
-    width: 6px;
-    height: 6px;
+  .badge-dot {
+    width: 6px; height: 6px;
     border-radius: 50%;
     background: var(--gold);
     animation: pulse-dot 2s ease-in-out infinite;
@@ -233,7 +171,7 @@
 
   .hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 56px;
+    font-size: 58px;
     font-weight: 400;
     line-height: 1.1;
     color: var(--ink);
@@ -241,11 +179,7 @@
     opacity: 0;
     animation: fadeUp 0.8s 0.4s forwards;
   }
-
-  .hero-title em {
-    font-style: italic;
-    color: var(--rose);
-  }
+  .hero-title em { font-style: italic; color: var(--rose); }
 
   .hero-subtitle {
     font-family: 'Cormorant Garamond', serif;
@@ -266,6 +200,54 @@
     margin-bottom: 40px;
     opacity: 0;
     animation: fadeUp 0.8s 0.8s forwards;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.9s forwards;
+    margin-bottom: 32px;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--rose);
+    color: white;
+    border-radius: 100px;
+    padding: 14px 32px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+    letter-spacing: 0.02em;
+  }
+  .btn-primary:hover {
+    background: #b3635a;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(201,117,106,0.35);
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--plum);
+    border: 1px solid var(--plum-mid);
+    border-radius: 100px;
+    padding: 14px 32px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover {
+    background: var(--plum-light);
+    border-color: var(--plum);
   }
 
   .hero-tags {
@@ -289,125 +271,26 @@
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 
-  .floating-stats {
-    position: absolute;
-    bottom: 40px;
-    right: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    z-index: 10;
-  }
-
-  .stat-pill {
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(8px);
-    border-radius: 12px;
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    min-width: 200px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    animation: slideInRight 0.6s ease forwards;
-    opacity: 0;
-  }
-
-  .stat-pill:nth-child(1) { animation-delay: 1.2s; }
-  .stat-pill:nth-child(2) { animation-delay: 1.4s; }
-  .stat-pill:nth-child(3) { animation-delay: 1.6s; }
-
-  @keyframes slideInRight {
-    from { opacity: 0; transform: translateX(30px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-
-  .stat-pill-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--plum);
-    line-height: 1;
-  }
-
-  .stat-pill-label {
-    font-size: 11px;
-    color: var(--ink-muted);
-    line-height: 1.4;
-    max-width: 100px;
-  }
-
-  /* ─── SECTIONS ─── */
-  section {
-    padding: 100px 80px;
-  }
-
-  .section-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--rose);
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .section-label::before {
-    content: '';
-    display: block;
-    width: 32px;
-    height: 1px;
-    background: var(--rose);
-  }
-
-  .section-heading {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 46px;
-    font-weight: 400;
-    line-height: 1.15;
-    color: var(--ink);
-    margin-bottom: 20px;
-  }
-
-  .section-heading em {
-    font-style: italic;
-    color: var(--rose);
-  }
-
-  .section-lead {
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--ink-muted);
-    max-width: 600px;
-  }
-
-  /* ─── STATS BAND ─── */
+  /* ─── STATS ─── */
   .stats-band {
     background: #F8EEF5;
     padding: 60px 80px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0;
   }
 
   .stats-band-item {
     padding: 40px;
     border-right: 1px solid rgba(107,78,110,0.12);
     text-align: center;
-    position: relative;
-    overflow: hidden;
   }
-
-  .stats-band-item:last-child { border-right: none; }
-  .stats-band-item:nth-child(3) { border-right: none; }
+  .stats-band-item:nth-child(3n) { border-right: none; }
   .stats-band-item:nth-child(n+4) { border-top: 1px solid rgba(107,78,110,0.12); }
 
-  .stats-band-num {
+  .stat-num {
     font-family: 'Cormorant Garamond', serif;
     font-size: 64px;
     font-weight: 600;
@@ -416,7 +299,7 @@
     display: block;
   }
 
-  .stats-band-label {
+  .stat-label {
     font-size: 14px;
     color: var(--ink-soft);
     margin-top: 8px;
@@ -424,241 +307,185 @@
     font-weight: 500;
   }
 
-  /* ─── CLINICAL BASIS ─── */
-  .clinical-section {
-    background: var(--warm-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23C9756A' stroke-opacity='0.07' stroke-width='1'%3E%3Cellipse cx='60' cy='60' rx='20' ry='35' transform='rotate(0 60 60)'/%3E%3Cellipse cx='60' cy='60' rx='20' ry='35' transform='rotate(45 60 60)'/%3E%3Cellipse cx='60' cy='60' rx='20' ry='35' transform='rotate(90 60 60)'/%3E%3Cellipse cx='60' cy='60' rx='20' ry='35' transform='rotate(135 60 60)'/%3E%3Ccircle cx='60' cy='60' r='12'/%3E%3Ccircle cx='60' cy='60' r='25'/%3E%3Ccircle cx='60' cy='60' r='40'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: repeat;
+  /* ─── VISION ─── */
+  .vision-section {
+    background: var(--ink);
+    padding: 100px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vision-section::before {
+    content: '';
+    position: absolute;
+    top: -150px; right: -150px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,117,106,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .vision-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
+    position: relative;
+    z-index: 2;
   }
 
-  .quote-block {
+  .vision-section .section-label { color: var(--rose-mid); }
+  .vision-section .section-label::before { background: var(--rose-mid); }
+
+  .vision-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 24px;
+  }
+  .vision-heading em { font-style: italic; color: var(--rose-mid); }
+
+  .vision-text {
+    font-size: 16px;
+    line-height: 1.85;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 32px;
+  }
+
+  .vision-quote {
     border-left: 3px solid var(--rose);
-    padding-left: 32px;
-    margin: 40px 0;
+    padding-left: 24px;
+    margin-top: 32px;
   }
 
-  .quote-text {
+  .vision-quote-text {
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     font-style: italic;
-    font-weight: 300;
+    color: rgba(255,255,255,0.85);
     line-height: 1.6;
-    color: var(--ink-soft);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
-  .quote-source {
+  .vision-quote-attr {
     font-size: 12px;
     letter-spacing: 0.1em;
-    color: var(--ink-muted);
-    font-weight: 500;
     text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    font-weight: 500;
   }
 
-  .benefits-grid {
+  .vision-pillars {
     display: grid;
-    gap: 1px;
-    background: rgba(0,0,0,0.06);
-    border-radius: 16px;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 20px;
     overflow: hidden;
   }
 
-  .benefit-card {
-    background: var(--warm-white);
-    padding: 28px 32px;
+  .pillar-card {
+    background: rgba(255,255,255,0.04);
+    padding: 36px 28px;
     transition: background 0.3s;
-    cursor: default;
+  }
+  .pillar-card:hover { background: rgba(255,255,255,0.08); }
+
+  .pillar-icon {
+    font-size: 28px;
+    margin-bottom: 14px;
+    display: block;
   }
 
-  .benefit-card:hover { background: var(--rose-light); }
+  .pillar-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 8px;
+  }
 
-  .benefit-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
+  .pillar-text {
+    font-size: 13px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.5);
+  }
+
+  /* ─── WHAT WE DO ─── */
+  .what-we-do {
+    background: var(--warm-white);
+    padding: 100px 80px;
+  }
+
+  .what-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 60px;
+  }
+
+  .what-card {
+    background: var(--cream);
+    border-radius: 20px;
+    padding: 40px 32px;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .what-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--rose), var(--plum));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .what-card:hover { transform: translateY(-8px); box-shadow: 0 24px 48px rgba(107,78,110,0.12); }
+  .what-card:hover::before { opacity: 1; }
+
+  .what-icon {
+    width: 56px; height: 56px;
+    border-radius: 16px;
     background: var(--plum-light);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .what-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--ink);
     margin-bottom: 12px;
-    font-size: 16px;
   }
 
-  .benefit-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 6px;
-  }
-
-  .benefit-text {
+  .what-text {
     font-size: 14px;
-    line-height: 1.65;
-    color: var(--ink-soft);
-  }
-
-  /* ─── PROGRAMMES ─── */
-  .programmes-section {
-    background: var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%236B4E6E' stroke-opacity='0.06' stroke-width='1'%3E%3Cpath d='M10 50 Q30 20 50 50 Q70 80 90 50'/%3E%3Cpath d='M10 30 Q30 0 50 30 Q70 60 90 30'/%3E%3Cpath d='M10 70 Q30 40 50 70 Q70 100 90 70'/%3E%3Cellipse cx='30' cy='35' rx='8' ry='12' transform='rotate(-30 30 35)'/%3E%3Cellipse cx='70' cy='65' rx='8' ry='12' transform='rotate(-30 70 65)'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: repeat;
-  }
-
-  .programme-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-    margin-top: 60px;
-  }
-
-  .programme-card {
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  }
-
-  .programme-card:hover { transform: translateY(-6px); }
-
-  .programme-header {
-    padding: 36px 36px 28px;
-    position: relative;
-  }
-
-  .programme-card.lscs .programme-header { background: linear-gradient(135deg, #E8D0CC 0%, #D4B5C8 100%); }
-  .programme-card.normal .programme-header { background: linear-gradient(135deg, #C8D8C0 0%, #B5C8D4 100%); }
-
-  .programme-type {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgba(30,26,26,0.5);
-    margin-bottom: 8px;
-  }
-
-  .programme-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 400;
-    color: var(--ink);
-  }
-
-  .programme-body {
-    background: var(--warm-white);
-    padding: 32px 36px;
-  }
-
-  .day-list { list-style: none; }
-
-  .day-item {
-    display: grid;
-    grid-template-columns: 80px 1fr;
-    gap: 16px;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    align-items: start;
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: opacity 0.5s, transform 0.5s;
-  }
-
-  .day-item.visible { opacity: 1; transform: translateX(0); }
-  .day-item:last-child { border-bottom: none; }
-
-  .day-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--rose);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding-top: 2px;
-  }
-
-  .day-desc {
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--ink-soft);
-  }
-
-  .day-duration {
-    display: inline-block;
-    background: var(--plum-light);
-    color: var(--plum);
-    font-size: 11px;
-    font-weight: 500;
-    border-radius: 100px;
-    padding: 2px 10px;
-    margin-top: 4px;
-  }
-
-  /* ─── OUTCOMES ─── */
-  .outcomes-section {
-    background: var(--warm-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23C9756A' fill-opacity='0.05'%3E%3Ccircle cx='40' cy='40' r='3'/%3E%3Ccircle cx='40' cy='20' r='2'/%3E%3Ccircle cx='40' cy='60' r='2'/%3E%3Ccircle cx='20' cy='40' r='2'/%3E%3Ccircle cx='60' cy='40' r='2'/%3E%3Ccircle cx='26' cy='26' r='1.5'/%3E%3Ccircle cx='54' cy='26' r='1.5'/%3E%3Ccircle cx='26' cy='54' r='1.5'/%3E%3Ccircle cx='54' cy='54' r='1.5'/%3E%3C/g%3E%3Cg fill='none' stroke='%236B4E6E' stroke-opacity='0.05' stroke-width='0.8'%3E%3Ccircle cx='40' cy='40' r='16'/%3E%3Ccircle cx='40' cy='40' r='28'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: repeat;
-  }
-
-  .outcomes-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    background: rgba(0,0,0,0.06);
-    border-radius: 20px;
-    overflow: hidden;
-    margin-top: 60px;
-  }
-
-  .outcome-card {
-    background: var(--warm-white);
-    padding: 40px;
-    transition: background 0.3s;
-  }
-
-  .outcome-card:hover { background: var(--plum-light); }
-
-  .outcome-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 52px;
-    font-weight: 400;
-    color: var(--plum);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-
-  .outcome-unit {
-    font-size: 18px;
-    color: var(--plum-mid);
-  }
-
-  .outcome-title {
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 8px;
-  }
-
-  .outcome-text {
-    font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--ink-muted);
-    margin-bottom: 12px;
+    margin-bottom: 20px;
   }
 
-  .outcome-source {
-    font-size: 11px;
+  .what-link {
+    font-size: 13px;
+    font-weight: 500;
     color: var(--rose);
-    font-style: italic;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s;
   }
-  .outcome-source a {
-    color: var(--rose);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-  .outcome-source a:hover { color: var(--plum); }
+  .what-link:hover { gap: 10px; }
 
   /* ─── JOURNEY ─── */
   .journey-section {
@@ -668,9 +495,6 @@
 
   .journey-section .section-label { color: var(--plum); }
   .journey-section .section-label::before { background: var(--plum); }
-  .journey-section .section-heading { color: var(--ink); }
-  .journey-section .section-heading em { color: var(--rose); }
-  .journey-section .section-lead { color: var(--ink-muted); }
 
   .journey-steps {
     margin-top: 60px;
@@ -684,12 +508,9 @@
 
   .journey-step {
     background: rgba(255,255,255,0.72);
-    border-radius: 0;
     padding: 40px 32px;
-    position: relative;
     transition: background 0.3s;
   }
-
   .journey-step:hover { background: rgba(255,255,255,0.9); }
 
   .step-num {
@@ -724,72 +545,9 @@
     color: var(--ink-muted);
   }
 
-  /* ─── ADD-ONS ─── */
-  .addons-section {
-    background: var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23B8956A' stroke-opacity='0.08' stroke-width='0.8'%3E%3Ccircle cx='0' cy='0' r='20'/%3E%3Ccircle cx='60' cy='0' r='20'/%3E%3Ccircle cx='0' cy='60' r='20'/%3E%3Ccircle cx='60' cy='60' r='20'/%3E%3Ccircle cx='30' cy='30' r='8'/%3E%3Cpath d='M30 22 Q34 26 30 30 Q26 26 30 22'/%3E%3Cpath d='M30 38 Q34 34 30 30 Q26 34 30 38'/%3E%3Cpath d='M22 30 Q26 34 30 30 Q26 26 22 30'/%3E%3Cpath d='M38 30 Q34 26 30 30 Q34 34 38 30'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: repeat;
-  }
-
-  .addons-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 60px;
-  }
-
-  .addon-card {
-    background: var(--warm-white);
-    border-radius: 16px;
-    padding: 32px 24px;
-    border: 1px solid rgba(0,0,0,0.06);
-    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-    cursor: default;
-  }
-
-  .addon-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(107,78,110,0.12);
-    border-color: var(--plum-mid);
-  }
-
-  .addon-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 48px;
-    font-weight: 300;
-    color: var(--rose-light);
-    -webkit-text-stroke: 1px var(--rose-mid);
-    line-height: 1;
-    margin-bottom: 20px;
-  }
-
-  .addon-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 6px;
-    line-height: 1.3;
-  }
-
-  .addon-duration {
-    font-size: 11px;
-    color: var(--rose);
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-  }
-
-  .addon-text {
-    font-size: 13px;
-    line-height: 1.65;
-    color: var(--ink-muted);
-  }
-
-  /* ─── HOLISTIC BENEFITS ─── */
+  /* ─── BENEFITS CHIPS ─── */
   .benefits-section {
-    background: var(--rose-light) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23C9756A' stroke-opacity='0.09' stroke-width='1'%3E%3Ccircle cx='60' cy='60' r='50'/%3E%3Ccircle cx='60' cy='60' r='35'/%3E%3Ccircle cx='60' cy='60' r='18'/%3E%3Cellipse cx='60' cy='60' rx='14' ry='28' transform='rotate(30 60 60)'/%3E%3Cellipse cx='60' cy='60' rx='14' ry='28' transform='rotate(90 60 60)'/%3E%3Cellipse cx='60' cy='60' rx='14' ry='28' transform='rotate(150 60 60)'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: repeat;
+    background: var(--rose-light);
     padding: 80px;
   }
 
@@ -809,16 +567,13 @@
     gap: 12px;
     transition: transform 0.3s;
   }
-
   .benefit-chip:hover { transform: scale(1.03); }
 
   .chip-dot {
-    width: 10px;
-    height: 10px;
+    width: 10px; height: 10px;
     border-radius: 50%;
     flex-shrink: 0;
   }
-
   .chip-dot.rose { background: var(--rose); }
   .chip-dot.plum { background: var(--plum); }
   .chip-dot.green { background: var(--green-soft); }
@@ -830,733 +585,91 @@
     color: var(--ink-soft);
   }
 
-  /* ─── EXPERT TEAM ─── */
-  .team-section {
-    background: var(--warm-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%236B4E6E' stroke-opacity='0.055' stroke-width='0.8'%3E%3Cpath d='M50 10 L55 40 L85 30 L65 55 L90 70 L60 65 L55 95 L45 65 L15 70 L40 55 L20 30 L50 40 Z'/%3E%3Ccircle cx='50' cy='50' r='22'/%3E%3Ccircle cx='50' cy='50' r='38'/%3E%3C/g%3E%3C/svg%3E");
-    background-repeat: repeat;
-    padding: 100px 80px;
-  }
-
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin-top: 60px;
-  }
-
-  .team-card {
-    border-radius: 24px;
-    overflow: hidden;
-    background: var(--cream);
-    border: 1px solid rgba(0,0,0,0.06);
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    cursor: default;
-    position: relative;
-  }
-
-  .team-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 24px 48px rgba(107,78,110,0.14);
-    border-color: var(--plum-mid);
-  }
-
-  .team-card-top {
-    position: relative;
-    height: 220px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .team-card.card-1 .team-card-top { background: #E8D5D0; }
-  .team-card.card-2 .team-card-top { background: #C8D8C0; }
-  .team-card.card-3 .team-card-top { background: #DDD4E8; }
-
-  .team-card-photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-  }
-
-  .team-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid rgba(255,255,255,0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
-    font-weight: 500;
-    color: var(--ink-soft);
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  }
-
-  .team-card.card-1 .team-avatar { background: #F0E0DC; color: #8B4E46; }
-  .team-card.card-2 .team-avatar { background: #D8EAD0; color: #3D6B4E; }
-  .team-card.card-3 .team-avatar { background: #E4D8F0; color: #5E3D8B; }
-
-  .team-pattern {
-    position: absolute;
-    inset: 0;
-    opacity: 0.07;
-    background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.8) 0%, transparent 50%),
-                      radial-gradient(circle at 80% 70%, rgba(255,255,255,0.6) 0%, transparent 40%);
-  }
-
-  .team-card-body {
-    padding: 48px 28px 32px;
-    text-align: center;
-  }
-
-  .team-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 26px;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-
-  .team-role {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--rose);
-    margin-bottom: 16px;
-  }
-
-  .team-divider {
-    width: 40px;
-    height: 1px;
-    background: var(--rose-mid);
-    margin: 0 auto 16px;
-  }
-
-  .team-bio {
-    font-size: 13px;
-    line-height: 1.75;
-    color: var(--ink-muted);
-    margin-bottom: 20px;
-  }
-
-  .team-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    justify-content: center;
-  }
-
-  .team-tag {
-    background: var(--plum-light);
-    color: var(--plum);
-    border-radius: 100px;
-    padding: 4px 12px;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-  }
-
-  /* ─── PARTNERSHIP ─── */
-  .partnership-section {
-    background: var(--warm-white);
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 0;
-    min-height: 600px;
-  }
-
-  .partnership-left {
-    background: linear-gradient(160deg, #9B5EA2 0%, #7A3D7F 100%);
-    padding: 80px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .partnership-left .section-label { color: var(--plum-mid); }
-  .partnership-left .section-label::before { background: var(--plum-mid); }
-  .partnership-left .section-heading { color: white; }
-  .partnership-left .section-heading em { color: var(--rose-mid); }
-  .partnership-left .section-lead { color: rgba(255,255,255,0.55); }
-
-  .partnership-right {
-    padding: 80px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .partner-feature {
-    display: grid;
-    grid-template-columns: 48px 1fr;
-    gap: 20px;
-    padding: 28px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    align-items: start;
-  }
-
-  .partner-feature:last-child { border-bottom: none; }
-
-  .partner-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: var(--plum-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    flex-shrink: 0;
-  }
-
-  .partner-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 6px;
-  }
-
-  .partner-text {
-    font-size: 13px;
-    line-height: 1.7;
-    color: var(--ink-muted);
-  }
-
-  /* ─── CTA ─── */
-  .cta-section {
+  /* ─── MINI CTA ─── */
+  .mini-cta {
     background: #8B3A7E;
-    padding: 100px 80px;
+    padding: 80px;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
 
-  .cta-section::before {
+  .mini-cta::before {
     content: '';
     position: absolute;
-    top: -200px;
-    left: 50%;
+    top: -200px; left: 50%;
     transform: translateX(-50%);
-    width: 800px;
-    height: 800px;
+    width: 800px; height: 800px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(255,200,230,0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255,200,230,0.12) 0%, transparent 70%);
     pointer-events: none;
   }
 
-  .cta-label {
-    display: inline-block;
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: rgba(255,220,240,0.9);
-    font-weight: 500;
-    margin-bottom: 24px;
-  }
-
-  .cta-heading {
+  .mini-cta-heading {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 400;
-    color: #ffffff;
+    color: white;
     line-height: 1.15;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
+  .mini-cta-heading em { font-style: italic; color: #FFD6F0; }
 
-  .cta-heading em {
-    font-style: italic;
-    color: #FFD6F0;
-  }
-
-  .cta-text {
+  .mini-cta-text {
     font-size: 15px;
-    color: rgba(255,235,248,0.75);
-    max-width: 480px;
-    margin: 0 auto 48px;
+    color: rgba(255,235,248,0.65);
+    max-width: 440px;
+    margin: 0 auto 36px;
     line-height: 1.8;
   }
 
-  .cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: var(--rose);
-    color: white;
-    border: none;
-    border-radius: 100px;
-    padding: 18px 40px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    cursor: pointer;
-    letter-spacing: 0.02em;
-    transition: all 0.3s;
-    text-decoration: none;
-  }
-
-  .cta-btn:hover {
-    background: #B86359;
-    transform: translateY(-2px);
-    box-shadow: 0 16px 40px rgba(201,117,106,0.35);
-  }
-
-  .cta-footnote {
-    margin-top: 32px;
-    font-size: 12px;
-    color: rgba(255,220,240,0.4);
-    letter-spacing: 0.08em;
-  }
-
-  /* ─── NAV ─── */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    padding: 20px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(250,247,242,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    transform: translateY(-100%);
-    animation: navSlide 0.6s 0.3s forwards;
-  }
-
-  @keyframes navSlide {
-    to { transform: translateY(0); }
-  }
-
-  .nav-brand-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--ink);
-    letter-spacing: 0.01em;
-  }
-  .nav-brand {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-  }
-
-  .nav-brand span {
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 400;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 32px;
-    list-style: none;
-    align-items: center;
-  }
-
-  .nav-links a {
-    font-size: 13px;
-    color: var(--ink-muted);
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover { color: var(--rose); }
-
-
-  .nav-cta {
-    background: var(--rose);
-    color: white;
-    border-radius: 100px;
-    padding: 10px 24px;
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: background 0.2s;
-    letter-spacing: 0.02em;
-  }
-
-  .nav-cta:hover { background: #b3635a; }
-
-  /* ─── SCROLL ANIMATIONS ─── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s, transform 0.7s;
-  }
-
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
   /* ─── RESPONSIVE ─── */
-  /* ─── HAMBURGER ─── */
-  .nav-hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 36px;
-    height: 36px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-    border-radius: 8px;
-    transition: background 0.2s;
-  }
-  .nav-hamburger:hover { background: var(--rose-light); }
-  .nav-hamburger span {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: var(--ink);
-    border-radius: 2px;
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  @media (max-width: 900px) { .nav-hamburger { display: flex; } }
-
-  /* ─── MOBILE DRAWER ─── */
-  .mobile-drawer-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(30,26,26,0.45);
-    z-index: 199;
-    backdrop-filter: blur(2px);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .mobile-drawer-overlay.open { display: block; opacity: 1; }
-
-  .mobile-drawer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 300px;
-    max-width: 85vw;
-    background: var(--warm-white);
-    z-index: 200;
-    transform: translateX(100%);
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: -8px 0 40px rgba(0,0,0,0.12);
-  }
-  .mobile-drawer.open { transform: translateX(0); }
-
-  .mobile-drawer-inner {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow-y: auto;
-  }
-
-  .mobile-drawer-close {
-    align-self: flex-end;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: 1px solid rgba(0,0,0,0.1);
-    background: none;
-    font-size: 16px;
-    color: var(--ink-muted);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 28px;
-    transition: background 0.2s;
-  }
-  .mobile-drawer-close:hover { background: var(--rose-light); }
-
-  .mobile-drawer-brand {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    margin-bottom: 36px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-  }
-
-  .mobile-nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    flex: 1;
-  }
-
-  .mob-link {
-    display: block;
-    padding: 14px 16px;
-    border-radius: 12px;
-    font-size: 16px;
-    color: var(--ink-soft);
-    text-decoration: none;
-    font-weight: 400;
-    transition: background 0.2s, color 0.2s;
-    letter-spacing: 0.01em;
-  }
-  .mob-link:hover { background: var(--rose-light); color: var(--rose); }
-
-  .mob-link-team {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--plum);
-    background: var(--plum-light);
-    font-weight: 500;
-  }
-  .mob-link-team::before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--plum);
-    flex-shrink: 0;
-  }
-  .mob-link-team:hover { background: var(--plum); color: white; }
-  .mob-link-team:hover::before { background: rgba(255,255,255,0.7); }
-
-  .mobile-drawer-ctas {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(0,0,0,0.06);
-    margin-top: 20px;
-  }
-
-  .mob-cta-email {
-    display: block;
-    text-align: center;
-    padding: 14px;
-    border-radius: 12px;
-    background: var(--rose);
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: background 0.2s;
-  }
-  .mob-cta-email:hover { background: #b3635a; }
-
-  .mob-cta-wa {
-    display: block;
-    text-align: center;
-    padding: 14px;
-    border-radius: 12px;
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: background 0.2s;
-  }
-  .mob-cta-wa:hover { background: #1da851; }
-
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; }
     .hero-right { display: none; }
-    section { padding: 60px 32px; }
-    .stats-band { grid-template-columns: 1fr 1fr; padding: 40px 16px; }
-    .clinical-section, .programme-grid, .outcomes-grid, .journey-steps, .addons-grid, .benefits-row, .partnership-section, .team-grid { grid-template-columns: 1fr; }
-    .section-heading { font-size: 36px; }
-    nav { padding: 16px 24px; }
-    .nav-links { display: none; }
-    .team-section { padding: 60px 32px; }
-    .addons-grid { grid-template-columns: 1fr 1fr; }
-    .benefits-row { grid-template-columns: 1fr 1fr; }
+    .stats-band { grid-template-columns: 1fr 1fr; padding: 40px 20px; }
+    .vision-inner { grid-template-columns: 1fr; gap: 40px; }
+    .what-grid { grid-template-columns: 1fr; gap: 20px; }
     .journey-steps { grid-template-columns: 1fr 1fr; }
+    .benefits-row { grid-template-columns: 1fr 1fr; }
+    .benefits-section { padding: 60px 32px; }
+    .mini-cta { padding: 60px 32px; }
+    .vision-section { padding: 60px 32px; }
   }
 
-  /* ─── MOBILE ─── */
   @media (max-width: 600px) {
-    /* Nav */
-    nav {
-      padding: 14px 20px;
-    }
-    .nav-brand-name { font-size: 16px; }
-    .nav-brand img { height: 40px; width: 40px; }
-    .nav-cta { padding: 8px 16px; font-size: 12px; }
-
-    /* Hero */
-    .hero-left {
-      padding: 100px 24px 60px;
-      min-height: 100vh;
-    }
+    .hero-left { padding: 100px 24px 60px; min-height: 100vh; }
     .hero-title { font-size: 40px; }
     .hero-subtitle { font-size: 18px; }
-    .hero-desc { font-size: 14px; margin-bottom: 32px; }
-    .hero-badge { font-size: 10px; padding: 5px 12px; }
-    .hero-tags { gap: 8px; }
-    .tag { font-size: 11px; padding: 6px 14px; }
-
-    /* Sections */
-    section { padding: 56px 20px; }
-    .section-heading { font-size: 30px; margin-bottom: 14px; }
-    .section-label { font-size: 10px; margin-bottom: 12px; }
-    .section-lead { font-size: 14px; line-height: 1.7; }
-
-    /* Stats band */
-    .stats-band { padding: 0; }
-    .stats-band-item {
-      padding: 36px 24px;
-      border-right: none;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .stats-band-item:last-child { border-bottom: none; }
-    .stats-band-num { font-size: 56px; }
-    .stats-band-label { font-size: 13px; }
-
-    /* Clinical */
-    .clinical-section { padding: 56px 20px; gap: 40px; }
-    .quote-text { font-size: 18px; }
-    .benefit-card { padding: 22px 24px; }
-    .benefit-title { font-size: 18px; }
-
-    /* Programmes */
-    .programme-grid { gap: 20px; margin-top: 40px; }
-    .programme-header { padding: 28px 24px 20px; }
-    .programme-title { font-size: 26px; }
-    .programme-body { padding: 24px; }
-    .day-item { grid-template-columns: 60px 1fr; gap: 12px; padding: 12px 0; }
-    .day-desc { font-size: 13px; }
-
-    /* Outcomes */
-    .outcomes-grid { margin-top: 40px; }
-    .outcome-card { padding: 28px 24px; }
-    .outcome-num { font-size: 40px; }
-    .outcome-title { font-size: 14px; }
-    .outcome-text { font-size: 13px; }
-
-    /* Journey */
-    .journey-section { padding: 56px 20px; }
-    .journey-steps { grid-template-columns: 1fr; margin-top: 36px; }
-    .journey-step { padding: 28px 24px; }
-    .step-num { font-size: 48px; margin-bottom: 10px; }
-    .step-title { font-size: 20px; }
-    .step-text { font-size: 13px; }
-
-    /* Benefits chips */
+    .stats-band { grid-template-columns: 1fr; padding: 0; }
+    .stats-band-item { border-right: none; border-bottom: 1px solid rgba(107,78,110,0.12); padding: 32px 24px; }
+    .stat-num { font-size: 52px; }
+    .vision-heading { font-size: 36px; }
+    .vision-pillars { grid-template-columns: 1fr; }
+    .what-grid { grid-template-columns: 1fr; }
+    .journey-steps { grid-template-columns: 1fr; }
+    .benefits-row { grid-template-columns: 1fr 1fr; }
+    .mini-cta-heading { font-size: 32px; }
     .benefits-section { padding: 56px 20px; }
-    .benefits-row { grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 32px; }
-    .benefit-chip { padding: 14px; gap: 8px; border-radius: 10px; }
-    .chip-label { font-size: 12px; }
-
-    /* Add-ons */
-    .addons-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 36px; }
-    .addon-card { padding: 24px 20px; }
-    .addon-num { font-size: 36px; margin-bottom: 14px; }
-    .addon-title { font-size: 18px; }
-    .addon-text { font-size: 13px; }
-
-    /* Team */
-    .team-section { padding: 56px 20px; }
-    .team-grid { gap: 20px; margin-top: 40px; }
-    .team-card-top { height: 160px; }
-    .team-card-body { padding: 44px 20px 28px; }
-    .team-name { font-size: 22px; }
-    .team-bio { font-size: 13px; }
-    .team-tags { gap: 5px; }
-    .team-tag { font-size: 10px; padding: 3px 10px; }
-
-    /* Partnership */
-    .partnership-section { display: block; }
-    .partnership-left { padding: 56px 24px 40px; }
-    .partnership-right { padding: 40px 24px 56px; }
-    .partnership-left .section-heading { font-size: 30px; }
-    .partner-feature { grid-template-columns: 40px 1fr; gap: 14px; padding: 20px 0; }
-    .partner-icon { width: 40px; height: 40px; font-size: 16px; border-radius: 10px; }
-    .partner-title { font-size: 18px; }
-    .partner-text { font-size: 13px; }
-
-    /* CTA */
-    .cta-section { padding: 80px 24px !important; }
-    .cta-heading { font-size: 34px; }
-    .cta-text { font-size: 14px; margin-bottom: 36px; }
-    .cta-btn { padding: 16px 28px; font-size: 14px; width: 100%; justify-content: center; }
-    .cta-footnote { font-size: 11px; }
-
-    /* Quote block */
-    .quote-block { padding-left: 20px; margin: 28px 0; }
-    .quote-text { font-size: 17px; }
-
-    /* Outcomes section padding */
-    .outcomes-section { padding: 56px 20px; }
+    .mini-cta { padding: 56px 20px; }
   }
 </style>
 </head>
-<body>
-
-<nav>
-  <div class="nav-brand">
-    <img src="images/logo.jpg" alt="MaatriSparsh" style="height:52px;width:52px;border-radius:12px;object-fit:cover;">
-    <span class="nav-brand-name">MaatriSparsh</span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="#clinical">Clinical Basis</a></li>
-    <li><a href="#programmes">Programmes</a></li>
-    <li><a href="#outcomes">Outcomes</a></li>
-    <li><a href="#addons">Add-Ons</a></li>
-
-  </ul>
-  <div style="display:flex;align-items:center;gap:12px;">
-    <a href="mailto:partnerships@maatrisparsh.com?subject=Clinical%20Demonstration%20Request%20%E2%80%94%20Maatri%20Sparsh%20Wellness&body=Dear%20Maatri%20Sparsh%20Team%2C%0A%0AI%20am%20writing%20to%20request%20a%20clinical%20demonstration%20of%20your%20postpartum%20wellness%20programme%20for%20our%20hospital%2Fmaternity%20unit.%0A%0AHospital%20Name%3A%20%0AContact%20Person%3A%20%0ADesignation%3A%20%0APhone%20Number%3A%20%0APreferred%20Demo%20Date%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you.%0A%0AWarm%20regards" class="nav-cta">Request Demo</a>
-    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- MOBILE MENU DRAWER -->
-<div class="mobile-drawer" id="mobileDrawer">
-  <div class="mobile-drawer-inner">
-    <button class="mobile-drawer-close" id="drawerClose" aria-label="Close menu">&#x2715;</button>
-    <div class="mobile-drawer-brand">
-      <span style="font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--ink);">MaatriSparsh</span>
-      <span style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-muted);font-family:'DM Sans',sans-serif;">Hospital Partnership Programme</span>
-    </div>
-    <nav class="mobile-nav-links">
-      <a href="#clinical" class="mob-link">Clinical Basis</a>
-      <a href="#programmes" class="mob-link">Programmes</a>
-      <a href="#outcomes" class="mob-link">Outcomes</a>
-      <a href="#addons" class="mob-link">Add-Ons</a>
-    </nav>
-    <div class="mobile-drawer-ctas">
-      <a href="mailto:partnerships@maatrisparsh.com?subject=Clinical%20Demonstration%20Request%20%E2%80%94%20Maatri%20Sparsh%20Wellness&body=Dear%20Maatri%20Sparsh%20Team%2C%0A%0AI%20am%20writing%20to%20request%20a%20clinical%20demonstration." class="mob-cta-email">✉ Request Demo by Email</a>
-      <a href="https://wa.me/919340194664?text=Hello%20Maatri%20Sparsh%20Wellness%20Team%2C%0A%0AI%20am%20interested%20in%20your%20postpartum%20wellness%20programme%20and%20would%20like%20to%20explore%20a%20hospital%20partnership%20or%20request%20a%20clinical%20demonstration.%0A%0AThank%20you." target="_blank" class="mob-cta-wa">💬 Chat on WhatsApp</a>
-    </div>
-  </div>
-</div>
-<div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+<body data-page="index">
 
 <!-- HERO -->
 <section class="hero" style="padding:0;">
   <div class="hero-left">
     <div>
-      <img src="images/logo.jpg" alt="MaatriSparsh" style="height:100px;width:100px;border-radius:24px;object-fit:cover;margin-bottom:28px;display:block;box-shadow:0 12px 32px rgba(184,149,106,0.25);">
+      <img src="images/logo.jpg" alt="MaatriSparsh" style="height:88px;width:88px;border-radius:20px;object-fit:cover;margin-bottom:28px;display:block;box-shadow:0 12px 32px rgba(184,149,106,0.25);">
+      <!-- <div class="hero-badge"><span class="badge-dot"></span>Hospital Partnership Programme</div> -->
       <h1 class="hero-title">The Healing<br><em>Touch</em><br>for a Mother</h1>
       <p class="hero-subtitle">MaatriSparsh</p>
-      <p class="hero-desc">A clinically informed, deeply nurturing postpartum recovery programme — designed to support new mothers through evidence-based massage therapy and holistic spa care, delivered directly to your maternity unit.</p>
+      <p class="hero-desc">A clinically informed, deeply nurturing postpartum recovery programme — evidence-based massage therapy and holistic spa care, delivered directly to your maternity ward.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">Request a Demo <span>→</span></a>
+        <a href="about.html" class="btn-outline">Our Vision</a>
+      </div>
       <div class="hero-tags">
         <span class="tag">Trained Therapists</span>
         <span class="tag">Evidence-Based</span>
@@ -1566,30 +679,24 @@
   </div>
   <div class="hero-right">
     <img src="images/hero.jpg" alt="" class="hero-right-photo">
-    <div class="hero-right-overlay"></div>
     <div class="hero-right-content">
-      <!-- Large logo centrepiece -->
       <div class="hero-logo-showcase">
         <div class="hero-logo-glow"></div>
         <img src="images/logo.jpg" alt="MaatriSparsh" class="hero-logo-large">
-        <div class="hero-logo-ring hero-logo-ring-1"></div>
-        <div class="hero-logo-ring hero-logo-ring-2"></div>
+        <div class="hero-logo-ring ring-1"></div>
+        <div class="hero-logo-ring ring-2"></div>
       </div>
-      <!-- Quote below -->
       <div class="hero-right-quote">
         <p class="hero-icon-text">"The healing begins the moment<br>she feels seen and cared for."</p>
       </div>
-      <!-- Floral SVG decoration -->
       <svg class="hero-floral-deco" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <g opacity="0.18" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1">
           <circle cx="100" cy="100" r="80"/>
           <circle cx="100" cy="100" r="60"/>
-          <circle cx="100" cy="100" r="40"/>
           <line x1="100" y1="20" x2="100" y2="180"/>
           <line x1="20" y1="100" x2="180" y2="100"/>
           <line x1="43" y1="43" x2="157" y2="157"/>
           <line x1="157" y1="43" x2="43" y2="157"/>
-          <!-- Petals -->
           <ellipse cx="100" cy="60" rx="12" ry="20" transform="rotate(0 100 100)"/>
           <ellipse cx="100" cy="60" rx="12" ry="20" transform="rotate(45 100 100)"/>
           <ellipse cx="100" cy="60" rx="12" ry="20" transform="rotate(90 100 100)"/>
@@ -1604,163 +711,78 @@
   </div>
 </section>
 
-<!-- STATS BAND -->
+<!-- STATS -->
 <div class="stats-band">
-  <div class="stats-band-item reveal">
-    <span class="stats-band-num">1 in 5</span>
-    <div class="stats-band-label">Mothers experience postpartum depression</div>
-  </div>
-  <div class="stats-band-item reveal">
-    <span class="stats-band-num">68%</span>
-    <div class="stats-band-label">Report inadequate physical recovery support</div>
-  </div>
-  <div class="stats-band-item reveal">
-    <span class="stats-band-num">4×</span>
-    <div class="stats-band-label">Faster recovery with structured massage therapy</div>
-  </div>
-  <div class="stats-band-item reveal">
-    <span class="stats-band-num">53%</span>
-    <div class="stats-band-label">Reduction in postpartum anxiety through therapeutic massage</div>
-  </div>
-  <div class="stats-band-item reveal">
-    <span class="stats-band-num">72%</span>
-    <div class="stats-band-label">Reduction in breast engorgement from Day 1–3</div>
-  </div>
-  <div class="stats-band-item reveal">
-    <span class="stats-band-num">60%</span>
-    <div class="stats-band-label">Reduction in pain within 3 targeted massage sessions</div>
-  </div>
+  <div class="stats-band-item reveal"><span class="stat-num">1 in 5</span><div class="stat-label">Mothers experience postpartum depression</div></div>
+  <div class="stats-band-item reveal"><span class="stat-num">68%</span><div class="stat-label">Report inadequate physical recovery support</div></div>
+  <div class="stats-band-item reveal"><span class="stat-num">4×</span><div class="stat-label">Faster recovery with structured massage therapy</div></div>
+  <div class="stats-band-item reveal"><span class="stat-num">53%</span><div class="stat-label">Reduction in postpartum anxiety through therapeutic massage</div></div>
+  <div class="stats-band-item reveal"><span class="stat-num">72%</span><div class="stat-label">Reduction in breast engorgement from Day 1–3</div></div>
+  <div class="stats-band-item reveal"><span class="stat-num">60%</span><div class="stat-label">Reduction in pain within 3 targeted massage sessions</div></div>
 </div>
 
-<!-- CLINICAL BASIS -->
-<section class="clinical-section" id="clinical" style="padding: 100px 80px;">
-  <div>
-    <div class="section-label reveal">Clinical Foundation</div>
-    <h2 class="section-heading reveal">Why postpartum<br>care <em>cannot wait</em></h2>
-
-    <div class="quote-block reveal">
-      <p class="quote-text">"The postpartum period is one of the most physiologically and emotionally demanding transitions a woman undergoes. Structured therapeutic support significantly improves recovery outcomes, mental health, and maternal bonding."</p>
-      <p class="quote-source">— <a href="https://www.who.int/publications/i/item/9789240045989" target="_blank" rel="noopener" style="color:var(--rose);text-decoration:underline;">WHO Postpartum Care Guidelines, 2022</a></p>
-    </div>
-  </div>
-
-  <div>
-    <div class="benefits-grid reveal">
-      <div class="benefit-card">
-        <div class="benefit-icon">🧬</div>
-        <div class="benefit-title">Oxytocin Release</div>
-        <p class="benefit-text">Therapeutic massage stimulates oxytocin — the bonding hormone — reducing cortisol and alleviating postpartum anxiety by up to 53%.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🩺</div>
-        <div class="benefit-title">Circulation & Recovery</div>
-        <p class="benefit-text">Lymphatic drainage and graduated pressure improve blood circulation, reduce oedema, and accelerate post-surgical wound healing.</p>
-      </div>
-      <div class="benefit-card">
-        <div class="benefit-icon">🤱</div>
-        <div class="benefit-title">Lactation Support</div>
-        <p class="benefit-text">Specialised breast massage enhances milk let-down reflex and reduces engorgement — a key concern in the first postpartum week.</p>
+<!-- VISION -->
+<section class="vision-section">
+  <div class="vision-inner">
+    <div>
+      <div class="section-label reveal">Our Vision</div>
+      <h2 class="vision-heading reveal">Every mother deserves to <em>heal with dignity</em></h2>
+      <p class="vision-text reveal">In India, over 27 million births happen each year. Yet postpartum recovery — a mother's most vulnerable window — is rarely given the clinical attention it deserves. MaatriSparsh was founded to change that.</p>
+      <p class="vision-text reveal">We believe recovery is not a luxury. It is a clinical necessity — and a mother's right. Our mission is to bring evidence-based, compassionate postpartum care into every maternity unit in India.</p>
+      <div class="vision-quote reveal">
+        <p class="vision-quote-text">"A healed mother is the foundation of a healthy family. We exist to make that healing possible."</p>
+        <p class="vision-quote-attr">— MaatriSparsh Founding Philosophy</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- PROGRAMMES -->
-<section class="programmes-section" id="programmes">
-  <div class="section-label reveal">Recovery Pathways</div>
-  <h2 class="section-heading reveal">Our <em>Programmes</em></h2>
-  <p class="section-lead reveal">Carefully designed recovery pathways for every birth type — clinically sequenced, physician-approved, and tailored to the specific physiological needs of each mother from Day 1 through discharge.</p>
-
-  <div class="programme-grid">
-    <div class="programme-card lscs reveal">
-      <div class="programme-header">
-        <div class="programme-type">Post Caesarean Section</div>
-        <div class="programme-title">LSCS Recovery Package</div>
+    <div class="vision-pillars reveal">
+      <div class="pillar-card">
+        <span class="pillar-icon">🌿</span>
+        <div class="pillar-title">Clinical Care</div>
+        <p class="pillar-text">Physician-approved protocols grounded in peer-reviewed research and postpartum physiology.</p>
       </div>
-      <div class="programme-body">
-        <ul class="day-list">
-          <li class="day-item">
-            <span class="day-num">Day 1</span>
-            <div class="day-desc">Rest & recovery — no massage; wound healing prioritised<br><span class="day-duration">Assessment only</span></div>
-          </li>
-          <li class="day-item">
-            <span class="day-num">Day 2</span>
-            <div class="day-desc">Gentle full body massage — slow pace, low pressure · Foot · Back · Head · Shoulder · Neck · Hand<br><span class="day-duration">30 min</span></div>
-          </li>
-          <li class="day-item">
-            <span class="day-num">Day 3</span>
-            <div class="day-desc">Full body massage — mid pace, medium pressure · Progressive recovery<br><span class="day-duration">30 min</span></div>
-          </li>
-          <li class="day-item">
-            <span class="day-num">Day 4</span>
-            <div class="day-desc">Full body massage + spa — complete session with pedicure treatment<br><span class="day-duration">60 min</span></div>
-          </li>
-        </ul>
+      <div class="pillar-card">
+        <span class="pillar-icon">🤝</span>
+        <div class="pillar-title">Hospital Ready</div>
+        <p class="pillar-text">Seamlessly integrated into your existing maternity unit — zero infrastructure investment required.</p>
       </div>
-    </div>
-
-    <div class="programme-card normal reveal">
-      <div class="programme-header">
-        <div class="programme-type">Vaginal Birth</div>
-        <div class="programme-title">Normal Delivery Package</div>
+      <div class="pillar-card">
+        <span class="pillar-icon">🧘</span>
+        <div class="pillar-title">Holistic Healing</div>
+        <p class="pillar-text">Body, mind, and spirit. From lymphatic drainage to Ayurvedic marma therapy.</p>
       </div>
-      <div class="programme-body">
-        <ul class="day-list">
-          <li class="day-item">
-            <span class="day-num">Day 1</span>
-            <div class="day-desc">Gentle full body recovery session — restorative therapy begins<br><span class="day-duration">30 min</span></div>
-          </li>
-          <li class="day-item">
-            <span class="day-num">Day 2</span>
-            <div class="day-desc">Full body massage — continued restorative therapy<br><span class="day-duration">30 min</span></div>
-          </li>
-          <li class="day-item">
-            <span class="day-num">Day 3</span>
-            <div class="day-desc">Full body massage — progressive recovery with lymphatic drainage<br><span class="day-duration">30 min</span></div>
-          </li>
-          <li class="day-item">
-            <span class="day-num">Day 4</span>
-            <div class="day-desc">Full body massage + spa — complete wellness session with pedicure<br><span class="day-duration">60 min</span></div>
-          </li>
-        </ul>
+      <div class="pillar-card">
+        <span class="pillar-icon">📊</span>
+        <div class="pillar-title">Measurable Outcomes</div>
+        <p class="pillar-text">Track recovery metrics, patient satisfaction, and programme ROI with full transparency.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- OUTCOMES -->
-<section class="outcomes-section" id="outcomes">
-  <div class="section-label reveal">Research-Backed Outcomes</div>
-  <h2 class="section-heading reveal">Every session grounded<br>in <em>peer-reviewed science</em></h2>
-  <p class="section-lead reveal">Combining clinical rigour with compassionate, hands-on care — adapted for postpartum mothers in Indian hospital settings.</p>
+<!-- WHAT WE DO -->
+<section class="what-we-do">
+  <div class="section-label reveal">What We Do</div>
+  <h2 class="section-heading reveal">Postpartum wellness,<br><em>redefined</em></h2>
+  <p class="section-lead reveal">From certified massage therapy to specialised clinical add-ons — every service is designed with the postpartum mother at its centre.</p>
 
-  <div class="outcomes-grid">
-    <div class="outcome-card reveal">
-      <div class="outcome-num">31<span class="outcome-unit">%</span></div>
-      <div class="outcome-title">Mental Health & Emotional Recovery</div>
-      <p class="outcome-text">Therapeutic massage activates the parasympathetic nervous system, reducing cortisol by up to 31% and increasing serotonin levels by 28%. Regular touch therapy has proven efficacy equivalent to mild antidepressant interventions.</p>
-      <div class="outcome-source"><a href="https://nimhans.ac.in/maternal-mental-health" target="_blank" rel="noopener">NIMHANS Maternal Mental Health Report, 2023</a> · <a href="https://doi.org/10.1097/AJP.0000000000000727" target="_blank" rel="noopener">Field et al., 2020</a></div>
+  <div class="what-grid">
+    <div class="what-card reveal">
+      <div class="what-icon">💆</div>
+      <div class="what-title">Postpartum Massage Therapy</div>
+      <p class="what-text">Progressive, clinically sequenced full-body massage programmes for both LSCS and normal delivery mothers — beginning from Day 1 of admission.</p>
+      <a href="services.html" class="what-link">Explore Services <span>→</span></a>
     </div>
-
-    <div class="outcome-card reveal">
-      <div class="outcome-num">2.4<span class="outcome-unit"> pts</span></div>
-      <div class="outcome-title">Post-Surgical Wound Recovery</div>
-      <p class="outcome-text">For LSCS mothers, graduated massage promotes micro-circulation accelerating fascial healing. Reduced peripheral oedema decreases pain scores by an average of 2.4 points on the VAS scale. Hospital discharge readiness improves by 1–2 days.</p>
-      <div class="outcome-source">Indian Journal of Anaesthesia, 2022 · JAMA Obstetrics & Gynecology, 2021</div>
+    <div class="what-card reveal">
+      <div class="what-icon">🤱</div>
+      <div class="what-title">Lactation & Breast Care</div>
+      <p class="what-text">Specialised breast massage to stimulate milk flow, relieve engorgement, and improve breastfeeding confidence from the very first days.</p>
+      <a href="services.html#addons" class="what-link">Learn More <span>→</span></a>
     </div>
-
-    <div class="outcome-card reveal">
-      <div class="outcome-num">72<span class="outcome-unit">%</span></div>
-      <div class="outcome-title">Breastfeeding & Lactation</div>
-      <p class="outcome-text">Breast massage targeting the Montgomery glands and milk ducts increases prolactin sensitivity and improves let-down reflex. Engorgement is reduced by 72% with consistent therapeutic breast massage from Day 1–3 postpartum.</p>
-      <div class="outcome-source"><a href="https://www.liebertpub.com/journal/bfm" target="_blank" rel="noopener">Breastfeeding Medicine Journal, 2023</a> · <a href="https://www.who.int/health-topics/breastfeeding" target="_blank" rel="noopener">WHO Infant Feeding Guidelines</a></div>
-    </div>
-
-    <div class="outcome-card reveal">
-      <div class="outcome-num">40<span class="outcome-unit">%</span></div>
-      <div class="outcome-title">Pain Management & Sleep Quality</div>
-      <p class="outcome-text">Targeted back, shoulder, and neck massage reduces reported pain by 60% within 3 sessions. Sleep quality — a critical predictor of postpartum recovery — improves by up to 40% as measured by PSQI scores.</p>
-      <div class="outcome-source"><a href="https://academic.oup.com/painmedicine" target="_blank" rel="noopener">Pain Medicine Journal, 2022</a> · <a href="https://fogsi.org" target="_blank" rel="noopener">Indian Obstetric Society, 2023</a></div>
+    <div class="what-card reveal">
+      <div class="what-icon">🌸</div>
+      <div class="what-title">Spa & Holistic Wellness</div>
+      <p class="what-text">Pedicure, reflexology, head & scalp therapy, and Ayurvedic marma point treatment — restoring the mother's sense of self and joy.</p>
+      <a href="services.html#addons" class="what-link">View Add-Ons <span>→</span></a>
     </div>
   </div>
 </section>
@@ -1768,8 +790,8 @@
 <!-- JOURNEY -->
 <section class="journey-section">
   <div class="section-label reveal">The Recovery Path</div>
-  <h2 class="section-heading reveal">The Maatri Sparsh <em>Journey</em></h2>
-  <p class="section-lead reveal">A carefully sequenced recovery path — from first day of admission to radiant wellness. Each stage builds on the last, ensuring safe, progressive, and deeply restorative care.</p>
+  <h2 class="section-heading reveal">The MaatriSparsh <em>Journey</em></h2>
+  <p class="section-lead reveal">A carefully sequenced recovery path — from first day of admission to radiant wellness.</p>
 
   <div class="journey-steps">
     <div class="journey-step reveal">
@@ -1799,7 +821,7 @@
   </div>
 </section>
 
-<!-- HOLISTIC BENEFITS -->
+<!-- BENEFITS -->
 <section class="benefits-section">
   <div class="section-label reveal">Holistic Impact</div>
   <h2 class="section-heading reveal" style="font-size:36px;">Benefits at a <em>Glance</em></h2>
@@ -1815,229 +837,17 @@
   </div>
 </section>
 
-<!-- ADD-ONS -->
-<section class="addons-section" id="addons">
-  <div class="section-label reveal">Specialised Therapies</div>
-  <h2 class="section-heading reveal">Clinically Targeted <em>Add-On</em> Treatments</h2>
-  <p class="section-lead reveal">Available as an upgrade to any package — each performed by certified therapists using medically approved techniques.</p>
-
-  <div class="addons-grid">
-    <div class="addon-card reveal">
-      <div class="addon-num">01</div>
-      <div class="addon-title">Breast Massage & Lactation Support</div>
-      <div class="addon-duration">1–2 Hour Session</div>
-      <p class="addon-text">Relieves engorgement, stimulates milk flow, unblocks ducts, and enhances breastfeeding comfort. Reduces mastitis risk and increases breastfeeding confidence. Includes home care guidance.</p>
-    </div>
-    <div class="addon-card reveal">
-      <div class="addon-num">02</div>
-      <div class="addon-title">Spinal Headache & Epidural Recovery</div>
-      <div class="addon-duration">1.5 Hour Session</div>
-      <p class="addon-text">Targeted therapy for post-epidural spinal headache. Combines cranio-sacral technique, deep neck massage, and pressure point therapy for rapid, non-pharmacological relief and improved CSF balance.</p>
-    </div>
-    <div class="addon-card reveal">
-      <div class="addon-num">03</div>
-      <div class="addon-title">Reflexology Foot Therapy</div>
-      <div class="addon-duration">45 Min – 1 Hour Session</div>
-      <p class="addon-text">Therapeutic foot reflexology targeting uterine, pituitary, and adrenal reflex zones. Promotes hormonal regulation, reduces postpartum fatigue, and supports natural uterine involution.</p>
-    </div>
-    <div class="addon-card reveal">
-      <div class="addon-num">04</div>
-      <div class="addon-title">Head, Scalp & Marma Therapy</div>
-      <div class="addon-duration">30–45 Min Session</div>
-      <p class="addon-text">Traditional Indian marma point therapy combined with scalp massage. Addresses postpartum hair fall, migraines, and mental fatigue. Promotes deep emotional healing rooted in Ayurvedic wisdom.</p>
-    </div>
+<!-- MINI CTA -->
+<section class="mini-cta" style="position:relative;z-index:1;">
+  <div class="section-label reveal" style="color:rgba(255,220,240,0.7);justify-content:center;">
+    <span style="background:rgba(255,220,240,0.7);height:1px;width:32px;"></span>
+    Take the Next Step
   </div>
+  <h2 class="mini-cta-heading reveal">Ready to bring <em>compassionate care</em><br>to your maternity ward?</h2>
+  <p class="mini-cta-text reveal">Arrange a clinical demonstration or partnership discussion. We respond within 24 hours.</p>
+  <a href="contact.html" class="btn-primary reveal" style="display:inline-flex;">Request a Clinical Demonstration <span>→</span></a>
 </section>
 
-<!-- PARTNERSHIP -->
-<section class="partnership-section" style="padding:0;" id="contact">
-  <div class="partnership-left">
-    <div class="section-label">For Hospitals</div>
-    <h2 class="section-heading">Partner <em>With Us</em></h2>
-    <p class="section-lead">Support every new mother's healing journey from day one. Maatri Sparsh Wellness integrates seamlessly into your existing maternity care framework — enhancing patient satisfaction, improving clinical outcomes, and differentiating your facility.</p>
-  </div>
-  <div class="partnership-right">
-    <div class="partner-feature reveal">
-      <div class="partner-icon">🏥</div>
-      <div>
-        <div class="partner-title">In-Hospital Service</div>
-        <p class="partner-text">We come to your facility. Zero infrastructure investment required. Our therapists operate within your existing clinical environment, fully insured and compliant with all hospital protocols and hygiene standards.</p>
-      </div>
-    </div>
-    <div class="partner-feature reveal">
-      <div class="partner-icon">🎓</div>
-      <div>
-        <div class="partner-title">Certified Therapists</div>
-        <p class="partner-text">All therapists trained in postpartum care with doctor-approved protocols. Background-checked, clinically supervised, and experienced in working within hospital settings.</p>
-      </div>
-    </div>
-    <div class="partner-feature reveal">
-      <div class="partner-icon">📊</div>
-      <div>
-        <div class="partner-title">Measurable Outcomes</div>
-        <p class="partner-text">Track patient satisfaction, recovery metrics, and programme ROI. We provide structured reporting to support your quality and outcomes frameworks with full transparency.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section" style="padding: 120px 80px;">
-  <div class="cta-label reveal">Take the Next Step</div>
-  <h2 class="cta-heading reveal">Ready to bring<br><em>compassionate care</em><br>to your maternity ward?</h2>
-  <p class="cta-text reveal">To arrange a clinical demonstration or partnership discussion, please contact our hospital relations team. We will respond within 24 hours.</p>
-  <a href="mailto:partnerships@maatrisparsh.com?subject=Clinical%20Demonstration%20Request%20%E2%80%94%20Maatri%20Sparsh%20Wellness&body=Dear%20Maatri%20Sparsh%20Team%2C%0A%0AI%20am%20writing%20to%20request%20a%20clinical%20demonstration%20of%20your%20postpartum%20wellness%20programme%20for%20our%20hospital%2Fmaternity%20unit.%0A%0AHospital%20Name%3A%20%0AContact%20Person%3A%20%0ADesignation%3A%20%0APhone%20Number%3A%20%0APreferred%20Demo%20Date%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you.%0A%0AWarm%20regards" class="cta-btn reveal">
-    Request a Clinical Demonstration
-    <span>→</span>
-  </a>
-</section>
-
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const siblings = el.parentElement.querySelectorAll('.reveal');
-        let delay = 0;
-        siblings.forEach((s, idx) => { if (s === el) delay = idx * 80; });
-        setTimeout(() => el.classList.add('visible'), delay);
-        observer.unobserve(el);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  const dayObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const items = entry.target.querySelectorAll('.day-item');
-        items.forEach((item, i) => {
-          setTimeout(() => item.classList.add('visible'), i * 120);
-        });
-        dayObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  document.querySelectorAll('.programme-card').forEach(card => dayObserver.observe(card));
-
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // close drawer if open
-      document.getElementById('mobileDrawer').classList.remove('open');
-      document.getElementById('drawerOverlay').classList.remove('open');
-    });
-  });
-
-  // Hamburger drawer
-  const hamburger = document.getElementById('navHamburger');
-  const drawer = document.getElementById('mobileDrawer');
-  const overlay = document.getElementById('drawerOverlay');
-  const closeBtn = document.getElementById('drawerClose');
-
-  function openDrawer() {
-    drawer.classList.add('open');
-    overlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeDrawer() {
-    drawer.classList.remove('open');
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  hamburger.addEventListener('click', openDrawer);
-  closeBtn.addEventListener('click', closeDrawer);
-  overlay.addEventListener('click', closeDrawer);
-</script>
-
-<!-- WHATSAPP FLOATING BUTTON -->
-<style>
-  .wa-float {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-  }
-  .wa-tooltip {
-    background: var(--warm-white);
-    border: 1px solid rgba(0,0,0,0.08);
-    border-radius: 12px;
-    padding: 10px 16px;
-    font-size: 13px;
-    color: var(--ink-soft);
-    white-space: nowrap;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.10);
-    opacity: 0;
-    transform: translateX(10px);
-    transition: opacity 0.3s, transform 0.3s;
-    pointer-events: none;
-    line-height: 1.5;
-  }
-  .wa-tooltip strong {
-    display: block;
-    font-size: 12px;
-    color: var(--ink-muted);
-    margin-bottom: 2px;
-    font-weight: 500;
-  }
-  .wa-float:hover .wa-tooltip { opacity: 1; transform: translateX(0); }
-  .wa-btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #25D366;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 6px 24px rgba(37,211,102,0.40);
-    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s;
-    position: relative;
-  }
-  .wa-btn:hover { transform: scale(1.12); box-shadow: 0 10px 32px rgba(37,211,102,0.50); }
-  .wa-btn svg { width: 32px; height: 32px; fill: white; }
-  .wa-pulse {
-    position: absolute;
-    inset: 0;
-    border-radius: 50%;
-    background: #25D366;
-    animation: wa-pulse-anim 2.5s ease-out infinite;
-    z-index: -1;
-  }
-  @keyframes wa-pulse-anim {
-    0%   { transform: scale(1);   opacity: 0.6; }
-    70%  { transform: scale(1.5); opacity: 0; }
-    100% { transform: scale(1.5); opacity: 0; }
-  }
-  @media (max-width: 900px) {
-    .wa-float { bottom: 20px; right: 20px; }
-    .wa-tooltip { display: none; }
-  }
-</style>
-
-<div class="wa-float">
-  <div class="wa-tooltip">
-    <strong>Quick Connect</strong>
-    Chat with us on WhatsApp
-  </div>
-  <a class="wa-btn"
-    href="https://wa.me/919340194664?text=Hello%20Maatri%20Sparsh%20Wellness%20Team%2C%0A%0AI%20am%20interested%20in%20your%20postpartum%20wellness%20programme%20and%20would%20like%20to%20explore%20a%20hospital%20partnership%20or%20request%20a%20clinical%20demonstration.%0A%0APlease%20get%20in%20touch%20at%20your%20earliest%20convenience.%0A%0AThank%20you."
-    target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
-    <div class="wa-pulse"></div>
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-      <path d="M16 2C8.268 2 2 8.268 2 16c0 2.47.668 4.784 1.832 6.77L2 30l7.43-1.79A13.94 13.94 0 0016 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.6a11.56 11.56 0 01-5.9-1.614l-.424-.252-4.408 1.062 1.1-4.29-.278-.44A11.56 11.56 0 014.4 16C4.4 9.593 9.593 4.4 16 4.4S27.6 9.593 27.6 16 22.407 27.6 16 27.6zm6.34-8.64c-.348-.174-2.06-1.016-2.38-1.132-.32-.116-.552-.174-.784.174-.232.348-.9 1.132-1.104 1.364-.204.232-.406.26-.754.086-.348-.174-1.47-.542-2.8-1.726-1.034-.922-1.732-2.06-1.936-2.408-.204-.348-.022-.536.154-.71.158-.156.348-.406.522-.61.174-.202.232-.348.348-.58.116-.232.058-.436-.028-.61-.088-.174-.784-1.89-1.074-2.59-.282-.68-.57-.588-.784-.598l-.668-.012c-.232 0-.61.086-.928.434-.32.348-1.218 1.19-1.218 2.902s1.248 3.366 1.422 3.598c.174.232 2.456 3.748 5.952 5.258.832.36 1.482.574 1.988.734.836.266 1.596.228 2.198.138.67-.1 2.06-.842 2.35-1.656.29-.814.29-1.512.204-1.656-.086-.144-.318-.232-.666-.406z"/>
-    </svg>
-  </a>
-</div>
-
+<script src="shared.js"></script>
 </body>
 </html>

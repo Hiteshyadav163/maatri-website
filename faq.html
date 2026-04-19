@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Frequently asked questions about MaatriSparsh postpartum wellness programmes.">
+<title>FAQ — MaatriSparsh</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .faq-layout {
+    padding: 80px;
+    background: var(--warm-white);
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* ─── SIDEBAR ─── */
+  .faq-sidebar {
+    position: sticky;
+    top: 100px;
+  }
+
+  .faq-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 24px;
+  }
+
+  .cat-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--ink-muted);
+    text-align: left;
+    transition: all 0.2s;
+    font-weight: 400;
+  }
+
+  .cat-btn:hover { background: var(--rose-light); color: var(--rose); }
+  .cat-btn.active { background: var(--rose-light); color: var(--rose); font-weight: 500; }
+
+  .cat-btn .cat-icon { font-size: 16px; }
+
+  .faq-search-wrap {
+    margin-bottom: 28px;
+    position: relative;
+  }
+
+  .faq-search {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(0,0,0,0.1);
+    background: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .faq-search:focus { border-color: var(--rose); }
+
+  .search-icon {
+    position: absolute;
+    left: 12px; top: 50%;
+    transform: translateY(-50%);
+    color: var(--ink-muted);
+    font-size: 14px;
+    pointer-events: none;
+  }
+
+  /* ─── FAQ LIST ─── */
+  .faq-section {
+    margin-bottom: 60px;
+  }
+
+  .faq-cat-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .faq-cat-heading em { font-style: italic; color: var(--rose); }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 22px 0;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--ink);
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    transition: color 0.2s;
+  }
+  .faq-question:hover { color: var(--rose); }
+  .faq-question.open { color: var(--rose); }
+
+  .faq-chevron {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--rose-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 12px;
+    color: var(--rose);
+    transition: transform 0.3s, background 0.2s;
+  }
+  .faq-question.open .faq-chevron { transform: rotate(180deg); background: var(--rose); color: white; }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .faq-answer.open { max-height: 600px; }
+
+  .faq-answer-inner {
+    padding: 0 0 24px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+  }
+
+  .faq-answer-inner p { margin-bottom: 12px; }
+  .faq-answer-inner p:last-child { margin-bottom: 0; }
+
+  .faq-answer-inner strong { color: var(--ink); font-weight: 600; }
+
+  .no-results {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .no-results.show { display: block; }
+  .no-results-icon { font-size: 48px; margin-bottom: 16px; }
+  .no-results-text { font-size: 16px; color: var(--ink-muted); }
+
+  /* ─── CTA ─── */
+  .faq-cta {
+    background: var(--plum-light);
+    border-radius: 24px;
+    padding: 40px;
+    margin-top: 48px;
+    text-align: center;
+  }
+
+  .faq-cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .faq-cta h3 em { font-style: italic; color: var(--plum); }
+  .faq-cta p { font-size: 14px; color: var(--ink-muted); margin-bottom: 20px; line-height: 1.7; }
+  .faq-cta a {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--plum); color: white;
+    border-radius: 100px; padding: 12px 28px;
+    font-size: 14px; font-weight: 500;
+    text-decoration: none; transition: all 0.2s;
+  }
+  .faq-cta a:hover { background: #5a3f5c; transform: translateY(-1px); }
+
+  @media (max-width: 900px) {
+    .faq-layout { grid-template-columns: 1fr; padding: 60px 32px; }
+    .faq-sidebar { position: static; }
+    .faq-categories { flex-direction: row; flex-wrap: wrap; }
+    .cat-btn { flex: none; }
+  }
+
+  @media (max-width: 600px) {
+    .faq-layout { padding: 56px 20px; }
+    .faq-question { font-size: 15px; }
+    .faq-cat-heading { font-size: 26px; }
+    .faq-categories { gap: 6px; }
+  }
+</style>
+</head>
+<body data-page="faq">
+
+<div class="page-hero">
+  <div class="page-hero-label">FAQ</div>
+  <h1>Frequently Asked <em>Questions</em></h1>
+  <p class="page-hero-lead">Everything you need to know about MaatriSparsh — our services, our clinical approach, and how we work with hospitals.</p>
+</div>
+
+<section class="faq-layout">
+  <!-- Sidebar -->
+  <div class="faq-sidebar">
+    <div class="section-label">Browse by Topic</div>
+
+    <div class="faq-search-wrap">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="faq-search" id="faqSearch" placeholder="Search questions…" oninput="filterFAQ(this.value)">
+    </div>
+
+    <div class="faq-categories">
+      <button class="cat-btn active" onclick="scrollToSection('general')">
+        <span class="cat-icon">📋</span> General
+      </button>
+      <button class="cat-btn" onclick="scrollToSection('clinical')">
+        <span class="cat-icon">🩺</span> Clinical
+      </button>
+      <button class="cat-btn" onclick="scrollToSection('hospital')">
+        <span class="cat-icon">🏥</span> For Hospitals
+      </button>
+      <button class="cat-btn" onclick="scrollToSection('therapists')">
+        <span class="cat-icon">👐</span> Our Therapists
+      </button>
+      <button class="cat-btn" onclick="scrollToSection('logistics')">
+        <span class="cat-icon">🚗</span> Logistics & Pricing
+      </button>
+    </div>
+  </div>
+
+  <!-- Questions -->
+  <div id="faqContent">
+    <!-- GENERAL -->
+    <div class="faq-section reveal" id="general">
+      <h2 class="faq-cat-heading">General <em>Questions</em></h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          What is MaatriSparsh? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>MaatriSparsh is a certified postpartum wellness programme that brings evidence-based massage therapy and holistic spa care directly to hospital maternity wards. We partner with hospitals to deliver in-ward recovery services for new mothers — from Day 1 of admission through discharge.</p>
+            <p>Our name combines "Maatri" (mother, in Sanskrit) and "Sparsh" (touch) — reflecting our core belief that compassionate, therapeutic touch is essential to a mother's postpartum healing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          Who are your services for? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Our primary partnership model is B2B — we work directly with hospitals, maternity units, and nursing homes to integrate our services into their postpartum care offering. Individual mothers benefit from our services through their hospital's programme.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How does the hospital partnership model work? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>We partner with maternity units to offer our programmes as an add-on service for admitted postpartum mothers. Our therapists come to your facility on a scheduled basis, work within your ward environment, and follow your clinical protocols. There is no infrastructure investment required from the hospital.</p>
+            <p>We handle all therapist scheduling, equipment, and client communication. You benefit from enhanced patient satisfaction and improved recovery outcomes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLINICAL -->
+    <div class="faq-section reveal" id="clinical">
+      <h2 class="faq-cat-heading">Clinical <em>Questions</em></h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          Is postpartum massage evidence-based? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p><strong>Yes.</strong> There is substantial peer-reviewed evidence supporting the clinical benefits of postpartum massage therapy. Key findings include: reduction in cortisol levels by up to 31%, improvement in oxytocin levels, 53% reduction in postpartum anxiety, 72% reduction in breast engorgement, and measurable improvement in pain scores and sleep quality.</p>
+            <p>Our protocols are designed in consultation with our clinical advisory board and are aligned with WHO Postpartum Care Guidelines (2022).</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          Is massage safe after a caesarean section? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p><strong>Yes, when performed correctly.</strong> Our LSCS programme is specifically designed for post-caesarean mothers. On Day 1 post-surgery, we only perform an assessment — no massage. From Day 2, we begin with gentle, low-pressure massage avoiding the surgical site completely. We progressively increase depth and coverage as healing progresses.</p>
+            <p>All sessions for LSCS mothers are conducted only after therapist assessment and with physician clearance as per hospital protocol.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          What contraindications do you check for? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Before each session, our therapists review the mother's medical notes and check for contraindications including: active infection or fever, blood clots (DVT), pre-eclampsia or eclampsia, open or infected wounds, haematoma, active bleeding, and any physician-indicated restrictions.</p>
+            <p>Any session where contraindications are present is postponed until clinical clearance is obtained.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How does the lactation support service work? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Our breast massage and lactation support service is offered as an add-on to any programme. It involves gentle therapeutic massage targeting the breast tissue, Montgomery glands, and milk ducts to stimulate milk flow, relieve engorgement, and unblock ducts.</p>
+            <p>Sessions last 1–2 hours and include guidance on home care techniques for continued benefit. We do not replace lactation consultants — we complement their work as part of a holistic care team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOSPITAL -->
+    <div class="faq-section reveal" id="hospital">
+      <h2 class="faq-cat-heading">For <em>Hospitals</em></h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          What does the hospital need to provide? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Very little. Our therapists bring all necessary equipment and supplies. You need to provide: access to the maternity ward during agreed hours, a notification system to alert our team when new mothers are admitted, and a brief orientation for our therapists to your facility's layout and protocols.</p>
+            <p>We integrate into your existing clinical environment — no renovation, no new equipment, no additional staff required.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How do you measure outcomes for our hospital? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>We track and report on: patient satisfaction scores (pre/post programme), pain scores (VAS), sleep quality, breastfeeding rates, session attendance, and any adverse events (of which we have none to date).</p>
+            <p>Monthly and quarterly reports are provided to partner hospitals in a format that integrates with standard quality frameworks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          Are your therapists covered by insurance? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Yes. All MaatriSparsh therapists are covered by professional liability insurance. We also carry general commercial liability insurance. Certificates are available upon request during the partnership discussion process.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- THERAPISTS -->
+    <div class="faq-section reveal" id="therapists">
+      <h2 class="faq-cat-heading">Our <em>Therapists</em></h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          What training do your therapists have? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>All MaatriSparsh therapists complete a rigorous certification programme covering: postpartum anatomy and physiology, therapeutic massage techniques (Swedish, lymphatic drainage, deep tissue), clinical contraindications, infection control and hygiene in hospital settings, Ayurvedic marma therapy fundamentals, and lactation support techniques.</p>
+            <p>They also complete ongoing refresher training and clinical supervision. All therapists are background-checked before deployment.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How many therapists will work at our facility? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>The number of therapists assigned to your facility depends on your maternity unit's admission volume. We work with you during the onboarding process to calculate the appropriate team size and scheduling frequency. Typically, one therapist can serve 4–6 mothers per day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGISTICS -->
+    <div class="faq-section reveal" id="logistics">
+      <h2 class="faq-cat-heading">Logistics &amp; <em>Pricing</em></h2>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          Which cities do you currently serve? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>We are currently operating in select cities and expanding rapidly. Please contact us to discuss whether we are able to serve your location — or to express interest in being among our first partners in a new city.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How is the programme priced? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Pricing is structured on a per-session or per-programme basis and varies based on location, volume, and programme type. We offer flexible partnership models — including revenue-sharing arrangements with hospitals.</p>
+            <p>Please contact us at <a href="mailto:partnerships@maatrisparsh.com" style="color:var(--rose);">partnerships@maatrisparsh.com</a> to receive a detailed proposal tailored to your facility.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+          How do we get started? <span class="faq-chevron">▼</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>The easiest way is to <a href="contact.html" style="color:var(--rose);">fill out our contact form</a> or reach us on <a href="https://wa.me/919340194664" style="color:var(--rose);">WhatsApp</a>. We'll arrange a brief introductory call, followed by a clinical demonstration at your facility at no cost. From there, we design a bespoke partnership proposal within 5–7 working days.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STILL HAVE QUESTIONS -->
+    <div class="faq-cta reveal">
+      <h3>Still have a <em>question?</em></h3>
+      <p>Our team is happy to answer any questions not covered here. Reach out directly — we typically respond within 24 hours.</p>
+      <a href="contact.html">Contact Us →</a>
+    </div>
+
+    <div class="no-results" id="noResults">
+      <div class="no-results-icon">🔍</div>
+      <p class="no-results-text">No questions match your search. Try different keywords or <a href="contact.html" style="color:var(--rose);">contact us directly</a>.</p>
+    </div>
+  </div>
+</section>
+
+<script src="shared.js"></script>
+<script>
+function toggleFAQ(btn) {
+  const item = btn.parentElement;
+  const answer = item.querySelector('.faq-answer');
+  const isOpen = btn.classList.contains('open');
+
+  // Close all
+  document.querySelectorAll('.faq-question.open').forEach(q => {
+    q.classList.remove('open');
+    q.parentElement.querySelector('.faq-answer').classList.remove('open');
+  });
+
+  if (!isOpen) {
+    btn.classList.add('open');
+    answer.classList.add('open');
+  }
+}
+
+function scrollToSection(id) {
+  document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function filterFAQ(query) {
+  const q = query.toLowerCase().trim();
+  const items = document.querySelectorAll('.faq-item');
+  let found = 0;
+
+  items.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    item.style.display = (!q || text.includes(q)) ? '' : 'none';
+    if (!q || text.includes(q)) found++;
+  });
+
+  document.querySelectorAll('.faq-cat-heading').forEach(h => {
+    const section = h.parentElement;
+    const visible = [...section.querySelectorAll('.faq-item')].some(i => i.style.display !== 'none');
+    section.style.display = visible ? '' : 'none';
+  });
+
+  document.getElementById('noResults').classList.toggle('show', found === 0 && q.length > 0);
+}
+</script>
+</body>
+</html>

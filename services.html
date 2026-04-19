@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="MaatriSparsh services — postpartum massage therapy, lactation support, and holistic wellness add-ons.">
+<title>Services — MaatriSparsh</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  /* ─── CLINICAL BASIS ─── */
+  .clinical-section {
+    background: var(--warm-white);
+    padding: 100px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .quote-block {
+    border-left: 3px solid var(--rose);
+    padding-left: 32px;
+    margin: 40px 0;
+  }
+
+  .quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+  }
+
+  .quote-source {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--ink-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .benefits-grid {
+    display: grid;
+    gap: 1px;
+    background: rgba(0,0,0,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .benefit-card {
+    background: var(--warm-white);
+    padding: 28px 32px;
+    transition: background 0.3s;
+    cursor: default;
+  }
+  .benefit-card:hover { background: var(--rose-light); }
+
+  .benefit-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--plum-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+
+  .benefit-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .benefit-text { font-size: 14px; line-height: 1.65; color: var(--ink-soft); }
+
+  /* ─── CORE SERVICES ─── */
+  .services-section {
+    background: var(--cream);
+    padding: 100px 80px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 60px;
+  }
+
+  .service-card {
+    background: var(--warm-white);
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(107,78,110,0.12); }
+
+  .service-header {
+    padding: 40px 40px 28px;
+  }
+
+  .service-card.lscs .service-header { background: linear-gradient(135deg,#E8D0CC,#D4B5C8); }
+  .service-card.normal .service-header { background: linear-gradient(135deg,#C8D8C0,#B5C8D4); }
+
+  .service-type {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(30,26,26,0.5);
+    margin-bottom: 8px;
+  }
+
+  .service-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .service-desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+  }
+
+  .service-body { padding: 36px 40px; }
+
+  .what-included-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 20px;
+  }
+
+  .inclusion-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+
+  .inclusion-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  .inclusion-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--rose);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  /* ─── OUTCOMES ─── */
+  .outcomes-section {
+    background: var(--warm-white);
+    padding: 100px 80px;
+  }
+
+  .outcomes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(0,0,0,0.06);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 60px;
+  }
+
+  .outcome-card {
+    background: var(--warm-white);
+    padding: 40px;
+    transition: background 0.3s;
+  }
+  .outcome-card:hover { background: var(--plum-light); }
+
+  .outcome-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 400;
+    color: var(--plum);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .outcome-unit { font-size: 18px; color: var(--plum-mid); }
+
+  .outcome-title { font-size: 15px; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
+
+  .outcome-text { font-size: 13px; line-height: 1.7; color: var(--ink-muted); margin-bottom: 12px; }
+
+  .outcome-source { font-size: 11px; color: var(--rose); font-style: italic; }
+  .outcome-source a { color: var(--rose); text-decoration: underline; }
+
+  /* ─── ADD-ONS ─── */
+  .addons-section {
+    background: var(--cream);
+    padding: 100px 80px;
+  }
+
+  .addons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+  }
+
+  .addon-card {
+    background: var(--warm-white);
+    border-radius: 20px;
+    padding: 40px 36px;
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+  .addon-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(107,78,110,0.12); border-color: var(--plum-mid); }
+
+  .addon-num-box {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 300;
+    color: var(--rose-mid);
+    line-height: 1;
+    width: 60px;
+  }
+
+  .addon-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .addon-duration {
+    font-size: 11px;
+    color: var(--rose);
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .addon-text { font-size: 14px; line-height: 1.7; color: var(--ink-muted); }
+
+  /* ─── CTA STRIP ─── */
+  .cta-strip {
+    background: #8B3A7E;
+    padding: 80px;
+    text-align: center;
+  }
+
+  .cta-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  .cta-heading em { font-style: italic; color: #FFD6F0; }
+
+  .cta-text { font-size: 15px; color: rgba(255,235,248,0.65); max-width: 440px; margin: 0 auto 36px; line-height: 1.8; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--rose); color: white;
+    border-radius: 100px; padding: 14px 32px;
+    font-size: 14px; font-weight: 500;
+    text-decoration: none; transition: all 0.3s;
+  }
+  .btn-primary:hover { background: #b3635a; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(201,117,106,0.35); }
+
+  @media (max-width: 900px) {
+    .clinical-section { grid-template-columns: 1fr; gap: 40px; padding: 60px 32px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .outcomes-grid { grid-template-columns: 1fr; }
+    .addons-grid { grid-template-columns: 1fr; }
+    .cta-strip { padding: 60px 32px; }
+  }
+
+  @media (max-width: 600px) {
+    .services-section { padding: 56px 20px; }
+    .outcomes-section { padding: 56px 20px; }
+    .addons-section { padding: 56px 20px; }
+    .service-header { padding: 28px 24px 20px; }
+    .service-body { padding: 24px; }
+    .addon-card { grid-template-columns: 1fr; gap: 12px; }
+    .cta-heading { font-size: 32px; }
+  }
+</style>
+</head>
+<body data-page="services">
+
+<div class="page-hero">
+  <div class="page-hero-label">Our Services</div>
+  <h1>Care designed around <em>her recovery</em></h1>
+  <p class="page-hero-lead">Every service we offer is clinically sequenced, physician-approved, and delivered by certified therapists — from the very first day of admission.</p>
+</div>
+
+<!-- CLINICAL BASIS -->
+<section class="clinical-section" id="clinical">
+  <div>
+    <div class="section-label reveal">Clinical Foundation</div>
+    <h2 class="section-heading reveal">Why postpartum care<br><em>cannot wait</em></h2>
+
+    <div class="quote-block reveal">
+      <p class="quote-text">"The postpartum period is one of the most physiologically and emotionally demanding transitions a woman undergoes. Structured therapeutic support significantly improves recovery outcomes, mental health, and maternal bonding."</p>
+      <p class="quote-source">— <a href="https://www.who.int/publications/i/item/9789240045989" target="_blank" rel="noopener" style="color:var(--rose);text-decoration:underline;">WHO Postpartum Care Guidelines, 2022</a></p>
+    </div>
+  </div>
+
+  <div>
+    <div class="benefits-grid reveal">
+      <div class="benefit-card">
+        <div class="benefit-icon">🧬</div>
+        <div class="benefit-title">Oxytocin Release</div>
+        <p class="benefit-text">Therapeutic massage stimulates oxytocin — the bonding hormone — reducing cortisol and alleviating postpartum anxiety by up to 53%.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🩺</div>
+        <div class="benefit-title">Circulation & Recovery</div>
+        <p class="benefit-text">Lymphatic drainage and graduated pressure improve blood circulation, reduce oedema, and accelerate post-surgical wound healing.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🤱</div>
+        <div class="benefit-title">Lactation Support</div>
+        <p class="benefit-text">Specialised breast massage enhances milk let-down reflex and reduces engorgement — a key concern in the first postpartum week.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CORE SERVICES -->
+<section class="services-section" id="programmes">
+  <div class="section-label reveal">Recovery Pathways</div>
+  <h2 class="section-heading reveal">Our <em>Core Programmes</em></h2>
+  <p class="section-lead reveal">Carefully designed for every birth type — from Day 1 through discharge. Each programme is personalised by our certified therapists following an initial assessment.</p>
+
+  <div class="services-grid">
+    <div class="service-card lscs reveal">
+      <div class="service-header">
+        <div class="service-type">Post Caesarean Section</div>
+        <div class="service-title">LSCS Recovery Programme</div>
+        <p class="service-desc">A carefully graduated programme beginning from Day 2 post-surgery, respecting wound healing timelines while progressively restoring circulation and comfort.</p>
+      </div>
+      <div class="service-body">
+        <div class="what-included-title">What's Included</div>
+        <ul class="inclusion-list">
+          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 1: Full clinical assessment — delivery type, vitals, physician notes reviewed. Personalised care plan created.</li>
+          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 2: Gentle full body massage — slow pace, low pressure. Foot, back, head, shoulder, neck, hand.</li>
+          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 3: Progressive full body massage — mid pace, medium pressure. Lymphatic drainage begins.</li>
+          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 4+: Complete wellness session — full body massage + spa treatment including pedicure.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service-card normal reveal">
+      <div class="service-header">
+        <div class="service-type">Vaginal Birth</div>
+        <div class="service-title">Normal Delivery Programme</div>
+        <p class="service-desc">Restorative therapy begins from Day 1, addressing the immediate physical demands of natural labour and supporting rapid, joyful recovery.</p>
+      </div>
+      <div class="service-body">
+        <div class="what-included-title">What's Included</div>
+        <ul class="inclusion-list">
+          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 1: Gentle full body recovery session — restorative therapy begins immediately.</li>
+          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 2: Full body massage — continued restorative therapy with increasing depth.</li>
+          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 3: Progressive full body massage — lymphatic drainage and muscle restoration.</li>
+          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 4+: Complete wellness session — full body massage + spa treatment including pedicure.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes-section" id="outcomes">
+  <div class="section-label reveal">Research-Backed Outcomes</div>
+  <h2 class="section-heading reveal">Every session grounded<br>in <em>peer-reviewed science</em></h2>
+
+  <div class="outcomes-grid">
+    <div class="outcome-card reveal">
+      <div class="outcome-num">31<span class="outcome-unit">%</span></div>
+      <div class="outcome-title">Mental Health & Emotional Recovery</div>
+      <p class="outcome-text">Therapeutic massage activates the parasympathetic nervous system, reducing cortisol by up to 31% and increasing serotonin levels by 28%.</p>
+      <div class="outcome-source"><a href="https://nimhans.ac.in" target="_blank" rel="noopener">NIMHANS Maternal Mental Health Report, 2023</a></div>
+    </div>
+    <div class="outcome-card reveal">
+      <div class="outcome-num">2.4<span class="outcome-unit"> pts</span></div>
+      <div class="outcome-title">Post-Surgical Wound Recovery</div>
+      <p class="outcome-text">For LSCS mothers, graduated massage promotes micro-circulation. Peripheral oedema reduction decreases pain scores by an average 2.4 points on the VAS scale.</p>
+      <div class="outcome-source">Indian Journal of Anaesthesia, 2022</div>
+    </div>
+    <div class="outcome-card reveal">
+      <div class="outcome-num">72<span class="outcome-unit">%</span></div>
+      <div class="outcome-title">Breastfeeding & Lactation</div>
+      <p class="outcome-text">Breast massage targeting the Montgomery glands and milk ducts increases prolactin sensitivity. Engorgement reduced by 72% with consistent therapy from Day 1–3.</p>
+      <div class="outcome-source"><a href="https://www.liebertpub.com/journal/bfm" target="_blank" rel="noopener">Breastfeeding Medicine Journal, 2023</a></div>
+    </div>
+    <div class="outcome-card reveal">
+      <div class="outcome-num">40<span class="outcome-unit">%</span></div>
+      <div class="outcome-title">Pain Management & Sleep Quality</div>
+      <p class="outcome-text">Targeted back, shoulder, and neck massage reduces reported pain by 60% within 3 sessions. Sleep quality improves by up to 40% as measured by PSQI scores.</p>
+      <div class="outcome-source"><a href="https://academic.oup.com/painmedicine" target="_blank" rel="noopener">Pain Medicine Journal, 2022</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ADD-ONS -->
+<section class="addons-section" id="addons">
+  <div class="section-label reveal">Specialised Therapies</div>
+  <h2 class="section-heading reveal">Clinically Targeted <em>Add-On</em> Treatments</h2>
+  <p class="section-lead reveal">Available as an upgrade to any programme — each performed by certified therapists using medically approved techniques.</p>
+
+  <div class="addons-grid">
+    <div class="addon-card reveal">
+      <div class="addon-num-box">01</div>
+      <div>
+        <div class="addon-title">Breast Massage & Lactation Support</div>
+        <div class="addon-duration">1–2 Hour Session</div>
+        <p class="addon-text">Relieves engorgement, stimulates milk flow, unblocks ducts, and enhances breastfeeding comfort. Reduces mastitis risk and includes home care guidance for continued benefit.</p>
+      </div>
+    </div>
+    <div class="addon-card reveal">
+      <div class="addon-num-box">02</div>
+      <div>
+        <div class="addon-title">Spinal Headache & Epidural Recovery</div>
+        <div class="addon-duration">1.5 Hour Session</div>
+        <p class="addon-text">Targeted therapy for post-epidural spinal headache. Combines cranio-sacral technique, deep neck massage, and pressure point therapy for rapid, non-pharmacological relief.</p>
+      </div>
+    </div>
+    <div class="addon-card reveal">
+      <div class="addon-num-box">03</div>
+      <div>
+        <div class="addon-title">Reflexology Foot Therapy</div>
+        <div class="addon-duration">45 Min – 1 Hour Session</div>
+        <p class="addon-text">Therapeutic foot reflexology targeting uterine, pituitary, and adrenal reflex zones. Promotes hormonal regulation and supports natural uterine involution.</p>
+      </div>
+    </div>
+    <div class="addon-card reveal">
+      <div class="addon-num-box">04</div>
+      <div>
+        <div class="addon-title">Head, Scalp & Marma Therapy</div>
+        <div class="addon-duration">30–45 Min Session</div>
+        <p class="addon-text">Traditional Indian marma point therapy combined with scalp massage. Addresses postpartum hair fall, migraines, and mental fatigue — rooted in Ayurvedic wisdom.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <h2 class="cta-heading reveal">Bring these services<br>to your <em>maternity ward</em></h2>
+  <p class="cta-text reveal">To arrange a clinical demonstration or discuss partnership options, contact our hospital relations team.</p>
+  <a href="contact.html" class="btn-primary reveal">Request a Demonstration <span>→</span></a>
+</section>
+
+<script src="shared.js"></script>
+</body>
+</html>
