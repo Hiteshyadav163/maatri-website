@@ -1,5 +1,5 @@
 /* ─── MAATRISPARSH SHARED STYLES ─── */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -12,9 +12,9 @@
   --plum-mid: #C2A8C5;
   --cream: #FDF5F8;
   --warm-white: #FFFAFC;
-  --ink: #1E1A1A;
-  --ink-soft: #4A3F3F;
-  --ink-muted: #8A7878;
+  --ink: #3E2F34;
+  --ink-soft: #5E4A4F;
+  --ink-muted: #9D878C;
   --gold: #B8956A;
   --gold-light: #F5EDD9;
   --green-soft: #4E7A5F;
@@ -24,7 +24,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   background: var(--cream);
   color: var(--ink);
   overflow-x: hidden;
@@ -45,7 +45,7 @@ nav {
   background: rgba(250,247,242,0.96);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(0,0,0,0.07);
+  border-bottom: 1px solid rgba(74,63,63,0.07);
   animation: navSlide 0.5s 0.1s both;
 }
 
@@ -69,7 +69,7 @@ nav {
 }
 
 .nav-brand-name {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 20px;
   font-weight: 600;
   color: var(--ink);
@@ -176,7 +176,7 @@ nav {
   z-index: 200;
   transform: translateX(100%);
   transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
-  box-shadow: -8px 0 40px rgba(0,0,0,0.15);
+  box-shadow: -8px 0 40px rgba(74,63,63,0.15);
   display: flex;
   flex-direction: column;
 }
@@ -195,7 +195,7 @@ nav {
   align-self: flex-end;
   width: 36px; height: 36px;
   border-radius: 50%;
-  border: 1px solid rgba(0,0,0,0.12);
+  border: 1px solid rgba(74,63,63,0.12);
   background: none;
   font-size: 15px;
   color: var(--ink-muted);
@@ -209,7 +209,7 @@ nav {
 
 .mobile-drawer-brand {
   padding-bottom: 20px;
-  border-bottom: 1px solid rgba(0,0,0,0.07);
+  border-bottom: 1px solid rgba(74,63,63,0.07);
   margin-bottom: 12px;
 }
 
@@ -243,7 +243,7 @@ nav {
   flex-direction: column;
   gap: 10px;
   padding-top: 20px;
-  border-top: 1px solid rgba(0,0,0,0.07);
+  border-top: 1px solid rgba(74,63,63,0.07);
   margin-top: 16px;
 }
 
@@ -305,7 +305,7 @@ nav {
 }
 
 .page-hero h1 {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 58px;
   font-weight: 400;
   line-height: 1.1;
@@ -349,7 +349,7 @@ section { padding: 90px 80px; }
 }
 
 .section-heading {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 44px;
   font-weight: 400;
   line-height: 1.15;
@@ -384,7 +384,7 @@ footer {
 }
 
 .footer-brand-name {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 600;
   color: white;
@@ -489,13 +489,13 @@ footer {
 
 .wa-tooltip {
   background: var(--warm-white);
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(74,63,63,0.08);
   border-radius: 12px;
   padding: 10px 14px;
   font-size: 13px;
   color: var(--ink-soft);
   white-space: nowrap;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
+  box-shadow: 0 8px 24px rgba(74,63,63,0.10);
   opacity: 0;
   transform: translateX(10px);
   transition: opacity 0.3s, transform 0.3s;

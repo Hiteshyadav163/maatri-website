@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Contact MaatriSparsh — request a clinical demonstration or hospital partnership discussion.">
 <title>Contact — MaatriSparsh</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
+<link rel="icon" type="image/jpeg" href="images/logo.jpg">
 <style>
   .contact-layout {
     padding: 100px 80px;
@@ -24,7 +25,7 @@
     gap: 20px;
     align-items: flex-start;
     padding: 28px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
+    border-bottom: 1px solid rgba(74,63,63,0.06);
   }
   .contact-info-item:first-child { padding-top: 0; }
   .contact-info-item:last-child { border-bottom: none; }
@@ -50,7 +51,7 @@
   }
 
   .ci-value {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color: var(--ink);
     font-weight: 500;
@@ -99,11 +100,11 @@
     background: var(--cream);
     border-radius: 28px;
     padding: 52px 48px;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(74,63,63,0.05);
   }
 
   .form-heading {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 34px;
     font-weight: 400;
     color: var(--ink);
@@ -146,9 +147,9 @@
   input, select, textarea {
     padding: 14px 18px;
     border-radius: 12px;
-    border: 1.5px solid rgba(0,0,0,0.1);
+    border: 1.5px solid rgba(74,63,63,0.1);
     background: var(--warm-white);
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 15px;
     color: var(--ink);
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -199,7 +200,7 @@
     border: none;
     border-radius: 100px;
     padding: 16px 32px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
@@ -230,7 +231,7 @@
   .form-success.show { display: block; }
   .form-success-icon { font-size: 56px; margin-bottom: 20px; }
   .form-success-heading {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 32px;
     color: var(--ink);
     margin-bottom: 12px;
@@ -259,7 +260,7 @@
   .alt-icon { font-size: 36px; margin-bottom: 16px; }
 
   .alt-title {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 22px;
     font-weight: 500;
     color: white;
@@ -325,7 +326,7 @@
       <div class="ci-icon">✉️</div>
       <div>
         <div class="ci-label">Email</div>
-        <div class="ci-value"><a href="mailto:partnerships@maatrisparsh.com" class="ci-link">partnerships@maatrisparsh.com</a></div>
+        <div class="ci-value"><a href="mailto:maatrisparsh@gmail.com" class="ci-link">maatrisparsh@gmail.com</a></div>
         <div class="ci-sub">For hospital partnership & demonstration requests</div>
       </div>
     </div>
@@ -334,7 +335,7 @@
       <div class="ci-icon">📱</div>
       <div>
         <div class="ci-label">WhatsApp / Phone</div>
-        <div class="ci-value"><a href="https://wa.me/919340194664" class="ci-link">+91 93401 94664</a></div>
+        <div class="ci-value"><a href="https://wa.me/9183216100" class="ci-link">+91 91832 16100</a></div>
         <div class="ci-sub">Quick connect — typically responds within a few hours</div>
       </div>
     </div>
@@ -445,19 +446,19 @@
     <div class="alt-icon">💬</div>
     <div class="alt-title">WhatsApp</div>
     <p class="alt-text">For quick questions or to start a conversation directly with our team.</p>
-    <a href="https://wa.me/919340194664?text=Hello%20MaatriSparsh%20Team" target="_blank" class="alt-link">Chat Now</a>
+    <a href="https://wa.me/9183216100?text=Hello%20MaatriSparsh%20Team" target="_blank" class="alt-link">Chat Now</a>
   </div>
   <div class="alt-item reveal">
     <div class="alt-icon">✉️</div>
     <div class="alt-title">Email</div>
     <p class="alt-text">For formal partnership proposals and clinical demonstration requests.</p>
-    <a href="mailto:partnerships@maatrisparsh.com" class="alt-link">Send Email</a>
+    <a href="mailto:maatrisparsh@gmail.com" class="alt-link">Send Email</a>
   </div>
   <div class="alt-item reveal">
     <div class="alt-icon">📋</div>
     <div class="alt-title">Download Brochure</div>
     <p class="alt-text">Get a detailed overview of our programmes and partnership model to share with your team.</p>
-    <a href="mailto:partnerships@maatrisparsh.com?subject=Brochure%20Request" class="alt-link">Request Brochure</a>
+    <a href="mailto:maatrisparsh@gmail.com?subject=Brochure%20Request" class="alt-link">Request Brochure</a>
   </div>
 </section>
 
@@ -493,7 +494,7 @@ function handleSubmit() {
   const message = document.getElementById('message').value;
 
   const body = `Name: ${firstName} ${lastName}\nPhone: ${phone}\nEmail: ${email}\nHospital: ${hospital}\nDesignation: ${designation}\nCity: ${city}\nEnquiry Type: ${enquiry}\n\nMessage:\n${message}`;
-  const mailtoLink = `mailto:partnerships@maatrisparsh.com?subject=Demo%20Request%20—%20${encodeURIComponent(hospital)}&body=${encodeURIComponent(body)}`;
+  const mailtoLink = `mailto:maatrisparsh@gmail.com?subject=Demo%20Request%20—%20${encodeURIComponent(hospital)}&body=${encodeURIComponent(body)}`;
 
   setTimeout(() => {
     window.location.href = mailtoLink;
