@@ -51,9 +51,9 @@ const FOOTER_HTML = `<footer>
       <div class="footer-brand-name">MaatriSparsh</div>
       <p class="footer-tagline">Bringing certified postpartum massage therapy and holistic wellness directly to your maternity ward.</p>
       <div class="footer-social">
-        <a href="#" aria-label="Instagram">IG</a>
-        <a href="#" aria-label="LinkedIn">in</a>
-        <a href="#" aria-label="Facebook">FB</a>
+        <a href="https://www.instagram.com/maatrisparsh/" aria-label="Instagram">IG</a>
+        <a href="https://www.instagram.com/maatrisparsh/" aria-label="LinkedIn">in</a>
+        <a href="https://www.facebook.com/profile.php?id=61572016331977" aria-label="Facebook">FB</a>
       </div>
     </div>
     <div class="footer-col">
