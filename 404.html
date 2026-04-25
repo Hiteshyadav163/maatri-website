@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found — MaatriSparsh</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+  .error-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+    background: linear-gradient(160deg, var(--warm-white) 0%, #F5E8F2 100%);
+  }
+
+  .error-inner { max-width: 520px; }
+
+  .error-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    font-weight: 300;
+    color: var(--rose-mid);
+    line-height: 1;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .error-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .error-title em { font-style: italic; color: var(--rose); }
+
+  .error-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--ink-muted);
+    margin-bottom: 36px;
+  }
+
+  .error-links {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--rose);
+    color: white;
+    border-radius: 100px;
+    padding: 13px 28px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-primary:hover { background: #b3635a; transform: translateY(-2px); }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--plum);
+    border: 1px solid var(--plum-mid);
+    border-radius: 100px;
+    padding: 13px 28px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { background: var(--plum-light); }
+
+  .error-ornament {
+    font-size: 48px;
+    margin-bottom: 20px;
+    display: block;
+    opacity: 0.6;
+  }
+</style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+
+<div class="error-page">
+  <div class="error-inner">
+    <span class="error-ornament">🌸</span>
+    <span class="error-num">404</span>
+    <h1 class="error-title">Page <em>not found</em></h1>
+    <p class="error-text">The page you're looking for doesn't exist or may have been moved. Let's get you back to the right place.</p>
+    <div class="error-links">
+      <a href="index.html" class="btn-primary">Go to Home →</a>
+      <a href="contact.html" class="btn-outline">Contact Us</a>
+    </div>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>

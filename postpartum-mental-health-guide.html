@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Recognising postpartum depression and anxiety early. Evidence-based emotional support, coping strategies, and when to seek help.">
+<meta name="keywords" content="postpartum depression India, postpartum anxiety, new mother mental health, PPD signs, postpartum emotional wellness">
+<meta property="og:title" content="Postpartum Mental Health & Emotional Wellness Guide — MaatriSparsh">
+<meta property="og:description" content="Recognising postpartum depression and anxiety early. Evidence-based emotional support, coping strategies, and when to seek help.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+
+<title>Postpartum Mental Health & Emotional Wellness Guide — MaatriSparsh</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+
+/* ─── ROOT TOKENS ─── */
+:root {
+  --lavender:       #7B6FA0;
+  --lavender-light: #EAE6F5;
+  --lavender-pale:  #F6F4FB;
+  --blush:          #D4788A;
+  --blush-light:    #F7DDE3;
+  --blush-pale:     #FDF4F6;
+  --sage:           #5A8A72;
+  --sage-light:     #C8E0D4;
+  --sage-pale:      #EDF5F0;
+  --sky:            #5A8FAA;
+  --sky-light:      #C8DDE8;
+  --sky-pale:       #EDF4F8;
+  --amber:          #C08840;
+  --amber-light:    #F0DDB8;
+  --amber-pale:     #FDF7EC;
+  --ink:            #1E1628;
+  --body:           #3C2F48;
+  --muted:          #7A6888;
+  --line:           rgba(123,111,160,0.14);
+  --white:          #FDFBFF;
+  --cream:          #F9F6FD;
+}
+
+/* ─── RESET ─── */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Jost',sans-serif;
+  background:var(--white);
+  color:var(--body);
+  line-height:1.85;
+}
+
+/* ══════════════════════════════
+   HERO
+══════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  background: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: drift 12s ease-in-out infinite;
+}
+.orb1 { width:500px;height:500px; background:rgba(123,111,160,0.25); top:-120px; left:-100px; animation-delay:0s; }
+.orb2 { width:400px;height:400px; background:rgba(212,120,138,0.18); bottom:-80px; right:-60px; animation-delay:-4s; }
+.orb3 { width:300px;height:300px; background:rgba(90,138,114,0.15); top:40%; left:55%; animation-delay:-8s; }
+
+@keyframes drift {
+  0%,100%{ transform:translate(0,0) scale(1); }
+  33%{ transform:translate(30px,-20px) scale(1.05); }
+  66%{ transform:translate(-20px,30px) scale(0.97); }
+}
+
+/* Stars */
+.stars {
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 25% 40%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 40% 20%, rgba(255,255,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 60%, rgba(255,255,255,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 30%, rgba(255,255,255,0.35) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 85% 75%, rgba(255,255,255,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 10%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 80%, rgba(255,255,255,0.25) 0%, transparent 100%),
+    radial-gradient(2px 2px at 50% 50%, rgba(255,255,255,0.15) 0%, transparent 100%);
+}
+
+.hero-inner { position:relative;z-index:2;max-width:780px;margin:0 auto; }
+
+.hero-eyebrow {
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid rgba(234,230,245,0.2);
+  border-radius:30px;
+  padding:7px 18px;
+  font-size:12px;font-weight:500;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:rgba(234,230,245,0.65);
+  margin-bottom:28px;
+}
+.hero-dot {
+  width:6px;height:6px;border-radius:50%;
+  background:var(--blush);
+  animation:pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot{
+  0%,100%{opacity:1;transform:scale(1);}
+  50%{opacity:0.5;transform:scale(1.4);}
+}
+
+.hero h1 {
+  font-family:'Lora',serif;
+  font-size:clamp(36px,5.5vw,64px);
+  color:#F9F6FD;
+  font-weight:700;
+  line-height:1.18;
+  margin-bottom:22px;
+  letter-spacing:-0.01em;
+}
+.hero h1 em {
+  color: transparent;
+  background: linear-gradient(120deg, #C8B8E8 0%, #E898B0 50%, #A8C8D8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-style:italic;
+}
+
+.hero-tagline {
+  font-size:17px;
+  color:rgba(240,235,250,0.6);
+  max-width:520px;
+  margin:0 auto 44px;
+  line-height:1.9;
+  font-weight:300;
+}
+
+.hero-affirmation {
+  display:inline-block;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(234,230,245,0.15);
+  border-radius:16px;
+  padding:18px 28px;
+  font-family:'Lora',serif;
+  font-size:17px;
+  font-style:italic;
+  color:rgba(240,235,250,0.75);
+  max-width:500px;
+  margin-bottom:48px;
+  line-height:1.7;
+}
+
+.hero-chips {
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:center;
+}
+.chip {
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(234,230,245,0.15);
+  border-radius:30px;
+  padding:8px 18px;
+  font-size:13px;color:rgba(234,230,245,0.65);font-weight:400;
+}
+
+/* ══════════════════════════════
+   NAV
+══════════════════════════════ */
+nav {
+  background:#fff;
+  border-bottom:1px solid var(--line);
+  position:sticky;top:0;z-index:200;
+  overflow-x:auto;
+  box-shadow:0 2px 20px rgba(30,22,40,0.06);
+}
+.nav-inner {
+  display:flex;max-width:1160px;
+  margin:0 auto;padding:0 28px;
+}
+nav a {
+  display:block;padding:16px 18px;
+  font-size:13px;font-weight:600;
+  color:var(--muted);text-decoration:none;
+  white-space:nowrap;
+  border-bottom:2px solid transparent;
+  transition:all 0.2s;
+  letter-spacing:0.02em;
+}
+nav a:hover {
+  color:var(--lavender);
+  border-bottom-color:var(--lavender);
+}
+
+/* ══════════════════════════════
+   LAYOUT
+══════════════════════════════ */
+.page {max-width:1160px;margin:0 auto;padding:0 32px 80px;}
+
+.section {
+  padding:80px 0 64px;
+  border-bottom:1px solid var(--line);
+  animation:fadeUp 0.5s ease both;
+}
+.section:last-child{border-bottom:none;}
+
+@keyframes fadeUp {
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ─── SECTION HEADER ─── */
+.sec-header {
+  display:flex;align-items:flex-start;gap:24px;
+  margin-bottom:48px;
+}
+.sec-icon {
+  width:64px;height:64px;
+  border-radius:20px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:30px;flex-shrink:0;margin-top:4px;
+}
+.si-lav{background:var(--lavender-light);}
+.si-blush{background:var(--blush-light);}
+.si-sage{background:var(--sage-light);}
+.si-sky{background:var(--sky-light);}
+
+.sec-title h2 {
+  font-family:'Lora',serif;
+  font-size:clamp(26px,3.5vw,38px);
+  color:var(--ink);
+  font-weight:700;line-height:1.22;
+  margin-bottom:10px;
+}
+.sec-title p {
+  font-size:16px;color:var(--muted);
+  max-width:600px;line-height:1.85;font-weight:300;
+}
+
+/* ─── SUBSECTION DIVIDER ─── */
+.sub-h {
+  font-family:'Lora',serif;
+  font-size:22px;font-weight:600;
+  color:var(--ink);
+  margin:44px 0 20px;
+  display:flex;align-items:center;gap:14px;
+}
+.sub-h::after {
+  content:'';flex:1;height:1px;
+  background:linear-gradient(90deg,var(--line),transparent);
+}
+
+/* ─── CARDS ─── */
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+  gap:22px;margin-bottom:28px;
+}
+.card {
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:28px;
+  transition:transform 0.22s,box-shadow 0.22s;
+}
+.card:hover {
+  transform:translateY(-4px);
+  box-shadow:0 12px 40px rgba(123,111,160,0.1);
+}
+.card-em{font-size:30px;margin-bottom:14px;display:block;}
+.card h3 {
+  font-family:'Lora',serif;
+  font-size:18px;color:var(--ink);
+  margin-bottom:12px;font-weight:600;
+}
+.card p,.card li {
+  font-size:14px;color:var(--body);
+  line-height:1.8;font-weight:400;
+}
+.card ul{list-style:none;padding:0;}
+.card li{padding:5px 0 5px 20px;position:relative;}
+.card li::before{
+  content:'';
+  position:absolute;left:0;top:13px;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--lavender);
+}
+.card.blush li::before{background:var(--blush);}
+.card.sage li::before{background:var(--sage);}
+.card.sky li::before{background:var(--sky);}
+.card.amber li::before{background:var(--amber);}
+
+/* ─── HIGHLIGHT BOX ─── */
+.hbox {
+  border-radius:18px;
+  padding:26px 30px;
+  margin:26px 0;
+  display:flex;gap:18px;align-items:flex-start;
+}
+.hbox.lav {background:var(--lavender-pale);border-left:3px solid var(--lavender);}
+.hbox.blush {background:var(--blush-pale);border-left:3px solid var(--blush);}
+.hbox.sage {background:var(--sage-pale);border-left:3px solid var(--sage);}
+.hbox.sky {background:var(--sky-pale);border-left:3px solid var(--sky);}
+.hbox.amber {background:var(--amber-pale);border-left:3px solid var(--amber);}
+.hbox-icon{font-size:22px;flex-shrink:0;margin-top:2px;}
+.hbox-body strong {
+  display:block;font-size:15px;font-weight:700;
+  color:var(--ink);margin-bottom:9px;
+  font-family:'Lora',serif;
+}
+.hbox-body p,.hbox-body li {font-size:14px;color:var(--body);line-height:1.8;}
+.hbox-body ul{list-style:none;padding:0;margin-top:8px;}
+.hbox-body li{padding:4px 0 4px 20px;position:relative;}
+.hbox.lav .hbox-body li::before{content:'◦';color:var(--lavender);position:absolute;left:0;top:4px;font-size:16px;}
+.hbox.blush .hbox-body li::before{content:'◦';color:var(--blush);position:absolute;left:0;top:4px;font-size:16px;}
+.hbox.sage .hbox-body li::before{content:'◦';color:var(--sage);position:absolute;left:0;top:4px;font-size:16px;}
+.hbox.sky .hbox-body li::before{content:'◦';color:var(--sky);position:absolute;left:0;top:4px;font-size:16px;}
+.hbox.amber .hbox-body li::before{content:'◦';color:var(--amber);position:absolute;left:0;top:4px;font-size:16px;}
+
+/* ─── COMPARISON TABLE ─── */
+.compare-wrap {
+  overflow-x:auto;
+  border-radius:18px;
+  border:1px solid var(--line);
+  margin:28px 0;
+}
+.compare {
+  width:100%;border-collapse:collapse;
+  font-size:14px;min-width:560px;
+}
+.compare thead tr th {
+  padding:16px 20px;
+  font-weight:700;font-size:13px;
+  letter-spacing:0.05em;text-transform:uppercase;
+}
+.compare thead .th-lbl {background:var(--cream);color:var(--muted);}
+.compare thead .th-blues {background:var(--sky-pale);color:var(--sky);}
+.compare thead .th-ppp {background:var(--lavender-pale);color:var(--lavender);}
+.compare td {
+  padding:14px 20px;
+  border-top:1px solid rgba(0,0,0,0.05);
+  color:var(--body);vertical-align:top;
+}
+.compare td:first-child{font-weight:600;color:var(--ink);}
+.compare tr:nth-child(even) td{background:#FDFBFF;}
+.compare tr:hover td{background:var(--lavender-pale);transition:background 0.15s;}
+
+/* ─── BADGE ─── */
+.badge{
+  display:inline-block;
+  font-size:12px;font-weight:600;
+  padding:3px 12px;border-radius:20px;
+}
+.b-lav{background:var(--lavender-light);color:#3A2F5C;}
+.b-blush{background:var(--blush-light);color:#6B2030;}
+.b-sage{background:var(--sage-light);color:#1E4D35;}
+.b-sky{background:var(--sky-light);color:#1A3D50;}
+.b-amber{background:var(--amber-light);color:#4A2C05;}
+
+/* ─── PULLQUOTE ─── */
+.pullquote {
+  position:relative;
+  border-radius:22px;
+  padding:40px 48px;
+  margin:40px 0;
+  overflow:hidden;
+}
+.pullquote.lavender {
+  background:linear-gradient(135deg,var(--lavender-pale) 0%,var(--blush-pale) 100%);
+  border:1px solid rgba(123,111,160,0.15);
+}
+.pullquote.sage-sky {
+  background:linear-gradient(135deg,var(--sage-pale) 0%,var(--sky-pale) 100%);
+  border:1px solid rgba(90,138,114,0.15);
+}
+.pullquote::before {
+  content:'"';
+  font-family:'Lora',serif;
+  font-size:220px;line-height:0.8;
+  color:rgba(123,111,160,0.08);
+  position:absolute;top:10px;left:16px;
+}
+.pullquote p {
+  font-family:'Lora',serif;
+  font-size:20px;font-style:italic;
+  color:var(--ink);line-height:1.75;
+  position:relative;z-index:1;
+  max-width:720px;
+}
+.pullquote cite {
+  display:block;margin-top:16px;
+  font-size:13px;font-style:normal;
+  font-weight:600;color:var(--muted);
+  position:relative;z-index:1;
+  letter-spacing:0.03em;
+}
+
+/* ─── YOU ARE NOT ALONE BANNER ─── */
+.not-alone {
+  background:linear-gradient(135deg, #2A1E38 0%, #1E2A38 100%);
+  border-radius:22px;
+  padding:40px 48px;
+  margin:44px 0;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.not-alone::before {
+  content:'';
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(123,111,160,0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(212,120,138,0.15) 0%, transparent 50%);
+}
+.not-alone h3 {
+  font-family:'Lora',serif;
+  font-size:clamp(24px,4vw,38px);
+  color:#F9F6FD;font-weight:700;
+  margin-bottom:14px;
+  position:relative;z-index:1;
+}
+.not-alone p {
+  font-size:16px;
+  color:rgba(240,235,250,0.65);
+  max-width:580px;margin:0 auto;
+  line-height:1.9;font-weight:300;
+  position:relative;z-index:1;
+}
+.not-alone-stars {
+  position:absolute;inset:0;
+  background-image:
+    radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.35) 0%,transparent 100%),
+    radial-gradient(1px 1px at 30% 70%, rgba(255,255,255,0.2) 0%,transparent 100%),
+    radial-gradient(1.5px 1.5px at 55% 30%, rgba(255,255,255,0.3) 0%,transparent 100%),
+    radial-gradient(1px 1px at 70% 80%, rgba(255,255,255,0.25) 0%,transparent 100%),
+    radial-gradient(1px 1px at 88% 15%, rgba(255,255,255,0.3) 0%,transparent 100%),
+    radial-gradient(2px 2px at 45% 60%, rgba(200,184,232,0.15) 0%,transparent 100%);
+}
+
+/* ─── ALERT / WARNING BOX ─── */
+.warn-box {
+  background:#FFF6F8;
+  border:1px solid rgba(212,120,138,0.22);
+  border-left:3px solid var(--blush);
+  border-radius:14px;
+  padding:22px 26px;margin:26px 0;
+  display:flex;gap:16px;align-items:flex-start;
+}
+.warn-icon{font-size:22px;flex-shrink:0;}
+.warn-body strong{
+  display:block;font-size:15px;font-weight:700;
+  color:#6B1525;margin-bottom:10px;
+  font-family:'Lora',serif;
+}
+.warn-body ul{list-style:none;padding:0;}
+.warn-body li{
+  font-size:14px;color:var(--body);
+  padding:5px 0 5px 20px;position:relative;
+}
+.warn-body li::before{
+  content:'!';color:var(--blush);
+  position:absolute;left:0;
+  font-weight:700;font-size:13px;
+}
+
+/* ─── COMPARISON PAIR ─── */
+.versus {
+  display:grid;grid-template-columns:1fr 1fr;gap:20px;
+  margin:28px 0;
+}
+@media(max-width:620px){.versus{grid-template-columns:1fr;}}
+.v-box {
+  border-radius:18px;padding:24px;
+}
+.v-blues {
+  background:var(--sky-pale);
+  border:1px solid rgba(90,143,170,0.2);
+}
+.v-ppd {
+  background:var(--lavender-pale);
+  border:1px solid rgba(123,111,160,0.2);
+}
+.v-box h4 {
+  font-family:'Lora',serif;
+  font-size:18px;font-weight:600;
+  margin-bottom:12px;
+}
+.v-blues h4{color:var(--sky);}
+.v-ppd h4{color:var(--lavender);}
+.v-box .tag{
+  display:inline-block;
+  font-size:11px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  padding:3px 10px;border-radius:20px;
+  margin-bottom:12px;
+}
+.v-blues .tag{background:var(--sky-light);color:#1A3D50;}
+.v-ppd .tag{background:var(--lavender-light);color:#3A2F5C;}
+.v-box ul{list-style:none;padding:0;}
+.v-box li{
+  font-size:14px;color:var(--body);
+  padding:5px 0 5px 20px;position:relative;
+}
+.v-blues li::before{content:'◦';color:var(--sky);position:absolute;left:0;top:4px;font-size:18px;}
+.v-ppd li::before{content:'◦';color:var(--lavender);position:absolute;left:0;top:4px;font-size:18px;}
+
+/* ─── EMOTION TIMELINE ─── */
+.etl{margin:28px 0;}
+.etl-item{
+  display:flex;gap:20px;
+  margin-bottom:22px;align-items:flex-start;
+}
+.etl-dot{
+  width:44px;height:44px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;margin-top:2px;
+  border:2px solid;
+}
+.etl-dot.lav{background:var(--lavender-pale);border-color:var(--lavender);}
+.etl-dot.blush{background:var(--blush-pale);border-color:var(--blush);}
+.etl-dot.sage{background:var(--sage-pale);border-color:var(--sage);}
+.etl-dot.sky{background:var(--sky-pale);border-color:var(--sky);}
+.etl-content h4{
+  font-family:'Lora',serif;
+  font-size:16px;font-weight:600;
+  color:var(--ink);margin-bottom:5px;
+}
+.etl-content p{font-size:14px;color:var(--body);line-height:1.78;}
+
+/* ─── WORKSHOP CARDS ─── */
+.workshop-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;margin:24px 0;
+}
+.wshop {
+  border-radius:20px;overflow:hidden;
+  border:1px solid var(--line);
+}
+.wshop-top{
+  padding:28px 24px 20px;
+  position:relative;overflow:hidden;
+}
+.wshop-top::before{
+  content:'';
+  position:absolute;
+  width:120px;height:120px;border-radius:50%;
+  bottom:-40px;right:-30px;
+  opacity:0.2;
+}
+.ws-lav .wshop-top{ background:var(--lavender-pale); }
+.ws-lav .wshop-top::before{ background:var(--lavender); }
+.ws-sage .wshop-top{ background:var(--sage-pale); }
+.ws-sage .wshop-top::before{ background:var(--sage); }
+.ws-blush .wshop-top{ background:var(--blush-pale); }
+.ws-blush .wshop-top::before{ background:var(--blush); }
+
+.wshop-em{font-size:36px;margin-bottom:10px;display:block;}
+.wshop-top h3{
+  font-family:'Lora',serif;
+  font-size:18px;font-weight:600;color:var(--ink);
+  margin-bottom:6px;
+}
+.wshop-top .ws-label{
+  font-size:11px;font-weight:700;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--muted);
+}
+.wshop-body{padding:18px 24px;}
+.wshop-body ul{list-style:none;padding:0;}
+.wshop-body li{
+  font-size:14px;color:var(--body);
+  padding:6px 0 6px 20px;position:relative;
+  border-bottom:1px solid rgba(0,0,0,0.04);
+}
+.wshop-body li:last-child{border-bottom:none;}
+.ws-lav .wshop-body li::before{content:'◦';color:var(--lavender);position:absolute;left:0;top:6px;font-size:18px;}
+.ws-sage .wshop-body li::before{content:'◦';color:var(--sage);position:absolute;left:0;top:6px;font-size:18px;}
+.ws-blush .wshop-body li::before{content:'◦';color:var(--blush);position:absolute;left:0;top:6px;font-size:18px;}
+
+/* ─── MINDFULNESS ACTIVITY CARDS ─── */
+.activity-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;margin:24px 0;
+}
+.activity{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:22px;text-align:center;
+}
+.act-em{font-size:38px;margin-bottom:12px;display:block;}
+.activity h4{
+  font-family:'Lora',serif;
+  font-size:16px;color:var(--ink);
+  margin-bottom:8px;font-weight:600;
+}
+.activity p{font-size:13px;color:var(--muted);line-height:1.65;}
+.act-time{
+  display:inline-block;margin-top:12px;
+  background:var(--lavender-light);
+  color:#3A2F5C;
+  font-size:11px;font-weight:700;
+  padding:3px 12px;border-radius:20px;
+  letter-spacing:0.05em;
+}
+
+/* ─── PARTNER ROLE BOX ─── */
+.partner-box{
+  background:linear-gradient(135deg,var(--amber-pale),var(--sage-pale));
+  border:1px solid rgba(192,136,64,0.18);
+  border-radius:20px;
+  padding:32px 36px;
+  margin:36px 0;
+}
+.partner-box h3{
+  font-family:'Lora',serif;
+  font-size:22px;font-weight:700;color:var(--ink);
+  margin-bottom:18px;
+  display:flex;align-items:center;gap:12px;
+}
+.pb-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+}
+.pb-item{
+  background:rgba(255,255,255,0.55);
+  border-radius:14px;padding:18px;
+  border:1px solid rgba(255,255,255,0.8);
+}
+.pb-item h4{
+  font-size:14px;font-weight:700;
+  color:var(--ink);margin-bottom:8px;
+  display:flex;align-items:center;gap:8px;
+}
+.pb-item p{font-size:13px;color:var(--body);line-height:1.7;}
+
+/* ─── QUICK RESET ─── */
+.reset-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:14px;margin:26px 0;
+}
+.reset-item{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px 16px;text-align:center;
+}
+.r-num{
+  font-family:'Lora',serif;
+  font-size:40px;font-weight:700;
+  color:var(--lavender);line-height:1;margin-bottom:10px;
+}
+.reset-item h4{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+.reset-item p{font-size:12px;color:var(--muted);line-height:1.6;}
+
+/* ─── WHEN TO SEEK HELP BOX ─── */
+.seek-box {
+  background:linear-gradient(135deg,#2A1E38 0%,#1E1E38 100%);
+  border-radius:22px;
+  padding:36px 40px;margin:40px 0;
+  position:relative;overflow:hidden;
+}
+.seek-box::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(circle at 85% 50%, rgba(212,120,138,0.15) 0%, transparent 55%);
+}
+.seek-box h3{
+  font-family:'Lora',serif;
+  font-size:24px;font-weight:700;
+  color:#F9F6FD;margin-bottom:6px;
+  position:relative;z-index:1;
+}
+.seek-box > p{
+  font-size:15px;color:rgba(240,235,250,0.6);
+  margin-bottom:24px;position:relative;z-index:1;
+}
+.seek-signs{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:14px;position:relative;z-index:1;
+}
+.seek-sign{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(234,230,245,0.12);
+  border-radius:14px;padding:16px 20px;
+  display:flex;gap:14px;align-items:flex-start;
+}
+.seek-sign-icon{font-size:18px;flex-shrink:0;margin-top:2px;}
+.seek-sign p{font-size:13px;color:rgba(240,235,250,0.7);line-height:1.65;}
+
+/* ─── FOOTER ─── */
+footer{
+  background:var(--ink);
+  color:rgba(240,235,250,0.5);
+  text-align:center;
+  padding:50px 32px;
+  font-size:13px;line-height:2.1;
+}
+footer strong{color:rgba(240,235,250,0.85);}
+.footer-heart{
+  font-size:30px;display:block;
+  margin-bottom:14px;
+  animation:heartbeat 2.5s ease-in-out infinite;
+}
+@keyframes heartbeat{
+  0%,100%{transform:scale(1);}
+  14%{transform:scale(1.15);}
+  28%{transform:scale(1);}
+  42%{transform:scale(1.08);}
+  56%{transform:scale(1);}
+}
+.crisis-line{
+  display:inline-block;
+  background:rgba(212,120,138,0.15);
+  border:1px solid rgba(212,120,138,0.25);
+  border-radius:12px;
+  padding:10px 24px;
+  margin-top:18px;
+  color:rgba(240,235,250,0.75);
+  font-size:13px;
+}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:768px){
+  .page{padding:0 18px 60px;}
+  .section{padding:56px 0 44px;}
+  .sec-header{flex-direction:column;gap:14px;}
+  .cards{grid-template-columns:1fr;}
+  .pullquote{padding:28px 24px;}
+  .not-alone{padding:30px 24px;}
+  .seek-box{padding:26px 24px;}
+}
+</style>
+<link rel="stylesheet" href="shared.css">
+<style>
+.shared-guide-topbar{padding-top:76px;display:block;}</style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>.guide-section-nav{position:sticky;top:76px;z-index:99;overflow-x:auto;}.guide-section-nav a{display:inline-block;padding:14px 20px;font-size:13px;font-weight:600;text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:all 0.2s;letter-spacing:0.03em;}</style>
+</head>
+<body>
+<div class="shared-guide-topbar"></div>
+<div style="background:#FDF5F8;border-bottom:1px solid rgba(0,0,0,0.06);padding:12px 32px;font-size:13px;font-family:DM Sans,sans-serif;color:#8A7878;"><a href="blog.html" style="color:#C9756A;text-decoration:none;font-weight:500;">← Back to Journal</a> &nbsp;/&nbsp; MaatriSparsh Resource Guide</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<div class="hero">
+  <div class="stars"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="hero-dot"></div>
+      Compassionate · Evidence-Based · Expert-Led
+    </div>
+    <h1>Postpartum <em>Mental Health</em><br>& Emotional Wellness</h1>
+    <p class="hero-tagline">Because becoming a mother is one of life's most profound transitions — and you deserve thoughtful, expert support every step of the way.</p>
+    <div class="hero-affirmation">
+      "What you are feeling is real. What you are going through matters. And you do not have to face it alone."
+    </div>
+    <div class="hero-chips">
+      <span class="chip">🌸 Why Mental Health Matters</span>
+      <span class="chip">⚠️ Baby Blues vs Depression</span>
+      <span class="chip">😰 Anxiety & Burnout</span>
+      <span class="chip">🔄 Identity Transition</span>
+      <span class="chip">🧘 Mind Relaxation</span>
+      <span class="chip">🎲 Mindfulness Activities</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<div class="guide-section-nav">
+  <div class="nav-inner">
+    <a href="#why">🌸 Why It Matters</a>
+    <a href="#challenges">⚠️ Challenges</a>
+    <a href="#anxiety">😰 Anxiety</a>
+    <a href="#identity">🔄 Identity</a>
+    <a href="#solutions">🌿 Solutions</a>
+    <a href="#mindfulness">🎲 Mindfulness</a>
+  </div>
+</nav>
+
+<div class="page">
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 1: WHY MENTAL HEALTH MATTERS       -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="section" id="why">
+  <div class="sec-header">
+    <div class="sec-icon si-lav">🌸</div>
+    <div class="sec-title">
+      <h2>Why Mental Health Sessions Are Important</h2>
+      <p>The weeks and months after childbirth are one of the most emotionally complex periods a woman can experience. Your mind needs as much care as your body.</p>
+    </div>
+  </div>
+
+  <div class="not-alone">
+    <div class="not-alone-stars"></div>
+    <h3>You Are Not Alone</h3>
+    <p>1 in 5 new mothers experiences a significant postpartum mental health challenge. Feeling overwhelmed, tearful, anxious, or lost is not a sign of weakness — it is a sign that you are human, and that you need support.</p>
+  </div>
+
+  <h3 class="sub-h">What Happens Inside Your Mind & Body After Birth</h3>
+  <div class="etl">
+    <div class="etl-item">
+      <div class="etl-dot lav">🧬</div>
+      <div class="etl-content">
+        <h4>Hormonal Storm</h4>
+        <p>Within 24–72 hours of delivery, estrogen and progesterone — which have been elevated throughout pregnancy — drop sharply and dramatically. This hormonal crash directly impacts your brain's mood-regulating chemicals, causing emotional swings, tearfulness, and anxiety that feel completely out of your control. This is biology, not weakness.</p>
+      </div>
+    </div>
+    <div class="etl-item">
+      <div class="etl-dot blush">😴</div>
+      <div class="etl-content">
+        <h4>Sleep Deprivation & Its Hidden Impact</h4>
+        <p>A new mother loses an average of 700 hours of sleep in the first year. Sleep deprivation alone can cause symptoms that mirror clinical depression — low mood, irritability, cognitive fog, hopelessness, and even physical pain. When this combines with hormonal changes, emotional distress can intensify significantly.</p>
+      </div>
+    </div>
+    <div class="etl-item">
+      <div class="etl-dot sage">💪</div>
+      <div class="etl-content">
+        <h4>Physical Recovery Demands</h4>
+        <p>Whether you had a vaginal birth or a caesarean section, your body has undergone enormous physical trauma. Pain, wound healing, breastfeeding challenges, and physical weakness all take a significant emotional toll. The mind and body are deeply connected — physical suffering is always emotional suffering too.</p>
+      </div>
+    </div>
+    <div class="etl-item">
+      <div class="etl-dot sky">🎭</div>
+      <div class="etl-content">
+        <h4>The Weight of New Responsibility</h4>
+        <p>Suddenly, a completely helpless human being depends entirely on you — for everything, at every hour. The pressure of this responsibility, combined with the fear of "getting it wrong," creates an enormous psychological load that builds silently, often without any outward sign, until it becomes overwhelming.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Why Early Emotional Support Changes Everything</h3>
+  <div class="cards">
+    <div class="card">
+      <span class="card-em">🤝</span>
+      <h3>Mother–Baby Bonding</h3>
+      <p>Unaddressed postpartum depression and anxiety are the leading causes of impaired mother–infant bonding. Early mental health support protects this sacred, irreplaceable connection — creating the secure foundation your baby needs for healthy development.</p>
+    </div>
+    <div class="card sage">
+      <span class="card-em">🏥</span>
+      <h3>Faster Physical Recovery</h3>
+      <p>Research consistently shows that mothers who receive mental health support recover faster physically. Psychological wellbeing directly influences immune function, wound healing, sleep quality, and the ability to nourish oneself — all critical for postpartum recovery.</p>
+    </div>
+    <div class="card blush">
+      <span class="card-em">🚀</span>
+      <h3>Prevention Is Powerful</h3>
+      <p>Mental health challenges that are addressed early — even just 2–3 sessions — rarely progress into severe conditions. Early intervention is not just helpful, it is transformative. The window of opportunity in the first few weeks postpartum is precious.</p>
+    </div>
+  </div>
+
+  <div class="hbox lav">
+    <div class="hbox-icon">💜</div>
+    <div class="hbox-body">
+      <strong>The Most Important Thing to Remember</strong>
+      <p>Seeking mental health support after having a baby is not a sign that something is wrong with you as a mother. It is a sign that you are a <em>wise, self-aware</em> woman who understands that taking care of herself is the greatest gift she can give her child.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 2: CHALLENGES — BLUES vs DEPRESSION -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="section" id="challenges">
+  <div class="sec-header">
+    <div class="sec-icon si-blush">⚠️</div>
+    <div class="sec-title">
+      <h2>Understanding Postpartum Mental Health Challenges</h2>
+      <p>Knowledge is the first step to healing. Understanding what you might be experiencing — and why — removes the shame and opens the door to help.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Baby Blues vs Postpartum Depression — Know the Difference</h3>
+
+  <div class="versus">
+    <div class="v-box v-blues">
+      <span class="tag">Temporary · Very Common</span>
+      <h4>😢 Baby Blues</h4>
+      <p style="font-size:14px;color:var(--body);margin-bottom:14px;line-height:1.75;">Baby blues affect up to <strong>80% of new mothers</strong> and is a normal, expected part of the hormonal adjustment after birth. It is not a disorder — it is a transition.</p>
+      <ul>
+        <li>Begins within 2–4 days of delivery</li>
+        <li>Resolves naturally within <strong>2 weeks</strong></li>
+        <li>Includes tearfulness, mood swings, irritability</li>
+        <li>Does not significantly impair daily function</li>
+        <li>Improves with rest, support, and reassurance</li>
+        <li>No medication needed in most cases</li>
+      </ul>
+    </div>
+    <div class="v-box v-ppd">
+      <span class="tag">Needs Professional Support</span>
+      <h4>💜 Postpartum Depression (PPD)</h4>
+      <p style="font-size:14px;color:var(--body);margin-bottom:14px;line-height:1.75;">PPD is a clinical condition requiring professional care. It is not a character flaw or a failure as a mother. It is a medical condition — and it is very treatable.</p>
+      <ul>
+        <li>Can begin any time in the <strong>first year</strong> after birth</li>
+        <li>Lasts more than 2 weeks without treatment</li>
+        <li>Persistent sadness, emptiness, hopelessness</li>
+        <li>Difficulty bonding with or caring for the baby</li>
+        <li>Withdrawal from family, friends, and activities</li>
+        <li>Requires therapy, support, and sometimes medication</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Side-by-Side Comparison</h3>
+  <div class="compare-wrap">
+    <table class="compare">
+      <thead>
+        <tr>
+          <th class="th-lbl">Feature</th>
+          <th class="th-blues">Baby Blues</th>
+          <th class="th-ppp">Postpartum Depression</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>When it starts</td>
+          <td>Days 2–4 after delivery</td>
+          <td>Anytime in the first 12 months</td>
+        </tr>
+        <tr>
+          <td>Duration</td>
+          <td>Up to 2 weeks</td>
+          <td>Weeks to months without treatment</td>
+        </tr>
+        <tr>
+          <td>Severity</td>
+          <td>Mild to moderate</td>
+          <td>Moderate to severe</td>
+        </tr>
+        <tr>
+          <td>Daily functioning</td>
+          <td>Mostly unaffected</td>
+          <td>Significantly impaired</td>
+        </tr>
+        <tr>
+          <td>Baby bonding</td>
+          <td>Usually intact</td>
+          <td>Often affected — feels distant</td>
+        </tr>
+        <tr>
+          <td>Appetite & sleep</td>
+          <td>Mostly normal</td>
+          <td>Disrupted beyond baby's schedule</td>
+        </tr>
+        <tr>
+          <td>Treatment</td>
+          <td>Rest, support, reassurance</td>
+          <td>Counselling, therapy, sometimes medication</td>
+        </tr>
+        <tr>
+          <td>What helps most</td>
+          <td>Partner support, sleep, warmth</td>
+          <td>Early professional intervention</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="warn-box">
+    <div class="warn-icon">🚨</div>
+    <div class="warn-body">
+      <strong>Warning Signs That Need Immediate Professional Support</strong>
+      <ul>
+        <li>Feelings of sadness, emptiness, or hopelessness lasting more than 2 weeks</li>
+        <li>Inability to care for yourself or your baby</li>
+        <li>Intrusive, frightening thoughts about harming yourself or your baby</li>
+        <li>Complete withdrawal from all relationships — partner, family, friends</li>
+        <li>Feelings that your baby, or everyone, would be better off without you</li>
+        <li>Hearing or seeing things that others cannot (rare — requires urgent care)</li>
+        <li>Extreme agitation, rapid mood swings, or bizarre behaviour</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pullquote lavender">
+    <p>If you recognise these feelings in yourself, please reach out today — not tomorrow, not when things get worse. Early support is the kindest, most powerful thing you can do for yourself and your baby.</p>
+    <cite>— Postpartum Mental Health Specialist, 10+ Years Experience</cite>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 3: ANXIETY & BURNOUT               -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="section" id="anxiety">
+  <div class="sec-header">
+    <div class="sec-icon si-sky">😰</div>
+    <div class="sec-title">
+      <h2>Postpartum Anxiety & Burnout</h2>
+      <p>Anxiety is actually more common than postpartum depression, yet far less discussed. If worry has become your constant companion, you are not alone — and there is help.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h">What Postpartum Anxiety Feels Like</h3>
+  <div class="cards">
+    <div class="card sky">
+      <span class="card-em">😟</span>
+      <h3>The Worry Loop</h3>
+      <p style="margin-bottom:12px;">An almost continuous stream of "what if" thoughts — many centred around the baby's health and safety — that you cannot seem to turn off, even when you know logically that everything is fine.</p>
+      <ul>
+        <li>"What if something happens when I'm asleep?"</li>
+        <li>"What if they're not eating enough?"</li>
+        <li>"Am I holding them correctly?"</li>
+        <li>Racing heart, shortness of breath, tension</li>
+      </ul>
+    </div>
+    <div class="card sky">
+      <span class="card-em">👩</span>
+      <h3>The "Good Mother" Trap</h3>
+      <p style="margin-bottom:12px;">A deeply painful and very common experience — the relentless inner critic telling you that you are not doing enough, not feeling enough, or not being the mother your baby deserves.</p>
+      <ul>
+        <li>Feeling like other mothers are coping better</li>
+        <li>Guilt about every imperfect moment</li>
+        <li>Comparing yourself to social media images</li>
+        <li>Fear of being judged by family or health professionals</li>
+      </ul>
+    </div>
+    <div class="card blush">
+      <span class="card-em">🔋</span>
+      <h3>Postpartum Burnout</h3>
+      <p style="margin-bottom:12px;">Burnout happens when the demands placed on a new mother — physical, emotional, social — consistently and massively exceed the support and recovery available. It is not laziness. It is exhaustion at a cellular level.</p>
+      <ul>
+        <li>Feeling completely empty and depleted</li>
+        <li>Emotional detachment from the baby or partner</li>
+        <li>Going through the motions without any feeling</li>
+        <li>Resentment, guilt, and shame about those feelings</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Early Signs of Anxiety to Notice</h3>
+  <div class="cards">
+    <div class="card">
+      <span class="card-em">💭</span>
+      <h3>Mental Signs</h3>
+      <ul>
+        <li>Racing, repetitive, uncontrollable thoughts</li>
+        <li>Difficulty concentrating or making decisions</li>
+        <li>Excessive Googling of baby symptoms at 2am</li>
+        <li>Catastrophising — always imagining the worst</li>
+        <li>Inability to enjoy moments with your baby</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="card-em">🫀</span>
+      <h3>Physical Signs</h3>
+      <ul>
+        <li>Racing heart or palpitations</li>
+        <li>Tight chest, shallow breathing, dizziness</li>
+        <li>Muscle tension, headaches, jaw clenching</li>
+        <li>Stomach upset — nausea, loss of appetite</li>
+        <li>Difficulty falling or staying asleep (beyond baby)</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="card-em">🚪</span>
+      <h3>Behavioural Signs</h3>
+      <ul>
+        <li>Avoiding situations out of fear (outings, visitors)</li>
+        <li>Constantly checking on the baby</li>
+        <li>Needing reassurance repeatedly from others</li>
+        <li>Withdrawing from social connections</li>
+        <li>Snapping or being unusually irritable</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hbox sky">
+    <div class="hbox-icon">💙</div>
+    <div class="hbox-body">
+      <strong>A Note on Anxiety</strong>
+      <p>Some anxiety after having a baby is completely normal — your nervous system is doing its job of protecting your new baby. The challenge is when anxiety becomes so persistent, intense, or consuming that it interferes with your quality of life and your ability to enjoy motherhood. That is when gentle professional support can make an extraordinary difference.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 4: IDENTITY TRANSITION             -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="section" id="identity">
+  <div class="sec-header">
+    <div class="sec-icon si-sage">🔄</div>
+    <div class="sec-title">
+      <h2>The Identity Transition — Becoming a Mother</h2>
+      <p>Psychologists call it "matrescence" — the profound identity shift that happens when a woman becomes a mother. It is as significant as adolescence, and just as turbulent.</p>
+    </div>
+  </div>
+
+  <div class="pullquote sage-sky">
+    <p>Becoming a mother doesn't mean losing yourself. It means discovering a version of yourself you never knew existed — someone stronger, more tender, and more courageous than you imagined.</p>
+    <cite>— Clinical Psychologist, Postpartum Specialist</cite>
+  </div>
+
+  <h3 class="sub-h">The Invisible Grief No One Talks About</h3>
+  <div class="cards">
+    <div class="card sage">
+      <span class="card-em">⏰</span>
+      <h3>Loss of Personal Time</h3>
+      <p>Time to simply exist as yourself — to read, rest, see friends, pursue work or creativity — is suddenly and completely replaced. Grieving this loss is natural, normal, and not a sign that you love your baby any less. It is one of the most common unspoken experiences of new motherhood.</p>
+    </div>
+    <div class="card sage">
+      <span class="card-em">💑</span>
+      <h3>Relationship Changes</h3>
+      <p>The intimate couple relationship you had before is profoundly changed by the arrival of a baby. Physical intimacy, spontaneous connection, private conversations, and shared leisure all shift. This is expected — but navigating it without support can create distance, resentment, or loneliness.</p>
+    </div>
+    <div class="card sage">
+      <span class="card-em">🪞</span>
+      <h3>Who Am I Now?</h3>
+      <p>Many mothers describe looking in the mirror and not recognising themselves — not just physically, but in terms of their values, aspirations, and sense of self. This disorientation is called "identity disruption" and it is one of the hallmarks of matrescence. It almost always resolves — but support speeds up the process enormously.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Signs You're Experiencing Difficult Identity Transition</h3>
+  <div class="hbox sage">
+    <div class="hbox-icon">🌿</div>
+    <div class="hbox-body">
+      <strong>You Might Be Experiencing This If You Feel...</strong>
+      <ul>
+        <li>Disconnected from yourself — as if you are watching your life from the outside</li>
+        <li>Resentful of your baby, your partner, or your situation — and then immediately guilty about that resentment</li>
+        <li>Like you have "disappeared" and only the role of "mother" remains</li>
+        <li>Nostalgic and sad for your pre-baby life, even while loving your child deeply</li>
+        <li>Overwhelmed by the gap between who you expected to be as a mother and who you actually are</li>
+        <li>Unsure of your values, goals, and purpose beyond caring for your baby</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="not-alone" style="margin-top:36px;">
+    <div class="not-alone-stars"></div>
+    <h3>Your feelings make complete sense</h3>
+    <p>What you are experiencing is not a personal failing. It is the completely understandable emotional response to one of the greatest life changes a human being can undergo. Therapy and counselling provide a safe, non-judgmental space to explore and rebuild your sense of self.</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 5: SOLUTIONS & SUPPORT             -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="section" id="solutions">
+  <div class="sec-header">
+    <div class="sec-icon si-lav">🌿</div>
+    <div class="sec-title">
+      <h2>Solutions & Support — Your Path to Wellness</h2>
+      <p>Healing is not a straight line, and it does not happen in isolation. Here is how our expert team supports every step of your recovery journey.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h">One-on-One Counselling with a Certified Postpartum Expert</h3>
+  <div class="cards">
+    <div class="card">
+      <span class="card-em">🔒</span>
+      <h3>Safe & Confidential</h3>
+      <p>A private space where you can say anything without fear of judgment — including the thoughts that frighten you, the feelings you are ashamed of, and the things you cannot say to your partner or family. Confidentiality is absolute and sacrosanct.</p>
+    </div>
+    <div class="card">
+      <span class="card-em">🧭</span>
+      <h3>Personalised Coping Strategies</h3>
+      <p>No generic worksheets or standard advice. Your therapist works with your specific history, personality, cultural context, and circumstances to build coping tools that actually fit your life and that you will actually use.</p>
+    </div>
+    <div class="card">
+      <span class="card-em">📈</span>
+      <h3>Evidence-Based Approaches</h3>
+      <p>Our clinicians are trained in Cognitive Behavioural Therapy (CBT), Acceptance & Commitment Therapy (ACT), and trauma-informed care — all proven effective for postpartum mental health. What you receive is guided by science and delivered with compassion.</p>
+    </div>
+  </div>
+
+  <div class="hbox lav" style="margin-top:0;">
+    <div class="hbox-icon">🌸</div>
+    <div class="hbox-body">
+      <strong>How Sessions Work — What to Expect</strong>
+      <ul>
+        <li><strong>Initial Assessment (Session 1):</strong> A gentle, non-clinical conversation about your birth experience, current feelings, support system, and goals. No tests, no labels — just listening.</li>
+        <li><strong>Personalised Plan:</strong> Based on your first session, your therapist creates a tailored support plan — including session frequency, focus areas, and specific coping strategies.</li>
+        <li><strong>Regular Sessions:</strong> Weekly or fortnightly 50-minute sessions, available in-person or via secure video call — at whatever time works for your baby's schedule.</li>
+        <li><strong>Between-Session Support:</strong> Resource materials, journaling prompts, and access to a support line between sessions if you need it.</li>
+        <li><strong>Progress Review:</strong> Every 4–6 sessions, we check in together on your progress and adjust the approach as you grow.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Mind Relaxation Workshops</h3>
+  <div class="workshop-grid">
+    <div class="wshop ws-lav">
+      <div class="wshop-top">
+        <span class="wshop-em">🫁</span>
+        <div class="ws-label">Breathwork</div>
+        <h3>Guided Breathing Sessions</h3>
+      </div>
+      <div class="wshop-body">
+        <ul>
+          <li>4-7-8 breathing for instant anxiety relief</li>
+          <li>Box breathing for grounding during overwhelm</li>
+          <li>Diaphragmatic breathing to activate calm</li>
+          <li>Techniques that take under 5 minutes</li>
+          <li>Can be done during feeds or nap times</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wshop ws-sage">
+      <div class="wshop-top">
+        <span class="wshop-em">🧘</span>
+        <div class="ws-label">Meditation</div>
+        <h3>Light Meditation for Mothers</h3>
+      </div>
+      <div class="wshop-body">
+        <ul>
+          <li>5-minute body scan for physical tension</li>
+          <li>Loving-kindness meditation for self-compassion</li>
+          <li>Baby-inclusive meditations (hold your baby)</li>
+          <li>Guided visualisation for restorative rest</li>
+          <li>No experience or equipment needed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wshop ws-blush">
+      <div class="wshop-top">
+        <span class="wshop-em">🌊</span>
+        <div class="ws-label">Stress Relief</div>
+        <h3>Stress Relief Practices</h3>
+      </div>
+      <div class="wshop-body">
+        <ul>
+          <li>Progressive muscle relaxation (PMR)</li>
+          <li>Sensory grounding — the 5-4-3-2-1 technique</li>
+          <li>Gentle postnatal yoga stretches</li>
+          <li>Evening wind-down routines for better sleep</li>
+          <li>Creating a daily emotional regulation ritual</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Partner Role -->
+  <div class="partner-box">
+    <h3>👨‍👩‍👦 The Partner & Family Support Role</h3>
+    <div class="pb-grid">
+      <div class="pb-item">
+        <h4>🤲 What Partners Can Do</h4>
+        <p>Take the night shift at least twice a week. Protect her sleep. Do not give advice unless asked. Simply listen, hold space, and say "I'm here." Your presence — not your solutions — is what she needs most.</p>
+      </div>
+      <div class="pb-item">
+        <h4>🗣️ What to Say (and Not Say)</h4>
+        <p>Say: "I see how hard you're working." "You're doing brilliantly." "What do you need right now?" — Never say: "Other mothers cope fine." "Shouldn't you be happy?" "It's just hormones."</p>
+      </div>
+      <div class="pb-item">
+        <h4>🏠 Practical Family Support</h4>
+        <p>Handle household tasks without being asked. Take the baby for a walk daily so she gets uninterrupted rest. Shield her from unsolicited advice and criticism. Reduce visitors in the early weeks.</p>
+      </div>
+      <div class="pb-item">
+        <h4>🚨 Recognising the Signs</h4>
+        <p>If you notice withdrawal from the baby, persistent crying, inability to sleep or eat, or frightening statements — please gently encourage professional help and offer to make the appointment together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════ -->
+<!-- SECTION 6: MINDFULNESS GAMES & ACTIVITIES  -->
+<!-- ═══════════════════════════════════════════ -->
+<section class="section" id="mindfulness">
+  <div class="sec-header">
+    <div class="sec-icon si-sage">🎲</div>
+    <div class="sec-title">
+      <h2>Mindfulness Games & Daily Activities</h2>
+      <p>Small, gentle practices that can be woven into your day — many taking just minutes — to bring calm, connection, and joy back into your experience of motherhood.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Daily Mindfulness Activities</h3>
+  <div class="activity-grid">
+    <div class="activity">
+      <span class="act-em">🌅</span>
+      <h4>Morning Intention</h4>
+      <p>Before picking up your phone, set one gentle intention for the day. "Today I will be patient with myself." Takes 30 seconds.</p>
+      <span class="act-time">30 seconds · On waking</span>
+    </div>
+    <div class="activity">
+      <span class="act-em">☕</span>
+      <h4>One Mindful Moment</h4>
+      <p>Drink one cup of tea or water in complete silence, noticing taste, warmth, and sensation. A mini-meditation hiding in plain sight.</p>
+      <span class="act-time">5 min · Any time</span>
+    </div>
+    <div class="activity">
+      <span class="act-em">🌿</span>
+      <h4>Gratitude Drops</h4>
+      <p>Name 3 tiny things that were good today — not big things, just small: "The sunlight. My baby's smell. A kind word." Write them down.</p>
+      <span class="act-time">3 min · Evening</span>
+    </div>
+    <div class="activity">
+      <span class="act-em">📖</span>
+      <h4>Journaling Prompts</h4>
+      <p>"What am I feeling right now without judgment?" "What did I do well today?" "What do I need most this week?"</p>
+      <span class="act-time">10 min · Your pace</span>
+    </div>
+    <div class="activity">
+      <span class="act-em">🚶</span>
+      <h4>Mindful Walk</h4>
+      <p>10 minutes outside with your baby — no phone, no earphones. Just notice the sky, the air, the sounds. A complete nervous system reset.</p>
+      <span class="act-time">10 min · Daily</span>
+    </div>
+    <div class="activity">
+      <span class="act-em">🌙</span>
+      <h4>Body Kindness Check</h4>
+      <p>Before bed, place your hands on your heart and say: "I did enough today. My body worked hard. I am enough." A compassion practice that rewires self-criticism.</p>
+      <span class="act-time">2 min · Bedtime</span>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Bonding Activities with Your Baby</h3>
+  <div class="cards">
+    <div class="card sage">
+      <span class="card-em">👁️</span>
+      <h3>Gaze & Mirror Play</h3>
+      <p>Look into your baby's eyes during feeds or awake time. Mirror their expressions back to them. This simple act releases oxytocin in both of you, strengthens bonding, and supports your baby's brain development — all while bringing you back to the present moment.</p>
+    </div>
+    <div class="card sage">
+      <span class="card-em">🎵</span>
+      <h3>Singing & Humming</h3>
+      <p>Sing or hum to your baby — even if you can't hold a tune. Your voice is your baby's first comfort, their favourite sound in the world. The vibration of humming also calms your own nervous system. No audience required.</p>
+    </div>
+    <div class="card sage">
+      <span class="card-em">🤲</span>
+      <h3>Baby Massage</h3>
+      <p>Gentle daily baby massage (with warm oil if desired) during bath time or before sleep reduces colic and fussiness, improves baby sleep, and — for you — provides a grounding, tactile mindfulness practice that draws you into the present.</p>
+    </div>
+  </div>
+
+  <h3 class="sub-h">Quick Emotional Reset Tips</h3>
+  <div class="reset-grid">
+    <div class="reset-item">
+      <div class="r-num">1</div>
+      <h4>5-4-3-2-1 Grounding</h4>
+      <p>Name 5 things you see, 4 you hear, 3 you can touch, 2 you smell, 1 you taste. Stops a spiral instantly.</p>
+    </div>
+    <div class="reset-item">
+      <div class="r-num">2</div>
+      <h4>Cold Water Reset</h4>
+      <p>Splash cold water on your face or hold cold water in your hands. Activates the dive reflex — slows heart rate within 30 seconds.</p>
+    </div>
+    <div class="reset-item">
+      <div class="r-num">3</div>
+      <h4>6-Second Hug</h4>
+      <p>A genuine 6-second hug with your partner, baby, or any trusted person releases oxytocin and reduces cortisol measurably.</p>
+    </div>
+    <div class="reset-item">
+      <div class="r-num">4</div>
+      <h4>Say It Out Loud</h4>
+      <p>"I am overwhelmed right now and that is okay." Naming emotions reduces their power by up to 50% (neuroscience confirms this).</p>
+    </div>
+    <div class="reset-item">
+      <div class="r-num">5</div>
+      <h4>Step Outside</h4>
+      <p>Even 60 seconds of natural light and fresh air changes your brain chemistry. Vitamin D, nature sounds, and sky — all are mood medicine.</p>
+    </div>
+    <div class="reset-item">
+      <div class="r-num">6</div>
+      <h4>One Tiny Thing for You</h4>
+      <p>One small act for yourself daily — a favourite song, a warm shower, one square of chocolate. You matter. Your pleasure matters.</p>
+    </div>
+  </div>
+
+  <!-- When to Seek Help -->
+  <div class="seek-box">
+    <h3>🌸 When to Seek Help — A Gentle Checklist</h3>
+    <p>If any of the following have been present for more than two weeks, please reach out to our team or your healthcare provider today. Asking for help is an act of love — for yourself and your baby.</p>
+    <div class="seek-signs">
+      <div class="seek-sign">
+        <div class="seek-sign-icon">😔</div>
+        <p>Persistent low mood, crying, or emptiness that doesn't lift</p>
+      </div>
+      <div class="seek-sign">
+        <div class="seek-sign-icon">😰</div>
+        <p>Anxiety or worry so constant that you cannot relax or enjoy any moment</p>
+      </div>
+      <div class="seek-sign">
+        <div class="seek-sign-icon">💔</div>
+        <p>Feeling disconnected from, or unable to bond with, your baby</p>
+      </div>
+      <div class="seek-sign">
+        <div class="seek-sign-icon">🚪</div>
+        <p>Withdrawing completely from relationships and normal activities</p>
+      </div>
+      <div class="seek-sign">
+        <div class="seek-sign-icon">🌙</div>
+        <p>Unable to sleep even when your baby sleeps — racing thoughts keep you awake</p>
+      </div>
+      <div class="seek-sign">
+        <div class="seek-sign-icon">🙅</div>
+        <p>Feeling that you or your baby would be better off if you weren't here</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+</div><!-- /page -->
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <span class="footer-heart">🌸</span>
+  <strong>Postpartum Mental Health & Emotional Wellness Guide</strong><br>
+  Written and reviewed by Certified Clinical Psychologists & Postpartum Mental Health Specialists<br>
+  This guide is for educational purposes. It does not replace personalised professional mental health care.<br>
+  If you are in crisis, please contact a mental health helpline or emergency services immediately.<br>
+  <div class="crisis-line">
+    🇮🇳 iCall (India): 9152987821 &nbsp;|&nbsp; Vandrevala Foundation: 1860-2662-345 &nbsp;|&nbsp; Available 24/7
+  </div>
+  <br>
+  <span style="opacity:0.35;font-size:12px;">© 2025 Maternal Wellness Centre · All Rights Reserved · You Are Enough</span>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>

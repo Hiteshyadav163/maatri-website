@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Frequently asked questions about MaatriSparsh postpartum wellness programmes.">
 <title>FAQ — MaatriSparsh</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 <style>
   .faq-layout {
@@ -39,7 +39,7 @@
     background: none;
     border: none;
     cursor: pointer;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 14px;
     color: var(--ink-muted);
     text-align: left;
@@ -61,9 +61,9 @@
     width: 100%;
     padding: 12px 16px 12px 40px;
     border-radius: 12px;
-    border: 1.5px solid rgba(74,63,63,0.1);
+    border: 1.5px solid rgba(0,0,0,0.1);
     background: var(--cream);
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 14px;
     color: var(--ink);
     outline: none;
@@ -86,18 +86,18 @@
   }
 
   .faq-cat-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 32px;
     font-weight: 400;
     color: var(--ink);
     margin-bottom: 24px;
     padding-bottom: 16px;
-    border-bottom: 1px solid rgba(74,63,63,0.08);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
   }
   .faq-cat-heading em { font-style: italic; color: var(--rose); }
 
   .faq-item {
-    border-bottom: 1px solid rgba(74,63,63,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
     overflow: hidden;
   }
 
@@ -106,7 +106,7 @@
     background: none;
     border: none;
     padding: 22px 0;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     font-weight: 500;
     color: var(--ink);
@@ -173,7 +173,7 @@
   }
 
   .faq-cta h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 28px;
     font-weight: 400;
     color: var(--ink);
@@ -191,19 +191,30 @@
   .faq-cta a:hover { background: #5a3f5c; transform: translateY(-1px); }
 
   @media (max-width: 900px) {
-    .faq-layout { grid-template-columns: 1fr; padding: 60px 32px; }
+    .faq-layout { grid-template-columns: 1fr; padding: 56px 24px; gap: 36px; }
     .faq-sidebar { position: static; }
-    .faq-categories { flex-direction: row; flex-wrap: wrap; }
-    .cat-btn { flex: none; }
+    .faq-categories { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+    .cat-btn { flex: none; font-size: 13px; padding: 10px 14px; }
+    .faq-section { margin-bottom: 48px; padding-bottom: 48px; }
   }
 
   @media (max-width: 600px) {
-    .faq-layout { padding: 56px 20px; }
-    .faq-question { font-size: 15px; }
-    .faq-cat-heading { font-size: 26px; }
+    .faq-layout { padding: 48px 16px; gap: 28px; }
+    .faq-search-wrap { margin-bottom: 20px; }
+    .faq-search { font-size: 15px; padding: 12px 14px 12px 36px; }
+    .search-icon { left: 10px; font-size: 13px; }
     .faq-categories { gap: 6px; }
+    .cat-btn { font-size: 12px; padding: 9px 12px; border-radius: 10px; }
+    .faq-cat-heading { font-size: 24px; margin-bottom: 16px; }
+    .faq-question { font-size: 14px; padding: 18px 0; gap: 12px; }
+    .faq-chevron { width: 24px; height: 24px; font-size: 11px; }
+    .faq-answer-inner { font-size: 14px; padding: 0 0 20px; }
+    .faq-cta { padding: 28px 20px; border-radius: 16px; }
+    .faq-cta h3 { font-size: 22px; }
+    .faq-cta a { padding: 12px 22px; font-size: 13px; }
   }
 </style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body data-page="faq">
 
@@ -438,7 +449,7 @@
         </button>
         <div class="faq-answer">
           <div class="faq-answer-inner">
-            <p>The easiest way is to <a href="contact.html" style="color:var(--rose);">fill out our contact form</a> or reach us on <a href="https://wa.me/9183216100" style="color:var(--rose);">WhatsApp</a>. We'll arrange a brief introductory call, followed by a clinical demonstration at your facility at no cost. From there, we design a bespoke partnership proposal within 5–7 working days.</p>
+            <p>The easiest way is to <a href="contact.html" style="color:var(--rose);">fill out our contact form</a> or reach us on <a href="https://wa.me/919183216100" style="color:var(--rose);">WhatsApp</a>. We'll arrange a brief introductory call, followed by a clinical demonstration at your facility at no cost. From there, we design a bespoke partnership proposal within 5–7 working days.</p>
           </div>
         </div>
       </div>

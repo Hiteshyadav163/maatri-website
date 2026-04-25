@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="postpartum massage therapy, LSCS recovery, normal delivery recovery, lactation support, hospital wellness programme India">
 <meta name="description" content="MaatriSparsh services — postpartum massage therapy, lactation support, and holistic wellness add-ons.">
 <title>Services — MaatriSparsh</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 <style>
   /* ─── CLINICAL BASIS ─── */
@@ -25,7 +26,7 @@
   }
 
   .quote-text {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     font-style: italic;
     font-weight: 300;
@@ -45,7 +46,7 @@
   .benefits-grid {
     display: grid;
     gap: 1px;
-    background: rgba(74,63,63,0.06);
+    background: rgba(0,0,0,0.06);
     border-radius: 16px;
     overflow: hidden;
   }
@@ -70,7 +71,7 @@
   }
 
   .benefit-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 20px;
     font-weight: 500;
     color: var(--ink);
@@ -96,7 +97,7 @@
     background: var(--warm-white);
     border-radius: 24px;
     overflow: hidden;
-    border: 1px solid rgba(74,63,63,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
   .service-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(107,78,110,0.12); }
@@ -118,7 +119,7 @@
   }
 
   .service-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 34px;
     font-weight: 400;
     color: var(--ink);
@@ -142,23 +143,52 @@
     margin-bottom: 20px;
   }
 
-  .inclusion-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-
-  .inclusion-item {
+  /* New programme features (no day details) */
+  .prog-features {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     gap: 14px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: var(--ink-soft);
+    margin-bottom: 28px;
   }
 
-  .inclusion-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--rose);
+  .prog-feat {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+
+  .prog-feat-icon {
+    font-size: 18px;
     flex-shrink: 0;
-    margin-top: 6px;
+    width: 28px;
+    text-align: center;
+  }
+
+  .prog-enquire-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--rose-light);
+    color: var(--rose);
+    border: 1px solid var(--rose-mid);
+    border-radius: 100px;
+    padding: 11px 22px;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.25s;
+    letter-spacing: 0.02em;
+  }
+
+  .prog-enquire-btn:hover {
+    background: var(--rose);
+    color: white;
+    border-color: var(--rose);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(201,117,106,0.25);
   }
 
   /* ─── OUTCOMES ─── */
@@ -171,7 +201,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2px;
-    background: rgba(74,63,63,0.06);
+    background: rgba(0,0,0,0.06);
     border-radius: 20px;
     overflow: hidden;
     margin-top: 60px;
@@ -185,7 +215,7 @@
   .outcome-card:hover { background: var(--plum-light); }
 
   .outcome-num {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 52px;
     font-weight: 400;
     color: var(--plum);
@@ -219,7 +249,7 @@
     background: var(--warm-white);
     border-radius: 20px;
     padding: 40px 36px;
-    border: 1px solid rgba(74,63,63,0.06);
+    border: 1px solid rgba(0,0,0,0.06);
     transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
     display: grid;
     grid-template-columns: auto 1fr;
@@ -229,7 +259,7 @@
   .addon-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(107,78,110,0.12); border-color: var(--plum-mid); }
 
   .addon-num-box {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 52px;
     font-weight: 300;
     color: var(--rose-mid);
@@ -238,7 +268,7 @@
   }
 
   .addon-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     font-weight: 600;
     color: var(--ink);
@@ -265,7 +295,7 @@
   }
 
   .cta-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 48px;
     font-weight: 400;
     color: white;
@@ -319,6 +349,7 @@
     .btn-primary { width: 100%; justify-content: center; }
   }
 </style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body data-page="services">
 
@@ -365,23 +396,35 @@
 <section class="services-section" id="programmes">
   <div class="section-label reveal">Recovery Pathways</div>
   <h2 class="section-heading reveal">Our <em>Core Programmes</em></h2>
-  <p class="section-lead reveal">Carefully designed for every birth type — from Day 1 through discharge. Each programme is personalised by our certified therapists following an initial assessment.</p>
+  <p class="section-lead reveal">Carefully designed recovery pathways for every birth type — clinically sequenced, physician-approved, and tailored to the specific physiological needs of each mother.</p>
 
   <div class="services-grid">
     <div class="service-card lscs reveal">
       <div class="service-header">
         <div class="service-type">Post Caesarean Section</div>
         <div class="service-title">LSCS Recovery Programme</div>
-        <p class="service-desc">A carefully graduated programme beginning from Day 2 post-surgery, respecting wound healing timelines while progressively restoring circulation and comfort.</p>
+        <p class="service-desc">A carefully graduated programme designed specifically for post-caesarean mothers — respecting surgical healing timelines while progressively restoring circulation, reducing oedema, and supporting emotional recovery.</p>
       </div>
       <div class="service-body">
-        <div class="what-included-title">What's Included</div>
-        <ul class="inclusion-list">
-          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 1: Full clinical assessment — delivery type, vitals, physician notes reviewed. Personalised care plan created.</li>
-          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 2: Gentle full body massage — slow pace, low pressure. Foot, back, head, shoulder, neck, hand.</li>
-          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 3: Progressive full body massage — mid pace, medium pressure. Lymphatic drainage begins.</li>
-          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 4+: Complete wellness session — full body massage + spa treatment including pedicure.</li>
-        </ul>
+        <div class="prog-features">
+          <div class="prog-feat">
+            <span class="prog-feat-icon">🩺</span>
+            <span>Physician-approved, wound-safe protocols</span>
+          </div>
+          <div class="prog-feat">
+            <span class="prog-feat-icon">💆</span>
+            <span>Progressive full-body therapeutic massage</span>
+          </div>
+          <div class="prog-feat">
+            <span class="prog-feat-icon">🌿</span>
+            <span>Lymphatic drainage & pain relief focus</span>
+          </div>
+          <div class="prog-feat">
+            <span class="prog-feat-icon">🌸</span>
+            <span>Spa & holistic wellness on recovery days</span>
+          </div>
+        </div>
+        <a href="contact.html" class="prog-enquire-btn">Enquire About This Programme →</a>
       </div>
     </div>
 
@@ -389,16 +432,28 @@
       <div class="service-header">
         <div class="service-type">Vaginal Birth</div>
         <div class="service-title">Normal Delivery Programme</div>
-        <p class="service-desc">Restorative therapy begins from Day 1, addressing the immediate physical demands of natural labour and supporting rapid, joyful recovery.</p>
+        <p class="service-desc">Restorative therapy beginning from Day 1 — addressing the immediate physical demands of natural labour and supporting rapid, joyful recovery from the very first hours after birth.</p>
       </div>
       <div class="service-body">
-        <div class="what-included-title">What's Included</div>
-        <ul class="inclusion-list">
-          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 1: Gentle full body recovery session — restorative therapy begins immediately.</li>
-          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 2: Full body massage — continued restorative therapy with increasing depth.</li>
-          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 3: Progressive full body massage — lymphatic drainage and muscle restoration.</li>
-          <li class="inclusion-item"><span class="inclusion-dot"></span>Day 4+: Complete wellness session — full body massage + spa treatment including pedicure.</li>
-        </ul>
+        <div class="prog-features">
+          <div class="prog-feat">
+            <span class="prog-feat-icon">🤱</span>
+            <span>Lactation support & breast care included</span>
+          </div>
+          <div class="prog-feat">
+            <span class="prog-feat-icon">💆</span>
+            <span>Full-body restorative massage therapy</span>
+          </div>
+          <div class="prog-feat">
+            <span class="prog-feat-icon">🌿</span>
+            <span>Hormonal balance & stress relief focus</span>
+          </div>
+          <div class="prog-feat">
+            <span class="prog-feat-icon">🌸</span>
+            <span>Spa & pedicure wellness on Day 4+</span>
+          </div>
+        </div>
+        <a href="contact.html" class="prog-enquire-btn">Enquire About This Programme →</a>
       </div>
     </div>
   </div>

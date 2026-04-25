@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="MaatriSparsh contact, request demo, hospital partnership, postpartum care demo India">
 <meta name="description" content="Contact MaatriSparsh — request a clinical demonstration or hospital partnership discussion.">
 <title>Contact — MaatriSparsh</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 <style>
   .contact-layout {
@@ -24,7 +25,7 @@
     gap: 20px;
     align-items: flex-start;
     padding: 28px 0;
-    border-bottom: 1px solid rgba(74,63,63,0.06);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
   }
   .contact-info-item:first-child { padding-top: 0; }
   .contact-info-item:last-child { border-bottom: none; }
@@ -50,7 +51,7 @@
   }
 
   .ci-value {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 20px;
     color: var(--ink);
     font-weight: 500;
@@ -99,11 +100,11 @@
     background: var(--cream);
     border-radius: 28px;
     padding: 52px 48px;
-    border: 1px solid rgba(74,63,63,0.05);
+    border: 1px solid rgba(0,0,0,0.05);
   }
 
   .form-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 34px;
     font-weight: 400;
     color: var(--ink);
@@ -146,9 +147,9 @@
   input, select, textarea {
     padding: 14px 18px;
     border-radius: 12px;
-    border: 1.5px solid rgba(74,63,63,0.1);
+    border: 1.5px solid rgba(0,0,0,0.1);
     background: var(--warm-white);
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 15px;
     color: var(--ink);
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -199,7 +200,7 @@
     border: none;
     border-radius: 100px;
     padding: 16px 32px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
@@ -230,7 +231,7 @@
   .form-success.show { display: block; }
   .form-success-icon { font-size: 56px; margin-bottom: 20px; }
   .form-success-heading {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 32px;
     color: var(--ink);
     margin-bottom: 12px;
@@ -259,7 +260,7 @@
   .alt-icon { font-size: 36px; margin-bottom: 16px; }
 
   .alt-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
     font-weight: 500;
     color: white;
@@ -306,6 +307,7 @@
     .alt-title { font-size: 19px; }
   }
 </style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body data-page="contact">
 
@@ -334,7 +336,7 @@
       <div class="ci-icon">📱</div>
       <div>
         <div class="ci-label">WhatsApp / Phone</div>
-        <div class="ci-value"><a href="https://wa.me/9183216100" class="ci-link">+91 91832 16100</a></div>
+        <div class="ci-value"><a href="https://wa.me/919183216100" class="ci-link">+91 91832 16100</a></div>
         <div class="ci-sub">Quick connect — typically responds within a few hours</div>
       </div>
     </div>
@@ -343,7 +345,8 @@
       <div class="ci-icon">📍</div>
       <div>
         <div class="ci-label">Service Area</div>
-        <div class="ci-value">Pan-India</div>
+        <div class="ci-value">Pan-Chhattisgarh
+	</div>
         <div class="ci-sub">We partner with hospitals and maternity units across India</div>
       </div>
     </div>
@@ -445,7 +448,7 @@
     <div class="alt-icon">💬</div>
     <div class="alt-title">WhatsApp</div>
     <p class="alt-text">For quick questions or to start a conversation directly with our team.</p>
-    <a href="https://wa.me/9183216100?text=Hello%20MaatriSparsh%20Team" target="_blank" class="alt-link">Chat Now</a>
+    <a href="https://wa.me/919183216100?text=Hello%20MaatriSparsh%20Team" target="_blank" class="alt-link">Chat Now</a>
   </div>
   <div class="alt-item reveal">
     <div class="alt-icon">✉️</div>
@@ -462,8 +465,25 @@
 </section>
 
 <script src="shared.js"></script>
+
+<!-- Supabase JS -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+
 <script>
-function handleSubmit() {
+// ─── SUPABASE CONFIG ───────────────────────────────────────────────────────────
+// Replace these two values with your own from supabase.com → Settings → API
+const SUPABASE_URL  = 'YOUR_SUPABASE_URL';   // e.g. https://xxxx.supabase.co
+const SUPABASE_ANON = 'YOUR_SUPABASE_ANON_KEY';
+// ──────────────────────────────────────────────────────────────────────────────
+
+let supabaseClient = null;
+try {
+  if (SUPABASE_URL !== 'YOUR_SUPABASE_URL') {
+    supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+  }
+} catch(e) { /* supabase not configured yet */ }
+
+async function handleSubmit() {
   const required = ['firstName','lastName','phone','email','hospitalName','city'];
   let valid = true;
   required.forEach(id => {
@@ -479,27 +499,46 @@ function handleSubmit() {
 
   const btn = document.getElementById('submitBtn');
   btn.disabled = true;
-  btn.textContent = 'Sending…';
+  btn.innerHTML = 'Sending… <span>⏳</span>';
 
-  // Build mailto
-  const firstName = document.getElementById('firstName').value;
-  const lastName = document.getElementById('lastName').value;
-  const phone = document.getElementById('phone').value;
-  const email = document.getElementById('email').value;
-  const hospital = document.getElementById('hospitalName').value;
-  const designation = document.getElementById('designation').value;
-  const city = document.getElementById('city').value;
-  const enquiry = document.getElementById('enquiryType').value;
-  const message = document.getElementById('message').value;
+  const data = {
+    first_name:  document.getElementById('firstName').value.trim(),
+    last_name:   document.getElementById('lastName').value.trim(),
+    phone:       document.getElementById('phone').value.trim(),
+    email:       document.getElementById('email').value.trim(),
+    hospital:    document.getElementById('hospitalName').value.trim(),
+    designation: document.getElementById('designation').value.trim(),
+    city:        document.getElementById('city').value.trim(),
+    enquiry:     document.getElementById('enquiryType').value,
+    message:     document.getElementById('message').value.trim()
+  };
 
-  const body = `Name: ${firstName} ${lastName}\nPhone: ${phone}\nEmail: ${email}\nHospital: ${hospital}\nDesignation: ${designation}\nCity: ${city}\nEnquiry Type: ${enquiry}\n\nMessage:\n${message}`;
-  const mailtoLink = `mailto:maatrisparsh@gmail.com?subject=Demo%20Request%20—%20${encodeURIComponent(hospital)}&body=${encodeURIComponent(body)}`;
+  // ── Try Supabase first ──
+  if (supabaseClient) {
+    const { error } = await supabaseClient.from('leads').insert([data]);
+    if (error) {
+      console.warn('Supabase error:', error.message);
+      // Fall back to mailto if Supabase fails
+      sendViaEmail(data);
+    } else {
+      showSuccess();
+    }
+  } else {
+    // No Supabase configured — use mailto fallback
+    sendViaEmail(data);
+  }
+}
 
-  setTimeout(() => {
-    window.location.href = mailtoLink;
-    document.getElementById('formContent').style.display = 'none';
-    document.getElementById('formSuccess').classList.add('show');
-  }, 800);
+function sendViaEmail(d) {
+  const body = `Name: ${d.first_name} ${d.last_name}\nPhone: ${d.phone}\nEmail: ${d.email}\nHospital: ${d.hospital}\nDesignation: ${d.designation}\nCity: ${d.city}\nEnquiry: ${d.enquiry}\n\nMessage:\n${d.message}`;
+  const link = `mailto:maatrisparsh@gmail.com?subject=Demo%20Request%20—%20${encodeURIComponent(d.hospital)}&body=${encodeURIComponent(body)}`;
+  window.open(link, '_blank');   // _blank works on both desktop and mobile
+  showSuccess();
+}
+
+function showSuccess() {
+  document.getElementById('formContent').style.display = 'none';
+  document.getElementById('formSuccess').classList.add('show');
 }
 </script>
 </body>
